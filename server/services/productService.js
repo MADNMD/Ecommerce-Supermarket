@@ -76,6 +76,18 @@ exports.getAllPastaProducts = () => Product.find({ selectedSubCategory: 'Мак�
 
 exports.getAllFreshPasta = () => Product.find({ selectedSubCategory: 'Прясна паста' }).sort({ productQuantity: -1 });
 
+//  SWEET AND SALTY
+
+exports.getAllSweetAndSalty = () => Product.find({ category: 'Сладки и солени' }).sort({ productQuantity: -1 });
+
+exports.getAllSugarProducts = () => Product.find({ selectedSubCategory: 'Захарни изделия' }).sort({ productQuantity: -1 });
+
+exports.getAllBreakfastCerealsCornflakesAndMuselies = () => Product.find({ selectedSubCategory: 'Зърнени Закуски, корнфлейкс и мюсли' }).sort({ productQuantity: -1 });
+
+exports.getAllSaltyProducts = () => Product.find({ selectedSubCategory: 'Солени изделия' }).sort({ productQuantity: -1 });
+
+exports.getAllChipsAndSnacks = () => Product.find({ selectedSubCategory: 'Чипсове и снаксове' }).sort({ productQuantity: -1 });
+
 exports.searchProducts = (query) => {
     return Product.find({ productName: { $regex: query, $options: 'i' } });
 };
