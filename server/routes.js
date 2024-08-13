@@ -7,6 +7,7 @@ const fruitAndVegController = require('./controllers/fruitAndVegController');
 const getAllMilkAndEggController = require('./controllers/milkAndEggController');
 const meatAndFishController = require('./controllers/meatAndFishController');
 const breadAndPastaController = require('./controllers/breadAndPastaController');
+const allSweetAndSalty = require('./controllers/sweetAndSaltyController');
 
 router.use('/users', userController);
 router.use('/email', emailController);
@@ -15,5 +16,6 @@ router.use('/fruit-and-veg-products', fruitAndVegController);
 router.use('/milk-and-egg-products', getAllMilkAndEggController);
 router.use('/meat-and-fish-products', meatAndFishController);
 router.use('/bread-and-pasta-products', breadAndPastaController);
+router.use('/sweet-and-salty', allSweetAndSalty);
 
 module.exports = router;
