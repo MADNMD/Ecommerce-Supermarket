@@ -88,6 +88,27 @@ exports.getAllSaltyProducts = () => Product.find({ selectedSubCategory: 'Сол�
 
 exports.getAllChipsAndSnacks = () => Product.find({ selectedSubCategory: 'Чипсове и снаксове' }).sort({ productQuantity: -1 });
 
+// DRINKS AND WATER
+
+exports.getAllDrinksAndWater = () => Product.find({ category: 'Напитки и вода' }).sort({ productQuantity: -1 });
+
+exports.getAllCoffeeAndTea = () => Product.find({ selectedSubCategory: 'Кафе, чай и какао' }).sort({ productQuantity: -1 });
+
+exports.getAllwater = () => Product.find({ selectedSubCategory: 'Вода' }).sort({ productQuantity: -1 });
+
+exports.getAllFreshAndSmoothie = () => Product.find({ selectedSubCategory: 'Фрешове, смутита, плодови и зеленчукови напитки' }).sort({ productQuantity: -1 });
+
+exports.getAllSoftDrinks = () => Product.find({ selectedSubCategory: 'Безалкохолни напитки' }).sort({ productQuantity: -1 });
+
+exports.getAllEnergyDrinks = () => Product.find({ selectedSubCategory: 'Енергийни напитки, витаминозни и изотонични напитки' }).sort({ productQuantity: -1 });
+
+exports.getAllCiderAndKombucha = () => Product.find({ selectedSubCategory: 'Сайдер и комбуча' }).sort({ productQuantity: -1 });
+
+exports.getAllBeers = () => Product.find({ selectedSubCategory: 'Бира' }).sort({ productQuantity: -1 });
+
+exports.getAllWines = () => Product.find({ selectedSubCategory: 'Вино' }).sort({ productQuantity: -1 });
+
+exports.getAllAlkoholDrinks = () => Product.find({ selectedSubCategory: 'Високоалкохолни напитки' }).sort({ productQuantity: -1 });
 exports.searchProducts = (query) => {
     return Product.find({ productName: { $regex: query, $options: 'i' } });
 };
