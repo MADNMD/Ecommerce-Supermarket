@@ -1,0 +1,70 @@
+@media only screen and (max-width: 768px) {
+    .favorite-main-content {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        padding: 3em 0;
+    }
+}
+
+.site-main .favorite .container {
+    max-width: 1300px;
+}
+
+.favorite-main-content {
+    display: flex;
+    justify-content: start;
+    padding: 3em 0;
+    margin-top: 9em;
+    margin-left: 6em;
+}
+
+.favorite-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin-left: 3em;
+}
+
+.favorite-content h3,
+.favorite-content p  {
+    color: var(--textColor);
+}
+
+/* MINI NAV STYLES */
+
+@media only screen and (max-width: 768px) {
+    .mini-nav {
+        margin-top: 3em;
+        margin-left: 3em;
+    }
+}
+
+.mini-nav {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 1em;
+    padding: 0.2em 0;
+    min-width: 9em;
+    max-width: 9em;
+}
+
+.mini-nav a {
+    text-decoration: none;
+    color: var(--textColor);
+}
+
+.mini-nav a:hover {
+    color: var(--orange);
+}
+
+/* карта на любими  fourCard*/
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.1em;
+    /* gap: 0.3em; */
+}
