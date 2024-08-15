@@ -1,0 +1,163 @@
+@media only screen and (max-width: 768px) {
+    .profile-main-content {
+        display: flex;
+        /* flex-direction: column; */
+        /* justify-content: start; */
+        /* align-items: start; */
+        padding: 3em 0;
+    }
+}
+
+@media only screen and (max-width: 492px) {
+    .profile-main-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        padding: 3em 0;
+    }
+
+    .mini-nav {
+        flex-direction: row;
+        text-wrap: nowrap;
+    }
+}
+
+.site-main .profile .container {
+    max-width: 1300px;
+}
+
+.profile-main-content {
+    display: flex;
+    justify-content: start;
+    padding: 3em 0;
+    margin-top: 9em;
+    margin-left: 6em;
+}
+
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin-left: 3em;
+}
+
+.profile-content h3 {
+    color: var(--textColor);
+}
+
+.profile-content p {
+    font-style: italic;
+    font-size: 0.5em;
+}
+
+.profile-form .save-btn {
+    margin-top: 1.5em;
+}
+
+.profile-form .save-btn {
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.3em 1.2em;
+    border: none;
+    border-radius: 0.3em;
+    color: var(--textColor);
+    background-color: var(--orange);
+    transform: scale(1);
+    transition: transform 0.7s;
+}
+
+.profile-form .save-btn:hover {
+    color: #fff;
+    background-color: rgb(218, 102, 13);
+    transform: scale(1.1);
+}
+
+.first-line,
+.second-line,
+.third-line,
+.four-line,
+.five-line {
+    display: flex;
+    justify-content: space-around;
+    gap: 2em;
+}
+
+.first-line,
+.second-line,
+.third-line,
+.four-line {
+    margin-bottom: 1em;
+}
+
+.first,
+.second {
+    display: flex;
+    flex-direction: column;
+}
+
+.first label,
+.second label {
+    font-size: 0.7em;
+}
+
+.first input,
+.second input {
+    min-width: 15em;
+}
+
+.second input:focus,
+.first input:focus {
+    border: 1px solid var(--orange);
+}
+
+.first input:focus,
+.second input:focus {
+    outline: none;
+}
+
+.first textarea {
+    resize: none;
+    outline: none;
+}
+
+.first textarea:focus {
+    border: 1px solid var(--orange);
+}
+
+/* MINI NAV STYLES */
+
+@media only screen and (max-width: 768px) {
+    .mini-nav {
+        margin-top: 3em;
+        margin-left: 3em;
+    }
+}
+
+.mini-nav {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 1em;
+    padding: 0.2em 0;
+    min-width: 9em;
+    max-width: 9em;
+}
+
+.mini-nav a {
+    text-decoration: none;
+    color: var(--textColor);
+}
+
+.mini-nav a:hover {
+    color: var(--orange);
+}
+
+.errors-form {
+    color: red;
+    font-size: 0.6em;
+    text-align: center;
+    margin-top: 0.5em;
+}
