@@ -1,0 +1,1 @@
+export { FavoriteThirdItem } from './FavoriteThirdItem';
