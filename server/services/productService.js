@@ -109,6 +109,37 @@ exports.getAllBeers = () => Product.find({ selectedSubCategory: 'Бира' }).so
 exports.getAllWines = () => Product.find({ selectedSubCategory: 'Вино' }).sort({ productQuantity: -1 });
 
 exports.getAllAlkoholDrinks = () => Product.find({ selectedSubCategory: 'Високоалкохолни напитки' }).sort({ productQuantity: -1 });
+
+// BABY AND CHILDREN
+
+exports.getAllBabyAndChildrenProducts = () => Product.find({ category: 'Бебешки и детски' }).sort({ productQuantity: -1 });
+
+exports.getAllBabyFoods = () => Product.find({ selectedSubCategory: 'Храни' }).sort({ productQuantity: -1 });
+
+exports.getAllBabyDrinks = () => Product.find({ selectedSubCategory: 'Напитки' }).sort({ productQuantity: -1 });
+
+exports.getAllBabyCosmetics = () => Product.find({ selectedSubCategory: 'Козметика' }).sort({ productQuantity: -1 });
+
+exports.getAllDiapersAndWetWipes = () => Product.find({ selectedSubCategory: 'Пелени и мокри кърпички' }).sort({ productQuantity: -1 });
+
+exports.getAllDetergentsAndFabricSofteners = () => Product.find({ selectedSubCategory: 'Перилни препарати и омекотители' }).sort({ productQuantity: -1 });
+
+// HOME AND GARDEN
+
+exports.getAllHomeAndGardenProducts = () => Product.find({ category: 'За дома и бита' }).sort({ productQuantity: -1 });
+
+exports.getAllLaundryDetergents = () => Product.find({ selectedSubCategory: 'Перилни препарати' }).sort({ productQuantity: -1 });
+
+exports.getAllCleaningPreparations = () => Product.find({ selectedSubCategory: 'Почистващи препарати' }).sort({ productQuantity: -1 });
+
+exports.getAllPapersNapkinsFoilsEnvelopes = () => Product.find({ selectedSubCategory: 'Хартии, салфетки, фолиа, пликове' }).sort({ productQuantity: -1 });
+
+exports.getAllCleaningProducts = () => Product.find({ selectedSubCategory: 'Средства за почистване' }).sort({ productQuantity: -1 });
+
+exports.getAllAirFreshenersCandlesInsecticides = () => Product.find({ selectedSubCategory: 'Ароматизатори, свещи, инсектициди' }).sort({ productQuantity: -1 });
+
+exports.getAllHoneAndGarden = () => Product.find({ selectedSubCategory: 'За бита и градината' }).sort({ productQuantity: -1 });
+
 exports.searchProducts = (query) => {
     return Product.find({ productName: { $regex: query, $options: 'i' } });
 };
