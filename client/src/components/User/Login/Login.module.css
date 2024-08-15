@@ -1,0 +1,107 @@
+.login-logo {
+    background-color: var(--orange);
+}
+
+.login-logo img{
+    margin: 0 auto;
+    width: 10em;
+    height: 10em;
+}  
+
+.site-login {
+    background-color: #EEE;
+    height: 100vh;
+}
+
+.site-login .container {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 0.3em;
+    padding: 1em;
+}
+
+.login-pic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    padding: 1em 0;
+}
+
+.login-pic i,
+.login-pic p {
+    color: var(--textColor);
+}
+
+.login-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+}
+
+.login-form .email,
+.login-form .password {
+    display: flex;
+    flex-direction: column;
+}
+.login-form .email input,
+.login-form .password input {
+    min-width: 15em;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.login-form .email input::placeholder,
+.login-form .password input::placeholder{
+    font-size: 0.8em;
+}
+
+.login-form .email input:focus,
+.login-form .password input:focus  {
+    outline: none;
+}
+
+.login-form .login-btn {
+    cursor: pointer;
+    padding: 0 6.5em ;
+    border: none;
+    border-radius: 0.3em;
+    text-decoration: none;
+    color: var(--textColor);
+    background-color: var(--orange);
+    transform: scale(1);
+    transition: transform 0.7s;
+}
+
+.login-form .login-btn:hover{
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.login-form .last-child{
+    font-size: 0.7em;
+    text-align: center;
+    margin-top: 1em;
+}
+
+.login-form .last-child span {
+    padding-left: 0.2em;
+}
+
+.login-form .last-child span a{
+    color: var(--textColor);
+}
+
+.errors-form {
+    color: red;
+    font-size: 0.6em;
+    text-align: center;
+    margin-top: 0.5em;
+}
