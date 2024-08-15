@@ -1,0 +1,112 @@
+.register-logo {
+    background-color: var(--orange);
+}
+
+.register-logo img{
+    margin: 0 auto;
+    width: 10em;
+    height: 10em;
+}
+
+.site-register {
+    background-color: #EEE;
+    height: 100vh;
+}
+
+.site-register .container {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 0.3em;
+    padding: 1em;
+}
+
+.register-pic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    padding: 1em 0;
+}
+
+.register-pic i,
+.register-pic p {
+    color: var(--textColor);
+}
+
+.register-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+}
+
+.register-form .email,
+.register-form .password,
+.register-form .rePassword {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-form .email input,
+.register-form .password input,
+.register-form .rePassword input {
+    min-width: 15em;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.register-form .email input::placeholder,
+.register-form .password input::placeholder ,
+.register-form .rePassword input::placeholder {
+    font-size: 0.8em;
+}
+
+.register-form .email input:focus,
+.register-form .password input:focus,
+.register-form .rePassword input:focus {
+    outline: none;
+}
+
+.register-form .register-btn {
+    cursor: pointer;
+    padding: 0 4.8em ;
+    border: none;
+    border-radius: 0.3em;
+    text-decoration: none;
+    color: var(--textColor);
+    background-color: var(--orange);
+    transform: scale(1);
+    transition: transform 0.7s;
+}
+
+.register-form .register-btn:hover{
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.register-form .last-child{
+    font-size: 0.7em;
+    text-align: center;
+    margin-top: 1em;
+}
+
+.register-form .last-child span {
+    padding-left: 0.2em;
+}
+
+.register-form .last-child span a{
+    color: var(--textColor);
+}
+
+.errors-form {
+    color: red;
+    font-size: 0.6em;
+    text-align: center;
+    margin-top: 0.5em;
+}
