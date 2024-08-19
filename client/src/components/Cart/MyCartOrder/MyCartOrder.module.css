@@ -1,0 +1,300 @@
+.myCartOrder-logo {
+    background-color: var(--orange);
+}
+
+.myCartOrder-logo img {
+    margin: 0 auto;
+    width: 10em;
+    height: 10em;
+}
+
+.site-myCartOrder {
+    height: 100%;
+    background-color: #EEE;
+}
+
+/* ------------------------- */
+
+.site-myCartOrder .container {
+    margin: 2em auto 2em auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    max-width: 850px;
+    /* max-width: 800px; */
+    border-radius: 0.3em;
+    padding: 1em;
+    flex-wrap: wrap;
+    background-color: #fff;
+}
+
+.site-myCartOrder .container h3 {
+    color: var(--textColor);
+}
+
+.myCartOrder-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.mini-nav-oreder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mini-nav-oreder p {
+    color: #616161;
+}
+
+.mini-nav-oreder p:nth-child(odd) {
+    font-size: 1.5em;
+}
+
+.mini-nav-oreder p:nth-child(5) {
+    font-size: 2em;
+}
+
+.mini-nav-oreder p:nth-child(6),
+.mini-nav-oreder p:nth-child(7) {
+    color: #c1c1c1;
+}
+
+.mini-nav-order-steps {
+    display: flex;
+    gap: 8.5em;
+}
+
+.mini-nav-order-steps p {
+    font-size: 0.8em;
+    color: #616161;
+
+}
+
+.mini-nav-order-steps p:nth-child(3) {
+    font-size: 0.9em;
+}
+
+.mini-nav-order-steps p:nth-child(4) {
+    color: #c1c1c1;
+}
+
+.data-order {
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.myCartOrder-personalData {
+    border-right: 1px solid #cdcdcd;
+    padding-right: 1em;
+}
+
+.myCartOrder-personalData p:first-child {
+    margin-bottom: 0.5em;
+    color: var(--textColor);
+}
+
+.myCartOrder-personalData p:nth-child(2),
+.myCartOrder-personalData p:nth-child(3) {
+    font-size: 0.9em;
+    color: var(--textColor);
+}
+
+.myCartOrder-personalData p:nth-child(4) {
+    color: var(--textColor);
+    margin-bottom: 1em;
+}
+
+.myCartOrder-personalData-form {
+    border: 1px solid #aaaaaa;
+    background-color: #EEE;
+    max-width: 22.4em;
+    padding: 1em;
+    border-radius: 0.3em;
+    margin-bottom: 1.5em;
+}
+
+.myCartOrder-personalData-form form {
+    position: relative;
+}
+
+.myCartOrder-personalData-form form label {
+    font-size: 0.8em;
+    color: var(--textColor);
+}
+
+.myCartOrder-personalData-form .form-day-hour,
+.myCartOrder-personalData-form .country-city,
+.myCartOrder-personalData-form .hood {
+    display: flex;
+    gap: 0.5em;
+    margin-bottom: 1.4em;
+}
+
+.form-day-hour option {
+    color: var(--textColor);
+}
+
+.myCartOrder-personalData-form select {
+    flex: 1;
+    appearance: none;
+    padding: 0.5em 0 0.5em 0.2em;
+    color: var(--textColor);
+    border-radius: 0.3em;
+}
+
+.myCartOrder-personalData-form select:focus {
+    outline: none;
+}
+
+.myCartOrder-personalData-form form textarea {
+    resize: none;
+    font-size: 0.9em;
+    color: var(--textColor);
+    border-radius: 0.3em;
+}
+
+.myCartOrder-personalData-form form textarea:focus {
+    outline: none;
+}
+
+.pay-method p:nth-child(2),
+.pay-method p:last-child {
+    border: 1px solid #EEE;
+    padding: 0.8em;
+    max-width: 25.5em;
+}
+
+.pay-method p:nth-child(2) input,
+.pay-method p:last-child input {
+    margin-right: 1em;
+}
+
+.comments-order p:nth-child(2) {
+    font-size: 0.8em;
+    max-width: 53ch;
+    margin-bottom: 1em;
+}
+
+.comments-order p:nth-child(2) span {
+    font-weight: bold;
+}
+
+.comments-order a {
+    text-decoration: none;
+    color: var(--orange);
+}
+
+.comments-order a:hover {
+    color: rgb(180, 84, 0);
+}
+
+.comments-order textarea {
+    resize: none;
+    font-size: 0.9em;
+    color: var(--textColor);
+}
+
+.comments-order textarea:focus {
+    outline: none;
+}
+
+.myCartOrder-personalOrder {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1em;
+    gap: 1em;
+    color: var(--textColor);
+}
+
+.personalOrder-countProduct p {
+    font-size: 0.9em;
+    margin-bottom: 0.5em;
+}
+
+.personalOrder-countProduct p span:first-child {
+    margin: 0 1em 0 1em;
+}
+
+.personalOrder-countProduct::after {
+    content: '';
+    display: block;
+    border-bottom: 1px solid #EEE
+}
+
+.myCartOrder-personalOrder .count-product,
+.myCartOrder-personalOrder .delivery-price {
+    font-size: 0.9em;
+}
+
+.myCartOrder-personalOrder .delivery-price span,
+.myCartOrder-personalOrder .count-product span {
+    margin-right: 8.6em;
+}
+
+.myCartOrder-personalOrder .total-personalOrder-price {
+    font-size: 1.1em;
+}
+
+.myCartOrder-personalOrder .total-personalOrder-price span {
+    margin-left: 10.9em;
+    font-weight: bold;
+}
+
+.myCartOrder-personalOrder .total-personalOrder-price::before {
+    content: '';
+    display: block;
+    border-top: 1px solid #EEE;
+    margin-bottom: 0.5em;
+}
+
+.myCartOrder-personalOrder .orderBtn {
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 0.3em;
+    text-align: center;
+    padding: 0.5em;
+    margin-bottom: 2em;
+    color: var(--textColor);
+    background-color: var(--orange);
+    border: none;
+    transform: scale(0.95);
+    transition: transform 0.7s;
+}
+
+.myCartOrder-personalOrder .orderBtn:hover {
+    color: #fff;
+    transform: scale(1);
+}
+
+.myCartOrder-personalOrder i {
+    padding-right: 1em;
+    font-size: 1em;
+}
+
+.selectInput {
+    border-color: red;
+}
+
+.error-addres {
+    position: absolute;
+    top: 30.6%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+    font-size: 0.6em;
+    color: red;
+}
+
+.errors-form {
+    position: absolute;
+    top: 48%;
+    left: 24%;
+    transform: translate(-50%, -50%);
+    font-size: 0.6em;
+    color: red;
+}
