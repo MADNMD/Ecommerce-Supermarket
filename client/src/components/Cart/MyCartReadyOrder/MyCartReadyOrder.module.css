@@ -1,0 +1,206 @@
+.myCartReadyOrder-logo {
+    background-color: var(--orange);
+}
+
+.myCartReadyOrder-logo img {
+    margin: 0 auto;
+    width: 10em;
+    height: 10em;
+}
+
+.site-myCartReadyOrder {
+    height: 100%;
+    background-color: #EEE;
+}
+
+/* ------------------------- */
+
+.site-myCartReadyOrder .container {
+    margin: 2em auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    max-width: 850px;
+    border-radius: 0.3em;
+    padding: 1em;
+    flex-wrap: wrap;
+    background-color: #fff;
+}
+
+.site-myCartReadyOrder .container h3 {
+    margin-bottom: 1em;
+    color: var(--textColor);
+}
+
+.site-myCartReadyOrder .container h3 span {
+    color: var(--orange);
+}
+
+.myCartReadyOrder-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.mini-nav-ready-oreder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mini-nav-ready-oreder p {
+    color: #616161;
+}
+
+.mini-nav-ready-oreder p:nth-child(odd) {
+    font-size: 1.5em;
+}
+
+.mini-nav-ready-oreder p:nth-child(7) {
+    font-size: 2em;
+}
+
+.mini-nav-ready-oreder p:nth-child(6),
+.mini-nav-ready-oreder p:nth-child(7) {
+    color: #616161;
+}
+
+.mini-nav-ready-order-steps {
+    display: flex;
+    gap: 8.5em;
+}
+
+.mini-nav-ready-order-steps p {
+    font-size: 0.8em;
+    color: #616161;
+
+}
+
+.mini-nav-ready-order-steps p:nth-child(3) {
+    font-size: 0.8em;
+}
+
+.mini-nav-ready-order-steps p:nth-child(4) {
+    font-size: 0.9em;
+    color: #616161;
+
+}
+
+/* ----------------------------------- */
+
+.data-ready-order {
+    display: flex;
+    justify-content: center;
+
+}
+
+.data-ready-order .flag-icon i {
+    font-size: 2.2em;
+    color: #8e8e8e;
+    margin-right: 0.5em;
+    margin-top: 0.1em;
+    transform: rotate(-25deg);
+}
+
+.data-ready-order-content p {
+    color: var(--textColor);
+    margin-bottom: 1em;
+}
+
+.data-ready-order-content p:nth-child(4) {
+    margin-bottom: 2.5em;
+}
+
+.data-ready-order-content p:nth-child(2) span {
+    color: var(--orange);
+    font-weight: bold;
+}
+
+.suggestions {
+    display: flex;
+    flex-direction: column;
+}
+
+.suggestions-1 {
+    margin-bottom: 4em;
+}
+
+.suggestions-1,
+.suggestions-2 {
+    display: flex;
+    gap: 4em;
+}
+
+.suggestions-1 p:nth-child(1),
+.suggestions-2 p:nth-child(1) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    width: 1em;
+    height: 1em;
+    background-color: #c6c6c6;
+    border-radius: 50%;
+    padding: 0.7em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.suggestions-1-content h6,
+.suggestions-2-content h6 {
+    color: var(--textColor);
+    margin-bottom: 0.5em;
+}
+
+.suggestion-1-content-form input:focus {
+    outline: none;
+}
+
+.suggestion-1-content-form .suggestion-1-content-form-btn {
+    text-decoration: none;
+    margin-left: 1em;
+    background-color: var(--orange);
+    color: var(--textColor);
+    padding: 0.2em 3em;
+    border-radius: 0.3em;
+    font-weight: bold;
+    transform: scale(1);
+    transition: 0.5s;
+    cursor: pointer;
+    border: none;
+}
+
+.suggestion-1-content-form .suggestion-1-content-form-btn:hover {
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.suggestion-1-content-form form {
+    position: relative;
+}
+
+.suggestion-2-content-icon a {
+    text-decoration: none;
+    color: var(--textColor);
+}
+
+.suggestion-2-content-icon a:first-child {
+    margin-right: 0.9em;
+}
+
+.suggestion-2-content-icon a i {
+    font-size: 1.5em;
+}
+
+.errors-form {
+    position: absolute;
+    top: 138%;
+    left: 0.1%;
+    margin: 0 auto;
+    color: red;
+    font-size: 0.6em;
+    text-wrap: nowrap;
+}
