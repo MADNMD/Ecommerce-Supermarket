@@ -1,0 +1,177 @@
+@media only screen and (max-width: 768px) {
+    .admin-header {
+        margin-top: 1.7em;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    .admin-header {
+        margin-top: 3.2em;
+    }
+}
+
+.admin-panel-products {
+    margin-top: 9em;
+}
+
+.admin-panel-products .container {
+    max-width: 1550px;
+}
+
+.admin-header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.admin-nav {
+    background-color: #555;
+    color: white;
+    padding: 0.5rem;
+}
+
+.admin-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.admin-nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* ADMIN_ORDERS */
+
+.section-order-users h2{
+    text-align: center;
+    margin-top: 0.5em;
+}
+
+.admin-orders {
+    width: 99.9%;
+    margin-top: 1em;
+    border-collapse: collapse;
+    margin-bottom: 1em;
+}
+
+.admin-orders th, .admin-orders td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.admin-orders tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.product-table-body-orders tr td {
+    text-align: center;
+}
+
+.product-table-body-orders tr td:nth-child(3) a,
+.product-table-body-orders tr td:nth-child(4) a {
+    text-decoration: none;
+    color: var(--orange);
+}
+
+.product-table-body-orders tr td:nth-child(3) a:hover,
+.product-table-body-orders tr td:nth-child(4) a:hover {
+    color: #000;
+}
+
+.orders-content {
+    margin-bottom: 1em;
+}
+
+.orders-content label {
+    font-weight: bold;
+}
+
+.orders-content form{
+    margin: 0 auto;
+    display: flex;
+    gap: 1em;
+    /* flex-direction: column; */
+    justify-content: center;
+    max-width: 15em;
+}
+
+.orders-content select {
+    border-radius: 0.3em;
+    width: 10em;
+}
+
+.orders-content form select:nth-child(2),
+.orders-content form select:nth-child(4) {
+    font-size: 0.9em;
+    margin-bottom: 1em;
+    padding: 0.3em;
+}
+
+/* edit-modal */
+
+.client-modal {
+    /* display: none; */
+    margin-top: 4.5em;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.client-modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 0.3em;
+    width: 80%;
+}
+
+.client-modal-content p {
+    color: var(--orange);
+}
+
+.client-modal-content p span {
+    font-weight: bold;
+    color: var(--textColor);
+}
+
+.client-close{
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.client-close:hover,
+.client-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.client-product-btn {
+    background-color: black;
+    color: #fff;
+    font-weight: bold;
+    margin: 2em auto 0 auto;
+    padding: 1em 4em;
+    border-radius: 0.3em;
+    cursor: pointer;
+}
+
+.client-product-btn:hover {
+    background-color: #959494;
+    color: black;
+}
