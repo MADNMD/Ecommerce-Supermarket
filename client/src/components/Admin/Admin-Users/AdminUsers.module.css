@@ -1,0 +1,109 @@
+@media only screen and (max-width: 768px) {
+    .admin-header {
+        margin-top: 1.7em;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    .admin-header {
+        margin-top: 3.2em;
+    }
+}
+
+.admin-panel-products {
+    margin-top: 9em;
+}
+
+.admin-panel-products .container {
+    max-width: 1550px;
+}
+
+.admin-header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.admin-nav {
+    background-color: #555;
+    color: white;
+    padding: 0.5rem;
+}
+
+.admin-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.admin-nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* USERS - ADMIN */
+
+.admin-section-users h2 {
+    text-align: center;
+    margin-top: 0.5em;
+}
+
+.admin-users {
+    width: 99.9%;
+    margin-top: 1em;
+    border-collapse: collapse;
+    margin-bottom: 1em;
+}
+
+.admin-users th, .admin-users td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.admin-users tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.product-table-bodu-users tr td {
+    text-align: center;
+}
+
+.product-table-bodu-users tr td:nth-child(3) a,
+.product-table-bodu-users tr td:nth-child(4) a {
+    text-decoration: none;
+    color: var(--orange);
+}
+
+.users-content {
+    margin-bottom: 1em;
+}
+
+.users-content label {
+    font-weight: bold;
+    margin-top: 0.2em;
+}
+
+.users-content form{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    max-width: 18em;
+}
+
+.users-content .search-user {
+    border-radius: 0.3em;
+}
+
+.users-content form .search-user:nth-child(2),
+.users-content form .search-user:nth-child(4) {
+    font-size: 0.9em;
+    margin-bottom: 1em;
+    padding: 0.3em;
+}
