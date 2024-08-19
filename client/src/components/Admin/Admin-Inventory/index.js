@@ -1,0 +1,1 @@
+export { AdminInvetory } from './AdminInvetory';
