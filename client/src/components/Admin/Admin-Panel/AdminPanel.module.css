@@ -1,0 +1,48 @@
+@media only screen and (max-width: 768px) {
+    .admin-header {
+        margin-top: 1.7em;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+   
+    .admin-header {
+        margin-top: 3.2em;
+    }
+}
+
+.admin-panel {
+    margin-top: 9em;
+}
+
+.admin-panel .container {
+    max-width: 1550px;
+}
+
+.admin-header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.admin-nav {
+    background-color: #555;
+    color: white;
+    padding: 0.5rem;
+}
+
+.admin-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.admin-nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
