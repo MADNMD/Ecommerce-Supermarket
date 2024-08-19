@@ -1,0 +1,179 @@
+@media only screen and (max-width: 768px) {
+    .admin-header {
+        margin-top: 1.7em;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    .admin-header {
+        margin-top: 3.2em;
+    }
+}
+
+.admin-panel-products {
+    margin-top: 9em;
+}
+
+.admin-panel-products .container {
+    max-width: 1550px;
+}
+
+.admin-header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.admin-nav {
+    background-color: #555;
+    color: white;
+    padding: 0.5rem;
+}
+
+.admin-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.admin-nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* PRODUCTS_BTN ADD MODAL*/
+
+.admin-panel-products .admin-section-products {
+    text-align: center;
+}
+
+.admin-panel-products .container {
+    max-width: 1550px;
+    /* position: relative; */
+}
+
+.admin-section-products h2 {
+    /* text-align: center; */
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+/* .add-product-section-btn {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */
+
+.add-product-section-btn {
+    padding: 0.5em 1em;
+    border: 1px solid #555;
+    border-radius: 0.3em;
+    background-color: #555;
+    color: #fff;
+    cursor: pointer;
+}
+
+.add-product-section-btn:hover {
+    color: #fff;
+    background-color: #222222;
+}
+
+.modal {
+    margin-top: 4.5em;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+
+    transition: opacity 0.5s, transform 0.5s ease-in-out;
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+.modal.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* .hidden {
+    display: none;
+} */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 0.3em;
+    width: 80%;
+    /* max-height: 80vh; 
+    overflow-y: auto;  */
+}
+
+.category-option,
+.subcategory-option  {
+    padding: 0.2em 0;
+    font-size: 1em;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.productForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.productForm input,
+.productForm select {
+    margin-bottom: 0.6em;
+}
+
+.productForm textarea {
+    resize: none;
+}
+
+.add-product-btn {
+    background-color: black;
+    color: #fff;
+    font-weight: bold;
+    margin: 2em auto 0 auto;
+    padding: 1em 4em;
+    border-radius: 0.3em;
+    cursor: pointer;
+}
+
+.add-product-btn:hover {
+    background-color: #959494;
+    color: black;
+}
+
+.errors-form {
+    color: red;
+    font-size: 0.6em;
+    text-align: center;
+    margin-bottom: 1em;
+}
