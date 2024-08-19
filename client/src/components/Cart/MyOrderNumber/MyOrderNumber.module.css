@@ -1,0 +1,142 @@
+.myCart-logo {
+    background-color: var(--orange);
+}
+
+.myCart-logo img {
+    margin: 0 auto;
+    width: 10em;
+    height: 10em;
+}
+
+.site-myCart {
+    height: 100%;
+}
+
+/* ---------------------------------- */
+
+.site-myCart .container {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    margin-left: 5em;
+}
+
+.site-myCart .container h3 {
+    color: var(--textColor);
+    margin-bottom: 1em;
+}
+
+.site-myCart .container h3 span {
+    color: var(--orange);
+}
+
+.myCart-product-order-number {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 67%;
+    border-right: 1px solid var(--orange);
+    padding-right: 1em;
+    margin-top: 2em;
+}
+
+.myCart-table-order-number {
+    border-collapse: collapse;
+}
+
+.myCart-table-order-number tr th {
+    font-size: 0.7em;
+    color: #727272;
+}
+
+.myCart-table-order-number th,
+.myCart-table-order-number td {
+    border-bottom: 1px solid var(--orange);
+    text-align: center;
+}
+
+.myCart-table-order-number-img-content {
+    display: flex;
+    align-items: center;
+    color: var(--textColor);
+    gap: 1em;
+}
+
+.myCart-table-order-number-img-content img {
+    max-width: 7em;
+    max-height: 7em;
+}
+
+.myCart-table-order-number-img-content a {
+    text-decoration: none;
+    color: var(--textColor);
+}
+
+.myCart-table-order-number-img-content a:hover {
+    color: var(--orange);
+}
+
+.myCart-table-order-number tbody td:nth-child(3) {
+    color: var(--textColor);
+    font-size: 1em;
+}
+
+.myCart-table-order-number tbody td:nth-child(4) {
+    color: var(--textColor);
+}
+
+.myCart-table-order-number tbody td:nth-child(4) span {
+    margin-left: 0.5em;
+    text-align: center;
+}
+
+.myCar-order-number-total-sum {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 73%;
+    flex-direction: column;
+    margin-top: 1em;
+    color: var(--textColor);
+}
+
+.myCar-order-number-total-sum p:first-child span {
+    padding-left: 0.3em;
+}
+
+.myCar-order-number-total-sum p:last-child {
+    padding-top: 0.5em;
+    padding-bottom: 2em;
+}
+
+.myCar-order-number-total-sum p:last-child span {
+    font-weight: bold;
+    padding-left: 0.3em;
+}
+
+.myCart-table-order-number tbody tr {
+    position: relative;
+}
+
+/* ------------- */
+
+.delivery-all-price-order-number {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 24%;
+    margin-top: 2.5em;
+    color: var(--textColor);
+    padding-left: 1em;
+}
+
+.delivery-all-price-order-number h6 {
+    margin-bottom: 0.5em;
+}
+
+.delivery-all-price-order-number p:last-child {
+    margin-bottom: 1em;
+}
+
+.delivery-all-price-order-number p:nth-child(odd) {
+    font-size: 0.7em;
+}
