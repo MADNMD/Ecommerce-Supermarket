@@ -1,0 +1,1 @@
+export { Salad } from './Salad';
