@@ -1,0 +1,1 @@
+export { CardThirdItem2 } from './CardThirdItem2';
