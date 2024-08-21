@@ -1,0 +1,1 @@
+export { MilkDrink } from './MilkDrink';
