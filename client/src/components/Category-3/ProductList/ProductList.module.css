@@ -1,0 +1,821 @@
+@media only screen and (max-width: 768px) {
+    .meatAndFish-main-content {
+        margin-top: 1em;
+    }
+   
+    .meatAndFish-main-content .option-btn {
+        text-align: center;
+   }
+
+   .meatAndFish-main-content .cards {
+    justify-content: center;
+   }
+}
+
+.meatAndFish .container {
+    max-width: 1300px;
+    margin: 10em auto;
+}
+
+.meatAndFish-main-content {
+    display: flex;
+    justify-content: start;
+    padding: 3em 0;
+}
+
+.meatAndFish-content {
+    text-align: center;
+    margin-left: 2em;
+    /* margin-left: 3em; */
+}
+
+.meatAndFish-content h3 {
+    color: var(--textColor);
+    padding-bottom: 1em;
+}
+
+.meatAndFish-content .meatAndFish-content-p,
+.meatAndFish-content .meatAndFish-content-p-1,
+.meatAndFish-content .meatAndFish-content-p-2 {
+    color: red;
+}
+
+.meatAndFish-content .meatAndFish-content-p-1::after, 
+.meatAndFish-content .meatAndFish-content-p-2::after {
+    content: '';
+    display: block;
+    border-bottom: 2px solid #EEE;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 2em;
+}
+
+.meatAndFish-content .sometimes::after {
+    content: '';
+    display: block;
+    border-bottom: 2px solid #EEE;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 1em;
+}
+
+.option-btn{
+    text-align: end;
+    margin: 1.5em 0 1em 0;
+}
+
+.option-btn label {
+    font-size: 0.8em;
+}
+
+.option-btn select {
+    font-size: 1em;
+    padding: 0.3em;
+    border-radius: 0.3em;
+}
+
+.option-btn select:focus {
+    outline: none;
+}
+
+/* -------------------------ГЛОБАЛЕН CSS----------------------------- */
+
+/* PAGINATION */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+    margin-top: 2em;
+}
+
+.prev,
+.next {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0.7em;
+    border: none;
+    border-radius: 0.3em;
+}
+
+.activePage,
+.currentPage{
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0.5em 0.8em;
+    border: none;
+    border-radius: 0.3em;
+}
+
+.activePage {
+    background-color: #dbdbdb;
+}
+
+.pagination button:disabled {
+    background-color: #cccccc; 
+    color: #666666; 
+    cursor: not-allowed; 
+    opacity: 0.5; 
+}
+
+/* Карта за грамаж firstCard*/
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.first-card,
+.second-card,
+.third-card,
+.four-card,
+.five-card {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.1em;
+    /* gap: 0.3em; */
+}
+
+.cards .first-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 1 calc(25% - 1em);
+    border: 1px solid #d4d2d2;
+    border-radius: 0.3em;
+    margin-bottom: 0.5em;
+    transition: transform 0.3s ease-in-out;
+}
+
+.cards .first-card:hover {
+    box-shadow: 2px 2px 15px -1px rgba(0,0,0,0.75);
+    transform:  scale(1.05);
+}
+
+.first-card .card-img img {
+    width: 10em;
+    height: 10em;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+
+    background-color: #f5f5f5;
+}
+
+.card-content h6 {
+    text-align: center;
+    /* max-width: 20ch; */
+    max-width: 40ch;
+    font-size: 0.9em;
+    font-weight: lighter;
+    padding: 0.5em 39px;
+    color: var(--textColor);
+}
+
+.card-content .card-price {
+    color: rgb(53, 210, 53);
+    font-weight: bold;
+}
+
+.card-content .weight {
+
+    width: 2.5em;
+    margin: 0.4em 0;
+
+    font-size: 0.8em;
+    color: #fff;
+    padding: 0.2em 0.6em;
+    border-radius: 0.3em;
+    background-color: #8d8b8b;
+}
+
+.card-option {
+    display: flex;
+    gap: 0.3em;
+    padding: 0.5em;
+    margin-bottom: 0.4em;
+}
+
+.card-option .order-product a,
+.card-option .favorite-product a {
+    font-size: 0.7em;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.5em 0.4em;
+    text-wrap: nowrap;
+    color: red;
+    border: 1px solid red;
+    background-color: #fff;
+    border-radius: 0.3em;
+}
+
+.card-option .order-product a:hover,
+.card-option .favorite-product a:hover {
+    color: #fff;
+    background-color: red;
+}
+
+
+.card-option .order-product i,
+.card-option .favorite-product i  {
+    font-size: 1em;
+    padding-right: 0.3em;
+}
+
+.card-option select {
+    border-radius: 0.3em;
+}
+
+/* ----------------------МАЛКА НАВИГАЦИЯ НА ПРОДУКТИТЕ---------------------------- */
+
+@media only screen and (max-width: 768px) {
+    .mini-nav-product{
+        margin-top: 3em;
+        margin-left: 3em;
+    }
+}
+
+.mini-nav-product {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 0.8em;
+    padding: 1em 0 2em 1em ;
+    height: 20em;
+    min-width: 9em;
+    max-width: 9em;
+    background-color: #EEE;
+    border-radius: 0.3em;
+}
+
+.mini-nav-product a {
+    text-decoration: none;
+    font-size: 0.9em;
+    color: var(--textColor);
+}
+
+.mini-nav-product a:hover {
+    color: var(--orange);
+}
+
+/* --------------------------------------- */
+
+
+/* карта за брой secondCard*/
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.1em;
+}
+
+.cards .second-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 0 1 calc(25% - 1em);
+    border: 1px solid #d4d2d2;
+    border-radius: 0.3em;
+    margin-bottom: 0.5em;
+    transition: transform 0.3s ease-in-out;
+}
+
+.cards .second-card:hover {
+    box-shadow: 2px 2px 15px -1px rgba(0, 0, 0, 0.75);
+    transform: scale(1.05);
+}
+
+.second-card .card-img img {
+    width: 10em;
+    height: 10em;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+
+    background-color: #f5f5f5;
+}
+
+.card-content h6 {
+    text-align: center;
+    max-width: 40ch;
+    /* max-width: 20ch; */
+    font-size: 0.9em;
+    font-weight: lighter;
+    padding: 0.5em 39px;
+    color: var(--textColor);
+}
+
+.card-content .card-price {
+    color: rgb(53, 210, 53);
+    font-weight: bold;
+}
+
+.card-content .weight {
+
+    width: 2.5em;
+    margin: 0.4em 0;
+
+    font-size: 0.8em;
+    color: #fff;
+    padding: 0.2em 0.6em;
+    border-radius: 0.3em;
+    background-color: #8d8b8b;
+}
+
+.card-option {
+    display: flex;
+    gap: 0.3em;
+    padding: 0.5em;
+    margin-bottom: 0.4em;
+}
+
+.card-option .order-product a,
+.card-option .favorite-product a {
+    font-size: 0.7em;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.5em 0.4em;
+    text-wrap: nowrap;
+    color: red;
+    border: 1px solid red;
+    background-color: #fff;
+    border-radius: 0.3em;
+}
+
+.card-option .order-product a:hover,
+.card-option .favorite-product a:hover {
+    color: #fff;
+    background-color: red;
+}
+
+
+.card-option .order-product i,
+.card-option .favorite-product i {
+    font-size: 1em;
+    padding-right: 0.3em;
+}
+
+.card-option .count-option {
+    display: flex;
+    align-items: center;
+    gap: 0.1em;
+}
+
+.card-option .minus,
+.card-option .plus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1em;
+    height: 1em;
+    color: #939393;
+    border: 1px solid #c8c8c8;
+    cursor: pointer;
+    font-size: 0.7em;
+}
+
+.card-option .count {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0em 0.3em;
+    color: #939393;
+    border: 1px solid #c8c8c8;
+    font-size: 0.8em;
+}
+
+.card-option .minus:hover,
+.card-option .plus:hover {
+    color: #fff;
+    background-color: rgb(249, 61, 61);
+}
+
+/* --------------------------------------------- */
+
+/* карта за изчерпан продукт thirdCard*/
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.1em;
+    /* gap: 0.3em; */
+}
+
+.cards .third-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 0 1 calc(25% - 1em);
+    border: 1px solid #d4d2d2;
+    border-radius: 0.3em;
+    margin-bottom: 0.5em;
+    transition: transform 0.3s ease-in-out;
+}
+
+.cards .third-card:hover {
+    box-shadow: 2px 2px 15px -1px rgba(0, 0, 0, 0.75);
+    transform: scale(1.05);
+}
+
+.third-card .card-img img {
+    width: 10em;
+    height: 10em;
+    filter: grayscale(100%);
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+
+    background-color: #f5f5f5;
+}
+
+.card-content h6 {
+    text-align: center;
+    max-width: 40ch;
+    /* max-width: 20ch; */
+    font-size: 0.9em;
+    font-weight: lighter;
+    padding: 0.5em 39px;
+    color: var(--textColor);
+}
+
+.card-content .card-price {
+    color: rgb(53, 210, 53);
+    font-weight: bold;
+}
+
+.card-content .weight {
+
+    width: 2.5em;
+    margin: 0.4em 0;
+
+    font-size: 0.8em;
+    color: #fff;
+    padding: 0.2em 0.6em;
+    border-radius: 0.3em;
+    background-color: #8d8b8b;
+}
+
+.card-option p {
+    color: red;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+/* ------------------------------------ */
+
+/* карта на любими  fourCard*/
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.1em;
+    /* gap: 0.3em; */
+}
+
+.cards .four-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 0 1 calc(25% - 1em);
+    border: 1px solid #d4d2d2;
+    border-radius: 0.3em;
+    margin-bottom: 0.5em;
+    transition: transform 0.3s ease-in-out;
+}
+
+.cards .four-card:hover {
+    box-shadow: 2px 2px 15px -1px rgba(0, 0, 0, 0.75);
+    transform: scale(1.05);
+}
+
+.four-card .fa-xmark {
+    position: absolute;
+    top: -2%;
+    left: 95%;
+    font-size: 0.8em;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #989898;
+    width: 1em;
+    height: 1em;
+    padding: 0.2em;
+    transform: scale(1);
+    transition: 0.5s;
+}
+
+.four-card .fa-xmark:hover {
+    background-color: red;
+    transform: scale(1.3);
+}
+
+.four-card .card-img img {
+    width: 10em;
+    height: 10em;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    background-color: #f5f5f5;
+}
+
+.card-content h6 {
+    text-align: center;
+    max-width: 40ch;
+    /* max-width: 20ch; */
+    font-size: 0.9em;
+    font-weight: lighter;
+    padding: 0.5em 39px;
+    color: var(--textColor);
+}
+
+.card-content .card-price {
+    color: rgb(53, 210, 53);
+    font-weight: bold;
+}
+
+.card-content .weight {
+    text-align: center;
+    width: 2.5em;
+    margin: 0.4em 0;
+
+    font-size: 0.8em;
+    color: #fff;
+    padding: 0.2em 0.6em;
+    border-radius: 0.3em;
+    background-color: #8d8b8b;
+}
+
+/* .product-info a {
+    text-decoration: none;
+} */
+
+.card-option-fav {
+    display: flex;
+    gap: 1.3em;
+    padding: 0.5em;
+    margin-bottom: 0.4em;
+}
+
+.card-option-fav .order-product a,
+.card-option-fav .favorite-product a {
+    font-size: 0.7em;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.5em 0.4em;
+    text-wrap: nowrap;
+    color: red;
+    border: 1px solid red;
+    background-color: #fff;
+    border-radius: 0.3em;
+}
+
+.card-option-fav .order-product a:hover,
+.card-option-fav .favorite-product a:hover {
+    color: #fff;
+    background-color: red;
+}
+
+
+.card-option-fav .order-product i,
+.card-option-fav .favorite-product i {
+    font-size: 1em;
+    padding-right: 0.3em;
+}
+
+.card-option-fav .count-option {
+    display: flex;
+    align-items: center;
+    gap: 0.1em;
+}
+
+.card-option-fav .minus,
+.card-option-fav .plus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1em;
+    height: 1em;
+    color: #939393;
+    border: 1px solid #c8c8c8;
+    cursor: pointer;
+    font-size: 0.7em;
+}
+
+.card-option-fav .count {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0em 0.3em;
+    color: #939393;
+    border: 1px solid #c8c8c8;
+    font-size: 0.8em;
+}
+
+.card-option-fav .minus:hover,
+.card-option-fav .plus:hover {
+    color: #fff;
+    background-color: rgb(249, 61, 61);
+}
+
+/* -------------------------------------------------- */
+
+/* карта за намаление fiveCard*/
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.1em;
+    /* gap: 0.3em; */
+}
+
+.cards .five-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 0 1 calc(25% - 1em);
+    border: 1px solid #d4d2d2;
+    border-radius: 0.3em;
+    margin-bottom: 0.5em;
+    transition: transform 0.3s ease-in-out;
+}
+
+.cards .five-card:hover {
+    box-shadow: 2px 2px 15px -1px rgba(0, 0, 0, 0.75);
+    transform: scale(1.05);
+}
+
+.five-card .card-img {
+    position: relative;
+}
+
+.discount-percent {
+    position: absolute;
+    top: 15%;
+    left: 105%;
+    transform: translate(-50%, -50%);
+    background-color: #f5f5f5;
+    color: red;
+    border-radius: 0.3em;
+    padding: 0.5em 0.9em;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.five-card .card-img img {
+    width: 10em;
+    height: 10em;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+
+    background-color: #f5f5f5;
+}
+
+.card-content h6 {
+    text-align: center;
+    max-width: 40ch;
+    /* max-width: 20ch; */
+    font-size: 0.9em;
+    font-weight: lighter;
+    padding: 0.5em 39px;
+    color: var(--textColor);
+}
+
+.card-content .card-info-price {
+    display: flex;
+    gap: 1em;
+}
+
+.card-content .card-price-new {
+    color: red;
+    font-weight: bold;
+}
+
+.card-content .card-price-old {
+    color: #8d8b8b;
+    text-decoration: line-through;
+}
+
+.card-content .weight {
+
+    width: 2.5em;
+    margin: 0.4em 0;
+
+    font-size: 0.8em;
+    color: #fff;
+    padding: 0.2em 0.6em;
+    border-radius: 0.3em;
+    background-color: #8d8b8b;
+}
+
+.card-option {
+    display: flex;
+    gap: 0.3em;
+    padding: 0.5em;
+    margin-bottom: 0.4em;
+}
+
+.card-option .order-product a,
+.card-option .favorite-product a {
+    font-size: 0.7em;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.5em 0.4em;
+    text-wrap: nowrap;
+    /* color: var(--orange); */
+    color: red;
+    /* border: 1px solid var(--orange); */
+    border: 1px solid red;
+    background-color: #fff;
+    border-radius: 0.3em;
+}
+
+.card-option .order-product a:hover,
+.card-option .favorite-product a:hover {
+    color: #fff;
+    /* background-color: var(--orange); */
+    background-color: red;
+}
+
+
+.card-option .order-product i,
+.card-option .favorite-product i {
+    font-size: 1em;
+    padding-right: 0.3em;
+}
+
+.card-option .count-option {
+    display: flex;
+    align-items: center;
+    gap: 0.1em;
+}
+
+.card-option .minus,
+.card-option .plus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1em;
+    height: 1em;
+    color: #939393;
+    border: 1px solid #c8c8c8;
+    cursor: pointer;
+    font-size: 0.7em;
+}
+
+.card-option .count {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0em 0.3em;
+    color: #939393;
+    border: 1px solid #c8c8c8;
+    font-size: 0.8em;
+}
+
+.card-option .minus:hover,
+.card-option .plus:hover {
+    color: #fff;
+    background-color: rgb(249, 61, 61);
+}
