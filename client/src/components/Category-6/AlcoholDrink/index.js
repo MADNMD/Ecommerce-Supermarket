@@ -1,0 +1,1 @@
+export { AlcoholDrink } from './AlcoholDrink';
