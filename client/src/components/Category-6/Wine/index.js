@@ -1,0 +1,1 @@
+export { Wine } from './Wine';
