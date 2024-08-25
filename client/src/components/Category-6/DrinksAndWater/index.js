@@ -1,0 +1,1 @@
+export { DrinksAndWater } from './DrinksAndWater';
