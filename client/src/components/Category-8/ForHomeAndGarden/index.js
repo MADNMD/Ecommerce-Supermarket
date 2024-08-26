@@ -1,0 +1,1 @@
+export { ForHomeAndGarden } from './ForHomeAndGarden';
