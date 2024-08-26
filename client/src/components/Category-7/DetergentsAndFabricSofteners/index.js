@@ -1,0 +1,1 @@
+export { DetergentsAndFabricSofteners } from './DetergentsAndFabricSofteners';
