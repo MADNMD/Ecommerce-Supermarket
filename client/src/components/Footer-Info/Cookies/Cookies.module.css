@@ -1,0 +1,36 @@
+@media only screen and (max-width: 600px) {
+    .cookies .container{
+            margin-top: 2em;
+            padding-left: 1em;
+            padding-right: 1em;
+    }
+}
+
+.cookies .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    padding: 2em 0;
+    margin: 9.5em 5em 2em 5em;
+    color: var(--textColor);
+}
+
+.first-section-cookie h6 {
+    padding-bottom: 1em;
+}
+
+.first-section-cookie p:nth-child(2) {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.first-section-cookie p:last-child a{
+    text-decoration: none;
+    color: rgb(36, 134, 199);
+}
+
+.second-section-cookie p:first-child {
+    font-size: 1.1em;
+    font-weight: bold;
+}
