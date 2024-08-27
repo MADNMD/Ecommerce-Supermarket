@@ -1,0 +1,84 @@
+@media only screen and (max-width: 768px) {
+    .pricePolitic{
+            margin-top: 15em;
+            /* padding-left: 1em; */
+            /* padding-right: 1em; */
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .pricePolitic .container{
+            margin-top: 4em;
+            /* padding-left: 1em; */
+            /* padding-right: 1em; */
+    }
+}
+
+.pricePolitic .container {
+    display: flex;
+    flex-direction: column;
+    margin: 11.5em 5em 2em 5em;
+}
+
+.pricePolitic .container h3 {
+    color: var(--textColor);
+    padding-bottom: 1em;
+}
+
+.pricePolitic .container p:nth-child(2) {
+    color: var(--textColor);
+    margin-bottom: 1em;
+}
+
+.pricePolitic .container p:nth-child(2) span,
+.pricePolitic .container p:nth-child(3) span {
+    color: var(--orange);
+    font-weight: bold;
+}
+
+.pricePolitic .container p:nth-child(3) {
+    color: var(--textColor);
+}
+
+.pricePolitic .container p:nth-child(4) {
+    color: var(--textColor);
+    margin-bottom: 1em;
+}
+
+.pricePolitic .container p:nth-child(4) span {
+    color: var(--orange);
+    font-weight: bold;
+}
+
+.pricePolitic .container p:nth-child(5) {
+    color: var(--textColor);
+}
+
+.pricePolitic .container p:nth-child(5) span {
+    font-weight: bold;
+    color: var(--orange);
+}
+
+.pricePolitic .container p:nth-child(6) {
+    font-weight: bold;
+    color: var(--orange);
+    margin-bottom: 1em;
+}
+
+.pricePolitic .container h4 {
+    text-align: center;
+    color: var(--textColor);
+    padding-bottom: 1em;
+}
+
+.pricePolitic .container p:last-child {
+    color: var(--textColor);
+}
+
+.pricePolitic .container p:last-child a {
+    color: var(--orange);
+}
+
+.pricePolitic .container p:last-child a:hover {
+    color: var(--textColor);
+}
