@@ -1,0 +1,1 @@
+export { CatFood } from './CatFood';
