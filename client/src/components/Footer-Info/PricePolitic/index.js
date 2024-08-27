@@ -1,0 +1,1 @@
+export { PricePolitic } from './PricePolitic';
