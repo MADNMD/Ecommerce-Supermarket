@@ -1,0 +1,73 @@
+{
+  "hash": "f4e10d07",
+  "configHash": "89a65c36",
+  "lockfileHash": "5c7b8dc0",
+  "browserHash": "9a4496d5",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "427f4b8e",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "e2f7643b",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "81322e77",
+      "needsInterop": false
+    },
+    "react-toastify": {
+      "src": "../../node_modules/react-toastify/dist/react-toastify.esm.mjs",
+      "file": "react-toastify.js",
+      "fileHash": "5246b13d",
+      "needsInterop": false
+    },
+    "formik": {
+      "src": "../../node_modules/formik/dist/formik.esm.js",
+      "file": "formik.js",
+      "fileHash": "3634bfce",
+      "needsInterop": false
+    },
+    "react-spinners/PacmanLoader": {
+      "src": "../../node_modules/react-spinners/PacmanLoader.js",
+      "file": "react-spinners_PacmanLoader.js",
+      "fileHash": "e0f7236a",
+      "needsInterop": true
+    },
+    "react-icons/go": {
+      "src": "../../node_modules/react-icons/go/index.mjs",
+      "file": "react-icons_go.js",
+      "fileHash": "1c924622",
+      "needsInterop": false
+    },
+    "moment": {
+      "src": "../../node_modules/moment/dist/moment.js",
+      "file": "moment.js",
+      "fileHash": "91db90e5",
+      "needsInterop": false
+    },
+    "@react-google-maps/api": {
+      "src": "../../node_modules/@react-google-maps/api/dist/esm.js",
+      "file": "@react-google-maps_api.js",
+      "fileHash": "091e4942",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-KTSCGB3P": {
+      "file": "chunk-KTSCGB3P.js"
+    },
+    "chunk-MOERMBVA": {
+      "file": "chunk-MOERMBVA.js"
+    },
+    "chunk-BQWMX7FD": {
+      "file": "chunk-BQWMX7FD.js"
+    }
+  }
+}
