@@ -1,0 +1,1 @@
+export { ProductInfoDiscount } from './ProductInfoDiscount';
