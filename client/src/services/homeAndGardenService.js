@@ -66,10 +66,10 @@ export const getAllAirFreshenersCandlesInsecticides = async () => {
     }
 }
 
-export const getAllHoneAndGarden = async () => {
+export const getAllHomeAndGarden = async () => {
 
     try {
-        const getAllHoneAndGarden = await requester.get('/home-and-garden/get-All-home-and-garden');
+        const getAllHoneAndGarden = await requester.get('/home-and-garden/get-all-home-and-garden');
         return getAllHoneAndGarden;
     } catch (error) {
         console.log('Error get-All-home-and-garden service client');
