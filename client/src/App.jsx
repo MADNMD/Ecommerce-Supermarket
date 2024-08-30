@@ -142,6 +142,17 @@ function App() {
                                 <Route path="/user/login" element={<Login hideNavigationAndFooter={hideNavigationAndFooter} />} />
                                 <Route path="/user/register" element={<Register hideNavigationAndFooter={hideNavigationAndFooter} />} />
 
+                                <Route element={<AdminGuards />}>
+                                    <Route path="/admin-panel" element={<AdminPanel showNavigationAndFooter={showNavigationAndFooter} />} />
+                                    <Route path="/admin-add-product" element={<AdminAddProduct showNavigationAndFooter={showNavigationAndFooter} />} />
+                                    <Route path="/admin-invetory" element={<AdminInvetory showNavigationAndFooter={showNavigationAndFooter} />} />
+                                    <Route path="/admin-orders" element={<AdminOrders showNavigationAndFooter={showNavigationAndFooter} />} />
+                                    <Route path="/admin-users" element={<AdminUsers showNavigationAndFooter={showNavigationAndFooter} />} />
+                                    <Route element={<OrderGuards />}>
+                                        <Route path="/my-order-number/:orderNumber" element={<MyOrderNumber hideNavigationAndFooter={hideNavigationAndFooter} />} />
+                                    </Route>
+                                </Route>
+
                                 <Route element={<AuthGuards />}>
                                     <Route path="/user/logout" element={<Logout />} />
 
@@ -239,14 +250,6 @@ function App() {
                                 <Route path="/cookies" element={<Cookies showNavigationAndFooter={showNavigationAndFooter} />} />
                                 <Route path="/contacts" element={<Contacts showNavigationAndFooter={showNavigationAndFooter} />} />
                                 <Route path="/holiday" element={<Holiday showNavigationAndFooter={showNavigationAndFooter} />} />
-
-                                <Route element={<AdminGuards />}>
-                                    <Route path="/admin-panel" element={<AdminPanel showNavigationAndFooter={showNavigationAndFooter} />} />
-                                    <Route path="/admin-add-product" element={<AdminAddProduct showNavigationAndFooter={showNavigationAndFooter} />} />
-                                    <Route path="/admin-invetory" element={<AdminInvetory showNavigationAndFooter={showNavigationAndFooter} />} />
-                                    <Route path="/admin-orders" element={<AdminOrders showNavigationAndFooter={showNavigationAndFooter} />} />
-                                    <Route path="/admin-users" element={<AdminUsers showNavigationAndFooter={showNavigationAndFooter} />} />
-                                </Route>
 
                                 <Route path="*" element={<NotFound />} />
 
