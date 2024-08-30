@@ -1,0 +1,303 @@
+i {
+    font-size: 1.3em;
+    /* font-size: 1.8em; */
+}
+
+.site-header {
+    background-color: var(--orange);
+
+
+    /* добавка за статична навигация */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.site-main {
+    margin-top: 9em;
+    /* добавка за статична навигация */
+}
+
+.site-header .container {
+    max-width: 1350px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    /* position: relative; */
+}
+
+.site-header .logo {
+    width: 8em;
+    height: 8em;
+}
+
+.site-header .search input {
+    color: #fff;
+    border: none;
+    border-bottom: 4px solid #fff;
+    outline: none;
+    width: 20em;
+    background-color: var(--orange);
+}
+
+.site-header .search input::placeholder {
+    color: #fff;
+    font-size: 1.1em;
+}
+
+.search i {
+    color: #fff;
+    padding-right: 0.5em;
+}
+
+/* .site-nav {
+    flex-grow: 1;
+} */
+
+.site-nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+    padding-top: 0.3em;
+
+    /* margin: 0; */
+}
+
+.site-nav ul li {
+    display: block;
+}
+
+.site-nav ul li a {
+    font-size: 1.1em;
+    text-decoration: none;
+    color: #fff;
+}
+
+.site-nav ul li i {
+    padding-right: 0.3em;
+}
+
+.site-nav .profile {
+    display: flex;
+    align-items: center;
+}
+
+.site-nav .profile a i {
+    color: #fff;
+    padding-right: 0.3em;
+}
+
+.admmin-panel a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.profile .profile-tag p,
+.profile .profile-reg a,
+.profile .profile-reg span {
+    margin-bottom: -0.5em;
+}
+
+.profile .profile-tag p {
+    color: #fff;
+}
+
+.profile .profile-reg a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.6em;
+}
+
+.profile .profile-reg a:first-child {
+    padding-top: 0.5em;
+}
+
+.profile .profile-reg span {
+    color: #fff;
+    font-size: 0.6em;
+    padding: 0 0.4em 0 0.4em;
+}
+
+.favorites {
+    display: flex;
+    align-items: center;
+}
+
+.favorites i {
+    color: #fff;
+}
+
+.favorites a i {
+    padding-right: 0.3em;
+}
+
+.favorites .favorites-count {
+    color: #fff;
+}
+
+.favorites .favorites-count p:last-child {
+    font-size: 0.6em;
+}
+
+.cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 0.3em;
+    padding: 0.4em 2em 0.4em 0.4em;
+}
+
+.cart a {
+    padding-right: 0.3em;
+}
+
+.cart a i {
+    color: var(--textColor);
+    padding-right: 0.3em;
+}
+
+.price {
+    color: rgb(53, 210, 53);
+}
+
+.product {
+    color: var(--textColor);
+    font-size: 0.6em;
+}
+
+.products {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    gap: 1.5em;
+    width: 100%;
+    clear: both;
+    margin-top: -0.6em;
+    margin-bottom: 0.8em;
+    text-wrap: nowrap;
+}
+
+.products a {
+    color: var(--textColor);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 0.9em;
+    position: relative;
+}
+
+.products a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.1em;
+    bottom: -3px;
+    left: 0;
+    background-color: #fff;
+    transform-origin: bottom right;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+
+.products a:hover {
+    color: #fff;
+}
+
+.products a:hover::before {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+}
+
+/* HAMURGER MENU */
+
+.site-header .search input {
+    color: #fff;
+    border: none;
+    border-bottom: 4px solid #fff;
+    outline: none;
+    width: 20em;
+    background-color: var(--orange);
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.ham-close {
+    position: absolute;
+    top: 10%;
+    left: 95%;
+    transform: translate(-50%, -50%);
+    padding-left: 1em;
+}
+
+.ham-icon,
+.ham-close {
+    color: #fff;
+    padding-right: 1em;
+}
+
+.ham-icon i {
+    font-size: 2.5em;
+}
+
+.ham-close span {
+    font-size: 3em;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .site-nav ul {
+        /* display: none; */
+        justify-content: space-around;
+        flex-direction: row;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: var(--orange);
+        padding: 10px;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .site-nav ul.show {
+        display: flex;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .site-nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .products {
+        display: none;
+    }
+
+    .products.show {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--orange);
+        width: 100%;
+        padding: 10px;
+        border-radius: 0 0 10px 10px;
+        margin-top: 3em;
+        font-size: 0.8em;
+    }
+
+    .products.show a {
+        font-size: 1.5em;
+    }
+
+
+}
