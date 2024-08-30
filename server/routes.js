@@ -11,6 +11,7 @@ const allSweetAndSaltyController = require('./controllers/sweetAndSaltyControlle
 const drinkAndWaterController = require('./controllers/drinkAndWaterController');
 const babyAndChildrenController = require('./controllers/babyAndChildrenController');
 const homeAndGardenController = require('./controllers/homeAndGardenController');
+const dogAndCatController = require('./controllers/dogAndCatController')
 
 router.use('/users', userController);
 router.use('/email', emailController);
@@ -23,5 +24,6 @@ router.use('/sweet-and-salty', allSweetAndSaltyController);
 router.use('/drink-and-water', drinkAndWaterController);
 router.use('/baby-and-children', babyAndChildrenController);
 router.use('/home-and-garden', homeAndGardenController);
+router.use('/dog-and-cat', dogAndCatController);
 
 module.exports = router;
