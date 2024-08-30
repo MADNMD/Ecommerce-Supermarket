@@ -136,9 +136,21 @@ exports.getAllPapersNapkinsFoilsEnvelopes = () => Product.find({ selectedSubCate
 
 exports.getAllCleaningProducts = () => Product.find({ selectedSubCategory: 'Средства за почистване' }).sort({ productQuantity: -1 });
 
-exports.getAllAirFreshenersCandlesInsecticides = () => Product.find({ selectedSubCategory: 'Ароматизатори, свещи, инсектициди' }).sort({ productQuantity: -1 });
+exports.getAllAirFreshenersCandlesInsecticides = () => Product.find({ selectedSubCategory: 'Ароматизатори и свещи' }).sort({ productQuantity: -1 });
 
-exports.getAllHoneAndGarden = () => Product.find({ selectedSubCategory: 'За бита и градината' }).sort({ productQuantity: -1 });
+exports.getAllHomeAndGarden = () => Product.find({ selectedSubCategory: 'За бита и градината' }).sort({ productQuantity: -1 });
+
+// DOG AND CAT
+
+exports.getAllDogAndCatProducts = () => Product.find({ category: 'Куче и котка' }).sort({ productQuantity: -1 });
+
+exports.getAllDogFoods = () => Product.find({ selectedSubCategory: 'Храна за куче' }).sort({ productQuantity: -1 });
+
+exports.getAllCatFoods = () => Product.find({ selectedSubCategory: 'Храна за коте' }).sort({ productQuantity: -1 });
+
+exports.getAllTreats = () => Product.find({ selectedSubCategory: 'Лакомства' }).sort({ productQuantity: -1 });
+
+exports.getAllAccessories = () => Product.find({ selectedSubCategory: 'Аксесоари' }).sort({ productQuantity: -1 });
 
 exports.searchProducts = (query) => {
     return Product.find({ productName: { $regex: query, $options: 'i' } });
