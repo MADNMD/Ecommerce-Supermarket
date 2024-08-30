@@ -36,7 +36,7 @@ router.get('/get-all-laundry-detergents', async (req, res) => {
 
 });
 
-router.get('/get-all-cleaninig-preparations', async (req, res) => {
+router.get('/get-all-cleaning-preparations', async (req, res) => {
 
     try {
 
@@ -57,7 +57,7 @@ router.get('/get-all-papers-napkins-foils-envelopes', async (req, res) => {
 
     try {
 
-        const products = await productService.getAllPapersNapkinsFoilEnvelopes();
+        const products = await productService.getAllPapersNapkinsFoilsEnvelopes();
 
         res.status(200).json(products);
 
@@ -104,11 +104,11 @@ router.get('/get-All-air-fresheners-candles-insecticides', async (req, res) => {
 
 });
 
-router.get('/get-only-home-and-garden', async (req, res) => {
+router.get('/get-all-home-and-garden', async (req, res) => {
 
     try {
 
-        const products = await productService.getOnlyHomeAndGarden();
+        const products = await productService.getAllHomeAndGarden();
 
         res.status(200).json(products);
 
