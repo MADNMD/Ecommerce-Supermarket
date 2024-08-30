@@ -100,6 +100,7 @@ import { NotFound } from "./components/NotFound";
 import { AdminGuards } from "./components/Guards/AdminGuards";
 import { AuthGuards } from "./components/Guards/AuthGuards";
 import { OrderGuards } from "./components/Guards/OrderGuards";
+import { ScrollTop } from "./components/ScrollTop";
 
 function App() {
 
@@ -128,12 +129,12 @@ function App() {
                         pauseOnHover={false}
                         hideProgressBar={true}
                     />
+                    <ScrollTop />
                     <div className="site">
                         {showNavigation && <Navigation />}
                         <main className="site-main">
 
                             <Routes>
-
                                 <Route path="/" element={<Home showNavigationAndFooter={showNavigationAndFooter} />} />
 
                                 <Route path="/search" element={<Search showNavigationAndFooter={showNavigationAndFooter} />} />
@@ -148,7 +149,7 @@ function App() {
                                     <Route path="/user/favorites" element={<Favorite showNavigationAndFooter={showNavigationAndFooter} />} />
                                     <Route path="/user/profile/" element={<Profile showNavigationAndFooter={showNavigationAndFooter} />} />
 
-                                        <Route path="/my-cart" element={<MyCart hideNavigationAndFooter={hideNavigationAndFooter} />} />
+                                    <Route path="/my-cart" element={<MyCart hideNavigationAndFooter={hideNavigationAndFooter} />} />
                                     <Route element={<OrderGuards />}>
                                         <Route path="/my-cart-order" element={<MyCartOrder hideNavigationAndFooter={hideNavigationAndFooter} />} />
                                         <Route path="/my-cart-ready-order" element={<MyCartReadyOrder hideNavigationAndFooter={hideNavigationAndFooter} />} />
