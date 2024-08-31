@@ -15,7 +15,7 @@ export const Footer = () => {
                 </div>
                 <div className={styles.useful}>
                     <p>ПОЛЕЗНО</p>
-                    <Link to="./interesting">Интересно</Link>
+                    <Link to="/interesting">Интересно</Link>
                     <Link to="/contacts">Контакти</Link>
                     <Link to="/holiday">Празнично работно време на Магазин VANIMI</Link>
                 </div>
