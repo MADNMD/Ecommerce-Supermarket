@@ -101,6 +101,7 @@ import { AdminGuards } from "./components/Guards/AdminGuards";
 import { AuthGuards } from "./components/Guards/AuthGuards";
 import { OrderGuards } from "./components/Guards/OrderGuards";
 import { ScrollTop } from "./components/ScrollTop";
+import { Interesting } from "./components/Footer-Info/Interesting";
 
 function App() {
 
@@ -250,6 +251,7 @@ function App() {
                                 <Route path="/cookies" element={<Cookies showNavigationAndFooter={showNavigationAndFooter} />} />
                                 <Route path="/contacts" element={<Contacts showNavigationAndFooter={showNavigationAndFooter} />} />
                                 <Route path="/holiday" element={<Holiday showNavigationAndFooter={showNavigationAndFooter} />} />
+                                <Route path="/interesting" element={<Interesting showNavigationAndFooter={showNavigationAndFooter} />} />
 
                                 <Route path="*" element={<NotFound />} />
 
