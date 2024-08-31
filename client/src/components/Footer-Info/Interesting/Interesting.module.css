@@ -1,0 +1,30 @@
+.interesting .container {
+    padding: 2em 0;
+    max-width: 1800px;
+    margin: 7.5em auto 0 auto;    
+    display: flex;
+    flex-direction: column;
+}
+
+.interesting-img img {
+    max-height: 28em;
+}
+
+.line-1 {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1.5em 1em 0 1em;
+}
+
+.card-1,
+.card-2,
+.card-3 {
+    border: 1px solid black;
+}
+
+.card-1-img img {
+    width: auto;
+    height: 5em;
+}
