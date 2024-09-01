@@ -1,7 +1,12 @@
+a {
+    text-decoration: none;
+    color: var(--textColor);
+}
+
 .interesting .container {
     padding: 2em 0;
     max-width: 1800px;
-    margin: 7.5em auto 0 auto;    
+    margin: 7.5em auto 0 auto;
     display: flex;
     flex-direction: column;
 }
@@ -18,13 +23,35 @@
     margin: 1.5em 1em 0 1em;
 }
 
-.card-1,
-.card-2,
-.card-3 {
-    border: 1px solid black;
+.line-1 .card-1,
+.line-1 .card-2,
+.line-1 .card-3 {
+    width: calc(33.33% - 0.5em);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.5em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    transition: box-shadow 0.3s ease;
 }
 
-.card-1-img img {
-    width: auto;
-    height: 5em;
+.card-1-img img,
+.card-3-img img {
+    width: 100%;
+    height: 20em;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+}
+
+.card-2-img img {
+    height: 23.8em;
+    border-radius: 0.5em;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.3em;
+}
+
+.content {
+    text-align: center;
 }
