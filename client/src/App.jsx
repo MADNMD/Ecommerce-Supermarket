@@ -42,7 +42,6 @@ import { ProductInfo } from "./components/Product-View/ProductInfo";
 import { ProductInfoDiscount } from "./components/Product-View/ProductInfoDiscount";
 import { ProductInfoExhausted } from "./components/Product-View/ProductInfoExhaused";
 import { ProductInfoSecond } from "./components/Product-View/ProductInfoSecond";
-import { ProductInfoThird } from "./components/Product-View/ProductInfoThird";
 import { MeatAndFish } from "./components/Category-3/MeatAndFish/MeatAndFish";
 import { AuthProvier } from "./contexts/authContext";
 import { ProfileProvider } from "./contexts/profileContext";
@@ -242,7 +241,6 @@ function App() {
 
                                 <Route path="/product-info/:productId" element={<ProductInfo showNavigationAndFooter={showNavigationAndFooter} />} />
                                 <Route path="/product-info-second/:productId" element={<ProductInfoSecond showNavigationAndFooter={showNavigationAndFooter} />} />
-                                <Route path="/product-info-third/:productId" element={<ProductInfoThird showNavigationAndFooter={showNavigationAndFooter} />} />
                                 <Route path="/product-info-discount/:productId" element={<ProductInfoDiscount showNavigationAndFooter={showNavigationAndFooter} />} />
                                 <Route path="/product-info-exhausted/:productId" element={<ProductInfoExhausted showNavigationAndFooter={showNavigationAndFooter} />} />
 
