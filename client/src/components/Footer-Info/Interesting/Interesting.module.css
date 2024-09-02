@@ -15,6 +15,12 @@ a {
     max-height: 28em;
 }
 
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.3em;
+}
+
 .line-1 {
     display: flex;
     gap: 1em;
@@ -24,34 +30,77 @@ a {
 }
 
 .line-1 .card-1,
-.line-1 .card-2,
 .line-1 .card-3 {
-    width: calc(33.33% - 0.5em);
+    width: calc(30% - 0.5em);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 0.5em;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
     transition: box-shadow 0.3s ease;
 }
 
-.card-1-img img,
-.card-3-img img {
+.line-1 .card-2 {
+    width: calc(40% - 0.5em);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.5em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    transition: box-shadow 0.3s ease;
+}
+
+.line-1 .card-1-img img,
+.line-1 .card-3-img img
+/* .line-2 .card-1-img img,
+.line-2 .card-4-img img  */
+{
     width: 100%;
-    height: 20em;
+    max-height: 20em;
     border-top-left-radius: 0.5em;
     border-top-right-radius: 0.5em;
 }
 
-.card-2-img img {
-    height: 23.8em;
+.line-1 .card-2-img img {
+    max-height: 19.6em;
     border-radius: 0.5em;
 }
 
-.header {
+.line-2 {
     display: flex;
+    gap: 1em;
+    align-items: stretch;
     justify-content: space-between;
-    margin: 0.3em;
+    margin: 1.5em 1em 0 1em;
 }
 
-.content {
-    text-align: center;
+.line-2 .card-1,
+.line-2 .card-4 {
+    width: calc(30% - 0.5em);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.5em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    transition: box-shadow 0.3s ease;
+}
+
+.line-2 .card-2,
+.line-2 .card-3 {
+    width: calc(20% - 0.5em);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.5em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    transition: box-shadow 0.3s ease;
+}
+
+.line-2 .card-2-img img,
+.line-2 .card-3-img img,
+.line-2 .card-1-img img,
+.line-2 .card-4-img img {
+    width: 100%;
+    height: auto;
+    max-height: 16em; 
+    object-fit: cover;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+}
+
+.line-2 .card-2-img img,
+.line-2 .card-3-img img  {
+    height: 16em;
 }
