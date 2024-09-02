@@ -243,6 +243,7 @@ export const AdminAddProduct = ({ showNavigationAndFooter }) => {
                                     <option value="180">180</option>
                                     <option value="190">190</option>
                                     <option value="193">193</option>
+                                    <option value="198">198</option>
                                     <option value="200">200</option>
                                     <option value="201">201</option>
                                     <option value="220">220</option>
@@ -251,6 +252,8 @@ export const AdminAddProduct = ({ showNavigationAndFooter }) => {
                                     <option value="250">250</option>
                                     <option value="270">270</option>
                                     <option value="275">275</option>
+                                    <option value="280">280</option>
+                                    <option value="290">290</option>
                                     <option value="300">300</option>
                                     <option value="325">325</option>
                                     <option value="330">330</option>
@@ -262,11 +265,13 @@ export const AdminAddProduct = ({ showNavigationAndFooter }) => {
                                     <option value="450">450</option>
                                     <option value="480">480</option>
                                     <option value="500">500</option>
+                                    <option value="530">530</option>
                                     <option value="600">600</option>
                                     <option value="700">700</option>
                                     <option value="750">750</option>
                                     <option value="800">800</option>
                                     <option value="900">900</option>
+                                    <option value="990">990</option>
                                     <option value="1000">1000</option>
                                     <option value="3190">3190</option>
                                     <option value="4125">4125</option>
