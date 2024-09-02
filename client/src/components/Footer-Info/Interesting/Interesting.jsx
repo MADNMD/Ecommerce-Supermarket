@@ -72,7 +72,7 @@ export const Interesting = ({ showNavigationAndFooter }) => {
                                 <img src="../../images/interesting-img/supa.jpg" alt="postno" />
                             </div>
                             <div className={styles.header}>
-                                <h6>Бързи и лесни за приготвяне рецепти на супи</h6>
+                                <h6>Бързи и лесни за приготвяне рецепти на вкусни супи</h6>
                             </div>
                         </Link></div>
                     <div className={styles['card-3']}>
