@@ -38,46 +38,75 @@ export const ProductInfo = ({ showNavigationAndFooter }) => {
         return productDetails.productPrice * count;
     };
 
-    let link = '';
-    let linkSubCategory = '';
+    const categoryLinks = {
+        'Зеленчуци и плодове': '/fruits-and-vegs',
+        'Млечни и яйца': '/milks-and-eggs',
+        'Месо и риба': '/meat-and-fish',
+        'Хляб и тестени': '/bread-and-pasta',
+        'Сладки и солени': '/sweet-and-salty',
+        'Напитки и вода': '/drink-water',
+        'Бебешки и детски': '/baby-and-children-products',
+        'За дома и бита': '/for-home-and-garden-products',
+        'Куче и котка': '/dog-and-cat-products',
+    };
 
-    if (productDetails.category === 'Зеленчуци и плодове') {
-        link = '/fruits-and-vegs';
-    } else if (productDetails.category === 'Млечни и яйца') {
-        link = '/milks-and-eggs';
-    }
+    const subCategoryLinks = {
+        'Плодове': '/fruits',
+        'Зеленчуци': '/vegitables',
+        'Свежи салати': '/salads',
+        'Свежи подправки': '/spices',
+        'Маслини': '/olives',
+        'Сушени плодове и зеленчуци': '/dried',
+        'Ядки и семена': '/nuts',
+        'Пресни млека': '/milks',
+        'Кисели млека': '/yogurts',
+        'Плодови млека, млечни напитки и десерти': '/milkDrinks',
+        'Сирена': '/cheeses',
+        'Кашкавали': '/yellowCheeses',
+        'Масло, сметана и извара': '/butters',
+        'Готови салати': '/packedSalads',
+        'Яйца': '/eggs',
+        'Месо': '/meat',
+        'Месни продукти': '/meat-products',
+        'Риба': '/fish',
+        'Суши и рибни продукти': '/sushi-and-fish-products',
+        'Хляб': '/bread',
+        'Макаронени изделия': '/pasta-product',
+        'Тестени изделия': '/dough-product',
+        'Прясна паста': '/fresh-pasta',
+        'Багети и тортили': '/baguettes-and-trotillas',
+        'Захарни изделия': '/sugar-products',
+        'Зърнени Закуски, корнфлейкс и мюсли': '/breakfast-cereals-cornflakes-and-muesli',
+        'Солени изделия': '/salty-products',
+        'Чипсове и снаксове': '/chips-and-snacks',
+        'Кафе, чай и какао': '/coffee-and-tea',
+        'Вода': '/water',
+        'Фрешове, смутита, плодови и зеленчукови напитки': '/fresh-and-smoothies',
+        'Безалкохолни напитки': '/soft-drink',
+        'Енергийни напитки, витаминозни и изотонични напитки': '/energy-drink',
+        'Сайдер и комбуча': '/cider-and-kombucha',
+        'Бира': '/beer',
+        'Вино': '/wine',
+        'Високоалкохолни напитки': '/alcohol-drink',
+        'Храни': '/baby-foods',
+        'Напитки': '/baby-drinks',
+        'Козметика': '/baby-cosmetics',
+        'Пелени и мокри кърпички': '/diapers-and-wet-wipes',
+        'Перилни препарати и омекотители': '/detergents-and-fabric-softeners',
+        'Перилни препарати': '/laundry-detergents',
+        'Почистващи препарати': '/cleaning-preparations',
+        'Хартии, салфетки, фолиа, пликов': '/papers-napkins-foils-envelopes',
+        'Средства за почистване': '/cleaning-products',
+        'Ароматизатори и свещи': '/air-fresheners-candles-insecticides',
+        'За бита и градината': '/for-home-and-garden',
+        'Храна за куче': '/dog-food',
+        'Храна за коте': '/cat-food',
+        'Лакомства': '/treats',
+        'Аксесоари': '/accessories',
+    };
 
-    if (productDetails.selectedSubCategory === 'Плодове') {
-        linkSubCategory = '/fruits';
-    } else if (productDetails.selectedSubCategory === 'Зеленчуци') {
-        linkSubCategory = '/vegitables';
-    } else if (productDetails.selectedSubCategory === 'Свежи салати') {
-        linkSubCategory = '/salads';
-    } else if (productDetails.selectedSubCategory === 'Свежи подправки') {
-        linkSubCategory = '/spices';
-    } else if (productDetails.selectedSubCategory === 'Маслини') {
-        linkSubCategory = '/olives';
-    } else if (productDetails.selectedSubCategory === 'Сушени плодове и зеленчуци') {
-        linkSubCategory = '/dried';
-    } else if (productDetails.selectedSubCategory === 'Ядки и семена') {
-        linkSubCategory = '/nuts';
-    } else if (productDetails.selectedSubCategory === 'Пресни млека') {
-        linkSubCategory = '/milks';
-    } else if (productDetails.selectedSubCategory === 'Кисели млека') {
-        linkSubCategory = '/yogurts';
-    } else if (productDetails.selectedSubCategory === 'Плодови млека, млечни напитки и десерти') {
-        linkSubCategory = '/milkDrinks';
-    } else if (productDetails.selectedSubCategory === 'Сирена') {
-        linkSubCategory = '/cheeses';
-    } else if (productDetails.selectedSubCategory === 'Кашкавали') {
-        linkSubCategory = '/yellowCheeses';
-    } else if (productDetails.selectedSubCategory === 'Масло, сметана и извара') {
-        linkSubCategory = '/butters';
-    } else if (productDetails.selectedSubCategory === 'Готови салати') {
-        linkSubCategory = '/packedSalads';
-    } else if (productDetails.selectedSubCategory === 'Яйца') {
-        linkSubCategory = '/eggs';
-    }
+    const link = categoryLinks[productDetails.category] || '';
+    const linkSubCategory = subCategoryLinks[productDetails.selectedSubCategory] || '';
 
     const handleAddToCart = async () => {
 
