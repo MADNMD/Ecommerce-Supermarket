@@ -1,0 +1,152 @@
+[
+    {
+        "id": 1,
+        "title": "Супа от пилешки дреболии",
+        "image": "https://www.supichka.com/files/images/3362/fit_1400_933.jpg",
+        "cookTime": "60 мин"
+    },
+    {
+        "id": 2,
+        "title": "Агнешка супа със застройка",
+        "image": "https://www.supichka.com/files/images/3353/fit_1400_933.jpg",
+        "cookTime": "150 мин"
+    },
+    {
+        "id": 3,
+        "title": "Пилешка крем супа",
+        "image": "https://www.supichka.com/files/images/3300/fit_1400_933.jpg",
+        "cookTime": "30 мин"
+    },
+    {
+        "id": 4,
+        "title": "Супа със соев сос, скариди и спагети",
+        "image": "https://www.supichka.com/files/images/3174/fit_1400_933.jpg",
+        "cookTime": "10 мин"
+    },
+    {
+        "id": 5,
+        "title": "Доматена супа с печени чушки",
+        "image": "https://www.supichka.com/files/images/3272/fit_1400_933.jpg",
+        "cookTime": "40 мин"
+    },
+    {
+        "id": 6,
+        "title": "Бял курбан",
+        "image": "https://www.supichka.com/files/images/2962/fit_1400_933.jpg",
+        "cookTime": "130 мин"
+    },
+    {
+        "id": 7,
+        "title": "Пилешка супа с пресечена застройка",
+        "image": "https://www.supichka.com/files/images/2946/fit_1400_933.jpg",
+        "cookTime": "15 мин"
+    },
+    {
+        "id": 8,
+        "title": "Телешко варено",
+        "image": "https://www.supichka.com/files/images/2613/fit_1400_933.jpg",
+        "cookTime": "150 мин"
+    },
+    {
+        "id": 9,
+        "title": "Студена крем супа от карфиол",
+        "image": "https://www.supichka.com/files/images/2556/fit_1400_933.jpg",
+        "cookTime": "10 мин"
+    },
+    {
+        "id": 10,
+        "title": "Зелева детокс супа",
+        "image": "https://www.supichka.com/files/images/2550/fit_1400_933.jpg",
+        "cookTime": "40 мин"
+    },
+    {
+        "id": 11,
+        "title": "Класическа лесна рецепта за леща чорба",
+        "image": "https://www.supichka.com/files/images/2392/fit_1400_933.jpg",
+        "cookTime": "60 мин"
+    },
+    {
+        "id": 12,
+        "title": "Супа от зелен боб",
+        "image": "https://www.supichka.com/files/images/2281/fit_1400_933.jpg",
+        "cookTime": "50 мин"
+    },
+    {
+        "id": 13,
+        "title": "Крем супа от червено цвекло",
+        "image": "https://www.supichka.com/files/images/1645/fit_1400_933.jpg",
+        "cookTime": "30 мин"
+    },
+    {
+        "id": 14,
+        "title": "Доматена крем супа с фиде",
+        "image": "https://www.supichka.com/files/images/1641/fit_1400_933.jpg",
+        "cookTime": "30 мин"
+    },
+    {
+        "id": 15,
+        "title": "Пролетна супа от лапад",
+        "image": "https://www.supichka.com/files/images/1632/fit_1400_933.jpg",
+        "cookTime": "40 мин"
+    },
+    {
+        "id": 16,
+        "title": "Пилешка супа със застройка",
+        "image": "https://www.supichka.com/files/images/1629/fit_1400_933.jpg",
+        "cookTime": "10 мин"
+    },
+    {
+        "id": 17,
+        "title": "Крем супа от моркови",
+        "image": "https://www.supichka.com/files/images/1576/fit_1400_933.jpg",
+        "cookTime": "45 мин"
+    },
+    {
+        "id": 18,
+        "title": "Крем супа от киселец и лапад",
+        "image": "https://www.supichka.com/files/images/1612/fit_1400_933.jpg",
+        "cookTime": "40 мин"
+    },
+    {
+        "id": 19,
+        "title": "Екзотична крем супа от леща",
+        "image": "https://www.supichka.com/files/images/1603/fit_1400_933.jpg",
+        "cookTime": "60 мин"
+    },
+    {
+        "id": 20,
+        "title": "Таратор - пълната рецепта",
+        "image": "https://www.supichka.com/files/images/1549/fit_1400_933.jpg",
+        "cookTime": "15 мин"
+    },
+    {
+        "id": 21,
+        "title": "Пилешка супа по класическа рецепта",
+        "image": "https://www.supichka.com/files/images/1513/fit_1400_933.jpg",
+        "cookTime": "60 мин"
+    },
+    {
+        "id": 22,
+        "title": "Пъстра зеленчукова супа",
+        "image": "https://www.supichka.com/files/images/1492/fit_1400_933.jpg",
+        "cookTime": "40 мин"
+    },
+    {
+        "id": 23,
+        "title": "Рибена чорба",
+        "image": "https://www.supichka.com/files/images/621/fit_1400_933.jpg",
+        "cookTime": "60 мин"
+    },
+    {
+        "id": 24,
+        "title": "Шкембе чорба",
+        "image": "https://www.supichka.com/files/images/438/fit_1400_933.jpg",
+        "cookTime": "30 мин"
+    },
+    {
+        "id": 25,
+        "title": "Крем супа от червена леща",
+        "image": "https://www.supichka.com/files/images/2358/fit_1400_933.jpg",
+        "cookTime": "45 мин"
+    }
+]
