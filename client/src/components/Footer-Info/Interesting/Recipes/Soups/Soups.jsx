@@ -2,276 +2,110 @@ import React, { useEffect, useState } from "react";
 import styles from '../Recipies.module.css';
 import { FaHeart, FaClock } from "react-icons/fa6";
 import { FaRegHeart } from "react-icons/fa";
+import { GoChevronLeft, GoChevronRight } from "react-icons/go";
 import { Link } from "react-router-dom";
+
+import soupsRecipies from './recipies.json';
 
 export const Soups = ({ showNavigationAndFooter }) => {
 
+    const [liked, setLiked] = useState({});
+    const [currentPage, setCurrentPage] = useState(1);
+    const itemsPerPage = 9;
+
     useEffect(() => {
         showNavigationAndFooter();
+        const savedLikes = JSON.parse(localStorage.getItem("likedRecipes"));
+        if (savedLikes) {
+            setLiked(savedLikes);
+        }
     }, [showNavigationAndFooter]);
 
-    const [liked, setLiked] = useState(false);
-    const [likesCount, setLikesCount] = useState(0);
-
-    const toggleLike = () => {
-        if (liked) {
-            setLikesCount(likesCount - 1);
-        } else {
-            setLikesCount(likesCount + 1);
-        }
-
-        setLiked(!liked);
+    const toggleLike = (id) => {
+        setLiked(prevLikedStates => {
+            const newLikedStates = {
+                ...prevLikedStates,
+                [id]: !prevLikedStates[id]
+            };
+            localStorage.setItem("likedRecipes", JSON.stringify(newLikedStates));
+            return newLikedStates;
+        });
     }
 
+    const indexOfLastItem = currentPage * itemsPerPage;
+    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+    const currentItems = soupsRecipies.slice(indexOfFirstItem, indexOfLastItem);
+
+    const nextPage = () => {
+        if (currentPage < Math.ceil(soupsRecipies.length / itemsPerPage)) {
+            setCurrentPage(currentPage + 1);
+        }
+    }
+
+    const prevPage = () => {
+        if (currentPage > 1) {
+            setCurrentPage(currentPage - 1);
+        }
+    }
+
+    const goToPage = (pageNumber) => {
+        setCurrentPage(pageNumber);
+    }
+
+    const renderPageNumbers = () => {
+        const totalPages = Math.ceil(soupsRecipies.length / itemsPerPage);
+        const pageNumbers = [];
+
+        for (let i = 1; i <= totalPages; i++) {
+            pageNumbers.push(
+                <button
+                    key={i}
+                    onClick={() => goToPage(i)}
+                    className={i === currentPage ? styles.activePage : styles.currentPage}
+                >
+                    {i}
+                </button>
+            );
+        }
+
+        return pageNumbers;
+    }
 
     return (
         <div className={styles['recipies-container']}>
             <h2>Рецепти за вкусни супи</h2>
             <div className={styles['recipes-cards']}>
 
-                <div className={styles['recipes-card']}>
-                    <Link>
-                        <div className={styles['recipies-img']}>
-                            <img src="https://www.supichka.com/files/images/3362/fit_1400_933.jpg" alt="chicken-soup" />
-                        </div>
-
-                        <h6>Супа от пилешки дреболии</h6>
-                    </Link>
-
-                    <div className={styles['recipies-content']}>
-                        <div className={styles.icons}>
-                            <div className={styles.heart}>
-                                <FaHeart />
-                                <p className={styles.count}>{likesCount}</p>
+                {currentItems.map(card => (
+                    <div key={card.id} className={styles['recipes-card']}>
+                        <Link>
+                            <div className={styles['recipies-img']}>
+                                <img src={card.image} alt="chicken-soup" />
                             </div>
-                            <div className={styles.clock}>
-                                <FaClock />
-                                <p className={styles.clock}>60 мин</p>
-                            </div>
-                        </div>
 
-                        <div className={styles.likes} style={{ color: liked ? "red" : "black" }} onClick={toggleLike}>
-                            {liked ? <FaHeart style={{ color: "red" }} /> : <FaRegHeart style={{ color: "black" }} />}
+                            <h6>{card.title}</h6>
+                        </Link>
+
+                        <div className={styles['recipies-content']}>
+                            <div className={styles.icons}>
+                                <div className={styles.clock}>
+                                    <FaClock style={{ color: "rgba(0, 31, 61, 1)" }} />
+                                    <p className={styles.clock}>{card.cookTime}</p>
+                                </div>
+                            </div>
+
+                            <div className={styles.likes} style={{ color: liked[card.id] ? "red" : "rgba(0, 31, 61, 1)" }} onClick={() => toggleLike(card.id)}>
+                                {liked[card.id] ? <FaHeart style={{ color: "red" }} /> : <FaRegHeart style={{ color: "rgba(0, 31, 61, 1)" }} />}
+                            </div>
                         </div>
                     </div>
-                </div>
+                ))}
 
-                <div className={styles['recipes-card']}>
-                    <Link>
-                        <div className={styles['recipies-img']}>
-                            <img src="https://www.supichka.com/files/images/3353/fit_1400_933.jpg" alt="chicken-soup" />
-                        </div>
-
-                        <h6>Агнешка супа със застройка</h6>
-
-                        <div className={styles['recipies-content']}>
-                            <div className={styles.icons}>
-                                <div className={styles.heart}>
-                                    <FaHeart />
-                                    <p className={styles.count}>{likesCount}</p>
-                                </div>
-                                <div className={styles.clock}>
-                                    <FaClock />
-                                    <p className={styles.clock}>60 мин</p>
-                                </div>
-                            </div>
-
-                            <div className={styles.likes} onClick={toggleLike}>
-                                <FaRegHeart />
-                            </div>
-                        </div>
-                    </Link>
-                </div>
-
-                <div className={styles['recipes-card']}>
-                    <Link>
-                        <div className={styles['recipies-img']}>
-                            <img src="https://www.supichka.com/files/images/3300/fit_1400_933.jpg" alt="chicken-soup" />
-                        </div>
-
-                        <h6>Пилешка крем супа</h6>
-
-                        <div className={styles['recipies-content']}>
-                            <div className={styles.icons}>
-                                <div className={styles.heart}>
-                                    <FaHeart />
-                                    <p className={styles.count}>{likesCount}</p>
-                                </div>
-                                <div className={styles.clock}>
-                                    <FaClock />
-                                    <p className={styles.clock}>60 мин</p>
-                                </div>
-                            </div>
-
-                            <div className={styles.likes}>
-                                <p>10</p>
-                            </div>
-                        </div>
-                    </Link>
-                </div>
-
-                <div className={styles['recipes-card']}>
-                    <Link>
-                        <div className={styles['recipies-img']}>
-                            <img src="https://www.supichka.com/files/images/3174/fit_1400_933.jpg" alt="chicken-soup" />
-                        </div>
-
-                        <h6>Супа със соев сос, скариди и спагети</h6>
-
-                        <div className={styles['recipies-content']}>
-                            <div className={styles.icons}>
-                                <div className={styles.heart}>
-                                    <FaHeart />
-                                    <p className={styles.count}>{likesCount}</p>
-                                </div>
-                                <div className={styles.clock}>
-                                    <FaClock />
-                                    <p className={styles.clock}>60 мин</p>
-                                </div>
-                            </div>
-
-                            <div className={styles.likes}>
-                                <p>10</p>
-                            </div>
-                        </div>
-                    </Link>
-                </div>
-
-                <div className={styles['recipes-card']}>
-                    <Link>
-                        <div className={styles['recipies-img']}>
-                            <img src="https://www.supichka.com/files/images/3272/fit_1400_933.jpg" alt="chicken-soup" />
-                        </div>
-
-                        <h6>Доматена супа с печени чушки</h6>
-
-                        <div className={styles['recipies-content']}>
-                            <div className={styles.icons}>
-                                <div className={styles.heart}>
-                                    <FaHeart />
-                                    <p className={styles.count}>{likesCount}</p>
-                                </div>
-                                <div className={styles.clock}>
-                                    <FaClock />
-                                    <p className={styles.clock}>60 мин</p>
-                                </div>
-                            </div>
-
-                            <div className={styles.likes}>
-                                <p>10</p>
-                            </div>
-                        </div>
-                    </Link>
-                </div>
-
-                <div className={styles['recipes-card']}>
-                    <Link>
-                        <div className={styles['recipies-img']}>
-                            <img src="https://www.supichka.com/files/images/2962/fit_1400_933.jpg" alt="chicken-soup" />
-                        </div>
-
-                        <h6>Бял курбан</h6>
-
-                        <div className={styles['recipies-content']}>
-                            <div className={styles.icons}>
-                                <div className={styles.heart}>
-                                    <FaHeart />
-                                    <p className={styles.count}>10</p>
-                                </div>
-                                <div className={styles.clock}>
-                                    <FaClock />
-                                    <p className={styles.clock}>60 мин</p>
-                                </div>
-                            </div>
-
-                            <div className={styles.likes}>
-                                <p>10</p>
-                            </div>
-                        </div>
-                    </Link>
-                </div>
-
-                <div className={styles['recipes-card']}>
-                    <Link>
-                        <div className={styles['recipies-img']}>
-                            <img src="https://www.supichka.com/files/images/2946/fit_1400_933.jpg" alt="chicken-soup" />
-                        </div>
-
-                        <h6>Пилешка супа с пресечена застройка</h6>
-
-                        <div className={styles['recipies-content']}>
-                            <div className={styles.icons}>
-                                <div className={styles.heart}>
-                                    <FaHeart />
-                                    <p className={styles.count}>10</p>
-                                </div>
-                                <div className={styles.clock}>
-                                    <FaClock />
-                                    <p className={styles.clock}>60 мин</p>
-                                </div>
-                            </div>
-
-                            <div className={styles.likes}>
-                                <p>10</p>
-                            </div>
-                        </div>
-                    </Link>
-                </div>
-
-                <div className={styles['recipes-card']}>
-                    <Link>
-                        <div className={styles['recipies-img']}>
-                            <img src="https://www.supichka.com/files/images/2613/fit_1400_933.jpg" alt="chicken-soup" />
-                        </div>
-
-                        <h6>Телешко варено</h6>
-
-                        <div className={styles['recipies-content']}>
-                            <div className={styles.icons}>
-                                <div className={styles.heart}>
-                                    <FaHeart />
-                                    <p className={styles.count}>10</p>
-                                </div>
-                                <div className={styles.clock}>
-                                    <FaClock />
-                                    <p className={styles.clock}>60 мин</p>
-                                </div>
-                            </div>
-
-                            <div className={styles.likes}>
-                                <p>10</p>
-                            </div>
-                        </div>
-                    </Link>
-                </div>
-
-                <div className={styles['recipes-card']}>
-                    <Link>
-                        <div className={styles['recipies-img']}>
-                            <img src="https://www.supichka.com/files/images/2556/fit_1400_933.jpg" alt="chicken-soup" />
-                        </div>
-
-                        <h6>Студена крем супа от карфиол</h6>
-
-                        <div className={styles['recipies-content']}>
-                            <div className={styles.icons}>
-                                <div className={styles.heart}>
-                                    <FaHeart />
-                                    <p className={styles.count}>10</p>
-                                </div>
-                                <div className={styles.clock}>
-                                    <FaClock />
-                                    <p className={styles.clock}>60 мин</p>
-                                </div>
-                            </div>
-
-                            <div className={styles.likes}>
-                                <p>10</p>
-                            </div>
-                        </div>
-                    </Link>
-                </div>
-
+            </div>
+            <div className={styles.pagination}>
+                <button className={styles.prev} onClick={prevPage} disabled={currentPage === 1}><GoChevronLeft /></button>
+                {renderPageNumbers()}
+                <button className={styles.next} onClick={nextPage} disabled={currentPage === Math.ceil(soupsRecipies.length / itemsPerPage)}><GoChevronRight /></button>
             </div>
         </div>
     )
