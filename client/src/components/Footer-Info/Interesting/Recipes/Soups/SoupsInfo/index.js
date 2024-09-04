@@ -1,0 +1,1 @@
+export { SoupsInfo } from './SoupsInfo';
