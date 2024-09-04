@@ -78,7 +78,7 @@ export const Soups = ({ showNavigationAndFooter }) => {
 
                 {currentItems.map(card => (
                     <div key={card.id} className={styles['recipes-card']}>
-                        <Link>
+                        <Link to={`/interesting/soups-recipies/${card.id}`}>
                             <div className={styles['recipies-img']}>
                                 <img src={card.image} alt="chicken-soup" />
                             </div>
