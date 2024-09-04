@@ -102,6 +102,7 @@ import { OrderGuards } from "./components/Guards/OrderGuards";
 import { ScrollTop } from "./components/ScrollTop";
 import { Interesting } from "./components/Footer-Info/Interesting";
 import { Soups } from "./components/Footer-Info/Interesting/Recipes/Soups";
+import { SoupsInfo } from "./components/Footer-Info/Interesting/Recipes/Soups/SoupsInfo";
 
 function App() {
 
@@ -252,7 +253,8 @@ function App() {
                                 <Route path="/holiday" element={<Holiday showNavigationAndFooter={showNavigationAndFooter} />} />
                                 <Route path="/interesting" element={<Interesting showNavigationAndFooter={showNavigationAndFooter} />} />
 
-                                <Route path="/soups-recipies" element={<Soups showNavigationAndFooter={showNavigationAndFooter} />} />
+                                <Route path="/interesting/soups-recipies" element={<Soups showNavigationAndFooter={showNavigationAndFooter} />} />
+                                <Route path="/interesting/soups-recipies/:soupId" element={<SoupsInfo showNavigationAndFooter={showNavigationAndFooter} />} />
 
                                 <Route path="*" element={<NotFound />} />
 
