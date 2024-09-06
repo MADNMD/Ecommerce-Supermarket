@@ -42,9 +42,13 @@ export const SoupsInfo = () => {
 
                     <div className={styles['recipies-content']}>
                         <p>{soupInfo.recipies.introduction}</p>
-                        <p className={styles.steps}>{soupInfo.recipies.step1}</p>
-                        <p className={styles.steps}>{soupInfo.recipies.step2}</p>
-                        <p className={styles.steps}>{soupInfo.recipies.step3}</p>
+                        <hr />
+                        <p className={styles.steps}><span className={styles['recipies-steps']}>1</span>{soupInfo.recipies.step1}</p>
+                        <hr />
+                        <p className={styles.steps}><span className={styles['recipies-steps']}>2</span>{soupInfo.recipies.step2}</p>
+                        <hr />
+                        <p className={styles.steps}><span className={styles['recipies-steps']}>3</span>{soupInfo.recipies.step3}</p>
+                        <hr />
                         <p>Рецептата за {soupInfo.title} е изпълнена.</p>
                         <p>ДОБЪР АПЕТИТ!</p>
                     </div>
