@@ -17,49 +17,6 @@
     max-width: 1300px;
 }
 
-.recipes-card {
-    flex-basis: calc(33.333% - 1em);
-    margin-bottom: 1.5em;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-    border-radius: 0.5em;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-}
-
-.recipes-card h6 {
-    margin-left: 0.6em;
-}
-
-.recipies-img img {
-    max-height: 20em;
-    width: 100%;
-    border-top-left-radius: 0.5em;
-    border-top-right-radius: 0.5em;
-    object-fit: cover;
-}
-
-.recipies-content {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 0.5em;
-}
-
-.icons {
-    display: flex;
-    gap: 1em;
-}
-
-.clock {
-    display: flex;
-    gap: 0.3em;
-    justify-content: center;
-    align-items: center;
-}
-
-.likes {
-    cursor: pointer;
-}
-
 /* PAGINATION */
 .pagination {
     display: flex;
