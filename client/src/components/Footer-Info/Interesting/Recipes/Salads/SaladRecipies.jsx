@@ -13,7 +13,7 @@ export const SaladRecipies = ({ showNavigationAndFooter }) => {
 
     useEffect(() => {
         showNavigationAndFooter();
-        const savedLikes = JSON.parse(localStorage.getItem("likedRecipes"));
+        const savedLikes = JSON.parse(localStorage.getItem("likedSaladRecipes"));
         if (savedLikes) {
             setLiked(savedLikes);
         }
@@ -25,7 +25,7 @@ export const SaladRecipies = ({ showNavigationAndFooter }) => {
                 ...prevLikedStates,
                 [id]: !prevLikedStates[id]
             };
-            localStorage.setItem("likedRecipes", JSON.stringify(newLikedStates));
+            localStorage.setItem("likedSaladRecipes", JSON.stringify(newLikedStates));
             return newLikedStates;
         });
     }
