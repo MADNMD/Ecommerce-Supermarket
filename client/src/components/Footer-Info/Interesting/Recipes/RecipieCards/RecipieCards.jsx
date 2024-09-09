@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import { FaClock, FaHeart, FaRegHeart } from 'react-icons/fa';
 import styles from './RecipieCards.module.css';
 
-export const RecipieCards = ({ id, image, title, cookTime, liked, toggleLike }) => {
+export const RecipieCards = ({ id, image, title, cookTime, category, liked, toggleLike }) => {
     return (
         <div className={styles['recipes-card']}>
-            <Link to={`/interesting/soups-recipies/${id}`}>
+            <Link to={`/interesting/${category}/${id}`}>
                 <div className={styles['recipies-img']}>
                     <img src={image} alt={title} />
                 </div>
