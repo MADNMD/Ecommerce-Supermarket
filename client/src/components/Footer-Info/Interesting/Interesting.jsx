@@ -22,7 +22,7 @@ export const Interesting = ({ showNavigationAndFooter }) => {
                 <div className={styles['line-1']}>
 
                     <div className={styles['card-1']}>
-                        <Link>
+                        <Link to={'/interesting/lean-meals-recipies'}>
                             <div className={styles['card-1-img']}>
                                 <img src="../../images/interesting-img/postno.webp" alt="postno" />
                             </div>
