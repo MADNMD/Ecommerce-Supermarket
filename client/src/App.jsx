@@ -103,6 +103,8 @@ import { ScrollTop } from "./components/ScrollTop";
 import { Interesting } from "./components/Footer-Info/Interesting";
 import { SoupsInfo } from "./components/Footer-Info/Interesting/Recipes/Soups/SoupsInfo";
 import { SoupRecipies } from "./components/Footer-Info/Interesting/Recipes/Soups/SoupRecipies";
+import { SaladRecipies } from "./components/Footer-Info/Interesting/Recipes/Salads/SaladRecipies";
+import { SaladsInfo } from "./components/Footer-Info/Interesting/Recipes/Salads/SaladsInfo";
 
 function App() {
 
@@ -255,6 +257,9 @@ function App() {
 
                                 <Route path="/interesting/soups-recipies" element={<SoupRecipies showNavigationAndFooter={showNavigationAndFooter} />} />
                                 <Route path="/interesting/soups-recipies/:soupId" element={<SoupsInfo showNavigationAndFooter={showNavigationAndFooter} />} />
+
+                                <Route path="/interesting/salads-recipies" element={<SaladRecipies showNavigationAndFooter={showNavigationAndFooter} />} />
+                                <Route path="/interesting/salads-recipies/:saladId" element={<SaladsInfo showNavigationAndFooter={showNavigationAndFooter} />} />
 
                                 <Route path="*" element={<NotFound />} />
 
