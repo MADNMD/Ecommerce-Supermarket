@@ -103,8 +103,8 @@ import { ScrollTop } from "./components/ScrollTop";
 import { Interesting } from "./components/Footer-Info/Interesting";
 import { SoupsInfo } from "./components/Footer-Info/Interesting/Recipes/Soups/SoupsInfo";
 import { SoupRecipies } from "./components/Footer-Info/Interesting/Recipes/Soups/SoupRecipies";
-import { SaladRecipies } from "./components/Footer-Info/Interesting/Recipes/Salads/SaladRecipies";
 import { SaladsInfo } from "./components/Footer-Info/Interesting/Recipes/Salads/SaladsInfo";
+import { SaladRecipies } from "./components/Footer-Info/Interesting/Recipes/Salads/SaladRecipies";
 
 function App() {
 
