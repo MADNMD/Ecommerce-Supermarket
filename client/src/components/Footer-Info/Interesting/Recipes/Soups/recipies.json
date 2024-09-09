@@ -4,6 +4,7 @@
         "title": "Супа от пилешки дреболии",
         "image": "https://www.supichka.com/files/images/3362/fit_1400_933.jpg",
         "cookTime": "60 мин",
+        "category":"soups-recipies",
         "products": [
             {"id":"1", "name": "пилешки воденички", "quantity": "300 грама" },
             {"id":"2", "name": "пилешки сърца", "quantity": "300 грама" },
@@ -26,6 +27,7 @@
         "title": "Агнешка супа със застройка",
         "image": "https://www.supichka.com/files/images/3353/fit_1400_933.jpg",
         "cookTime": "150 мин",
+        "category":"soups-recipies",
         "products": [
             {"id":"1", "name": "агнешко", "quantity": "1 1/2 кг" },
             {"id":"2", "name": "пресен чесън", "quantity": "2 стръка" },
@@ -50,6 +52,7 @@
         "title": "Пилешка крем супа",
         "image": "https://www.supichka.com/files/images/3300/fit_1400_933.jpg",
         "cookTime": "30 мин",
+        "category":"soups-recipies",
         "products": [
             {"id":"1", "name": "пилешки бутчета", "quantity": "600 грама" },
             {"id":"2", "name": "лук", "quantity": "1 брой" },
@@ -76,6 +79,7 @@
         "title": "Супа със соев сос, скариди и спагети",
         "image": "https://www.supichka.com/files/images/3174/fit_1400_933.jpg",
         "cookTime": "10 мин",
+        "category":"soups-recipies",
         "products": [
             {"id":"1", "name": "бульон", "quantity": "1 литър" },
             {"id":"2", "name": "соев сос", "quantity": "4 супени лъжици" },
@@ -102,6 +106,7 @@
         "title": "Доматена супа с печени чушки",
         "image": "https://www.supichka.com/files/images/3272/fit_1400_933.jpg",
         "cookTime": "40 мин",
+        "category":"soups-recipies",
         "products": [
             {"id":"1", "name": "домати", "quantity": "500 грама" },
             {"id":"2", "name": "лук", "quantity": "1 брой" },
@@ -127,6 +132,7 @@
         "title": "Бял курбан",
         "image": "https://www.supichka.com/files/images/2962/fit_1400_933.jpg",
         "cookTime": "130 мин",
+        "category":"soups-recipies",
         "products": [
             {"id":"1", "name": "агнешко", "quantity": "1 кг" },
             {"id":"2", "name": "дафинов лист", "quantity": "4 броя" },
@@ -145,6 +151,7 @@
         "title": "Пилешка супа с пресечена застройка",
         "image": "https://www.supichka.com/files/images/2946/fit_1400_933.jpg",
         "cookTime": "15 мин",
+        "category":"soups-recipies",
         "products": [
             {"id":"1", "name": "бульон", "quantity": "1 1/2 литър" },
             {"id":"2", "name": "джинджифил", "quantity": "20 грама" },
@@ -165,6 +172,7 @@
         "title": "Телешко варено",
         "image": "https://www.supichka.com/files/images/2613/fit_1400_933.jpg",
         "cookTime": "150 мин",
+        "category":"soups-recipies",
         "products": [
             {"id":"1", "name": "телешки джолан", "quantity": "1 брой" },
             {"id":"2", "name": "моркови", "quantity": "300 грама" },
@@ -189,6 +197,7 @@
         "title": "Студена крем супа от карфиол",
         "image": "https://www.supichka.com/files/images/2556/fit_1400_933.jpg",
         "cookTime": "10 мин",
+        "category":"soups-recipies",
         "products": [
             {"id":"1", "name": "карфиол", "quantity": "300 грама" },
             {"id":"2", "name": "чесън", "quantity": "3 скилидки" },
@@ -208,6 +217,7 @@
         "title": "Зелева детокс супа",
         "image": "https://www.supichka.com/files/images/2550/fit_1400_933.jpg",
         "cookTime": "40 мин",
+        "category":"soups-recipies",
         "products": [
             {"id":"1", "name": "зеле", "quantity": "500 грама" },
             {"id":"2", "name": "праз", "quantity": "1 брой" },
@@ -232,6 +242,7 @@
         "title": "Класическа лесна рецепта за леща чорба",
         "image": "https://www.supichka.com/files/images/2392/fit_1400_933.jpg",
         "cookTime": "60 мин",
+        "category":"soups-recipies",
         "products": [
             {"id":"1", "name": "пилешки воденички", "quantity": "300 грама" },
             {"id":"2", "name": "пилешки сърца", "quantity": "300 грама" },
@@ -254,6 +265,7 @@
         "title": "Супа от зелен боб",
         "image": "https://www.supichka.com/files/images/2281/fit_1400_933.jpg",
         "cookTime": "50 мин",
+        "category":"soups-recipies",
         "products": [
             {"id":"1", "name": "пилешки воденички", "quantity": "300 грама" },
             {"id":"2", "name": "пилешки сърца", "quantity": "300 грама" },
@@ -276,6 +288,7 @@
         "title": "Крем супа от червено цвекло",
         "image": "https://www.supichka.com/files/images/1645/fit_1400_933.jpg",
         "cookTime": "30 мин",
+        "category":"soups-recipies",
         "products": [
             {"id":"1", "name": "пилешки воденички", "quantity": "300 грама" },
             {"id":"2", "name": "пилешки сърца", "quantity": "300 грама" },
@@ -298,6 +311,7 @@
         "title": "Доматена крем супа с фиде",
         "image": "https://www.supichka.com/files/images/1641/fit_1400_933.jpg",
         "cookTime": "30 мин",
+        "category":"soups-recipies",
         "products": [
             {"id":"1", "name": "пилешки воденички", "quantity": "300 грама" },
             {"id":"2", "name": "пилешки сърца", "quantity": "300 грама" },
@@ -320,6 +334,7 @@
         "title": "Пролетна супа от лапад",
         "image": "https://www.supichka.com/files/images/1632/fit_1400_933.jpg",
         "cookTime": "40 мин",
+        "category":"soups-recipies",
         "products": [
             {"id":"1", "name": "пилешки воденички", "quantity": "300 грама" },
             {"id":"2", "name": "пилешки сърца", "quantity": "300 грама" },
@@ -342,6 +357,7 @@
         "title": "Пилешка супа със застройка",
         "image": "https://www.supichka.com/files/images/1629/fit_1400_933.jpg",
         "cookTime": "10 мин",
+        "category":"soups-recipies",
         "products": [
             {"id":"1", "name": "пилешки воденички", "quantity": "300 грама" },
             {"id":"2", "name": "пилешки сърца", "quantity": "300 грама" },
@@ -364,6 +380,7 @@
         "title": "Крем супа от моркови",
         "image": "https://www.supichka.com/files/images/1576/fit_1400_933.jpg",
         "cookTime": "45 мин",
+        "category":"soups-recipies",
         "products": [
             {"id":"1", "name": "пилешки воденички", "quantity": "300 грама" },
             {"id":"2", "name": "пилешки сърца", "quantity": "300 грама" },
@@ -386,6 +403,7 @@
         "title": "Крем супа от киселец и лапад",
         "image": "https://www.supichka.com/files/images/1612/fit_1400_933.jpg",
         "cookTime": "40 мин",
+        "category":"soups-recipies",
         "products": [
             {"id":"1", "name": "пилешки воденички", "quantity": "300 грама" },
             {"id":"2", "name": "пилешки сърца", "quantity": "300 грама" },
@@ -408,6 +426,7 @@
         "title": "Екзотична крем супа от леща",
         "image": "https://www.supichka.com/files/images/1603/fit_1400_933.jpg",
         "cookTime": "60 мин",
+        "category":"soups-recipies",
         "products": [
             {"id":"1", "name": "пилешки воденички", "quantity": "300 грама" },
             {"id":"2", "name": "пилешки сърца", "quantity": "300 грама" },
@@ -430,6 +449,7 @@
         "title": "Таратор - пълната рецепта",
         "image": "https://www.supichka.com/files/images/1549/fit_1400_933.jpg",
         "cookTime": "15 мин",
+        "category":"soups-recipies",
         "products": [
             {"id":"1", "name": "пилешки воденички", "quantity": "300 грама" },
             {"id":"2", "name": "пилешки сърца", "quantity": "300 грама" },
@@ -452,6 +472,7 @@
         "title": "Пилешка супа по класическа рецепта",
         "image": "https://www.supichka.com/files/images/1513/fit_1400_933.jpg",
         "cookTime": "60 мин",
+        "category":"soups-recipies",
         "products": [
             {"id":"1", "name": "пилешки воденички", "quantity": "300 грама" },
             {"id":"2", "name": "пилешки сърца", "quantity": "300 грама" },
@@ -474,6 +495,7 @@
         "title": "Пъстра зеленчукова супа",
         "image": "https://www.supichka.com/files/images/1492/fit_1400_933.jpg",
         "cookTime": "40 мин",
+        "category":"soups-recipies",
         "products": [
             {"id":"1", "name": "пилешки воденички", "quantity": "300 грама" },
             {"id":"2", "name": "пилешки сърца", "quantity": "300 грама" },
@@ -496,6 +518,7 @@
         "title": "Рибена чорба",
         "image": "https://www.supichka.com/files/images/621/fit_1400_933.jpg",
         "cookTime": "60 мин",
+        "category":"soups-recipies",
         "products": [
             {"id":"1", "name": "пилешки воденички", "quantity": "300 грама" },
             {"id":"2", "name": "пилешки сърца", "quantity": "300 грама" },
@@ -518,6 +541,7 @@
         "title": "Шкембе чорба",
         "image": "https://www.supichka.com/files/images/438/fit_1400_933.jpg",
         "cookTime": "30 мин",
+        "category":"soups-recipies",
         "products": [
             {"id":"1", "name": "пилешки воденички", "quantity": "300 грама" },
             {"id":"2", "name": "пилешки сърца", "quantity": "300 грама" },
@@ -540,6 +564,7 @@
         "title": "Крем супа от червена леща",
         "image": "https://www.supichka.com/files/images/2358/fit_1400_933.jpg",
         "cookTime": "45 мин",
+        "category":"soups-recipies",
         "products": [
             {"id":"1", "name": "пилешки воденички", "quantity": "300 грама" },
             {"id":"2", "name": "пилешки сърца", "quantity": "300 грама" },
