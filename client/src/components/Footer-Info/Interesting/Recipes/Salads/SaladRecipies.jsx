@@ -51,7 +51,7 @@ export const SaladRecipies = ({ showNavigationAndFooter }) => {
     }
 
     const renderPageNumbers = () => {
-        const totalPages = Math.ceil(soupsRecipies.length / itemsPerPage);
+        const totalPages = Math.ceil(saladsRecipies.length / itemsPerPage);
         const pageNumbers = [];
 
         for (let i = 1; i <= totalPages; i++) {
@@ -81,6 +81,7 @@ export const SaladRecipies = ({ showNavigationAndFooter }) => {
                         image={card.image}
                         title={card.title}
                         cookTime={card.cookTime}
+                        category={card.category}
                         liked={liked[card.id]}
                         toggleLike={() => toggleLike(card.id)}
                     />
