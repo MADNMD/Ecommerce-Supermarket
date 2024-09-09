@@ -1,0 +1,1 @@
+export { LeanMealsInfo } from './LeanMealsInfo';
