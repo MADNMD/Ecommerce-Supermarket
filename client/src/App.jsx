@@ -107,6 +107,8 @@ import { SaladsInfo } from "./components/Footer-Info/Interesting/Recipes/Salads/
 import { SaladRecipies } from "./components/Footer-Info/Interesting/Recipes/Salads/SaladRecipies";
 import { LeanMealRecipies } from "./components/Footer-Info/Interesting/Recipes/LeanMeals";
 import { LeanMealsInfo } from "./components/Footer-Info/Interesting/Recipes/LeanMeals/LeanMealsInfo";
+import { MeatDishesRecipies } from "./components/Footer-Info/Interesting/Recipes/MeatDishes/MeatDishesRecipies";
+import { MeatDishesInfo } from "./components/Footer-Info/Interesting/Recipes/MeatDishes/MeatDishesInfo";
 
 function App() {
 
@@ -265,6 +267,9 @@ function App() {
 
                                 <Route path="/interesting/lean-meals-recipies" element={<LeanMealRecipies showNavigationAndFooter={showNavigationAndFooter} />} />
                                 <Route path="/interesting/lean-meals-recipies/:leanMealsId" element={<LeanMealsInfo showNavigationAndFooter={showNavigationAndFooter} />} />
+
+                                <Route path="/interesting/meat-dishes-recipies" element={<MeatDishesRecipies showNavigationAndFooter={showNavigationAndFooter} />} />
+                                <Route path="/interesting/meat-dishes-recipies/:meatDishesId" element={<MeatDishesInfo showNavigationAndFooter={showNavigationAndFooter} />} />
 
                                 <Route path="*" element={<NotFound />} />
 
