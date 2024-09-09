@@ -105,6 +105,8 @@ import { SoupsInfo } from "./components/Footer-Info/Interesting/Recipes/Soups/So
 import { SoupRecipies } from "./components/Footer-Info/Interesting/Recipes/Soups/SoupRecipies";
 import { SaladsInfo } from "./components/Footer-Info/Interesting/Recipes/Salads/SaladsInfo";
 import { SaladRecipies } from "./components/Footer-Info/Interesting/Recipes/Salads/SaladRecipies";
+import { LeanMealRecipies } from "./components/Footer-Info/Interesting/Recipes/LeanMeals";
+import { LeanMealsInfo } from "./components/Footer-Info/Interesting/Recipes/LeanMeals/LeanMealsInfo";
 
 function App() {
 
@@ -260,6 +262,9 @@ function App() {
 
                                 <Route path="/interesting/salads-recipies" element={<SaladRecipies showNavigationAndFooter={showNavigationAndFooter} />} />
                                 <Route path="/interesting/salads-recipies/:saladId" element={<SaladsInfo showNavigationAndFooter={showNavigationAndFooter} />} />
+
+                                <Route path="/interesting/lean-meals-recipies" element={<LeanMealRecipies showNavigationAndFooter={showNavigationAndFooter} />} />
+                                <Route path="/interesting/lean-meals-recipies/:leanMealsId" element={<LeanMealsInfo showNavigationAndFooter={showNavigationAndFooter} />} />
 
                                 <Route path="*" element={<NotFound />} />
 
