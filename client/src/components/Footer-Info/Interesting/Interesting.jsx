@@ -55,7 +55,7 @@ export const Interesting = ({ showNavigationAndFooter }) => {
 
                 <div className={styles['line-2']}>
                     <div className={styles['card-1']}>
-                        <Link>
+                        <Link to={'/interesting/desserts-recipies'}>
                             <div className={styles['card-1-img']}>
                                 <img src="../../images/interesting-img/desert.jpg" alt="postno" />
                             </div>
