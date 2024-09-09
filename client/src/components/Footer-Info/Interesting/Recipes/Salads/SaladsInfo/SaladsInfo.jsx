@@ -10,7 +10,7 @@ export const SaladsInfo = () => {
 
     const id = useParams();
 
-    const salad = saladsRecipies.filter(salad => salad.id === Number(id.soupId));
+    const salad = saladsRecipies.filter(salad => salad.id === Number(id.saladId));
 
     return (
 
