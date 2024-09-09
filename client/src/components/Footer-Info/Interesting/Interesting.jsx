@@ -40,7 +40,7 @@ export const Interesting = ({ showNavigationAndFooter }) => {
                     </div>
 
                     <div className={styles['card-3']}>
-                        <Link>
+                        <Link to={'/interesting/meat-dishes-recipies'}>
                             <div className={styles['card-3-img']}>
                                 <img src="../../images/interesting-img/mestni.jpg" alt="mestni" />
                             </div>
