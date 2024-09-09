@@ -81,6 +81,7 @@ export const SoupRecipies = ({ showNavigationAndFooter }) => {
                         image={card.image}
                         title={card.title}
                         cookTime={card.cookTime}
+                        category={card.category}
                         liked={liked[card.id]}
                         toggleLike={() => toggleLike(card.id)}
                     />
