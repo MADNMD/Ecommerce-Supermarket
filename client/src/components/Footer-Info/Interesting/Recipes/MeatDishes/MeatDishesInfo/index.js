@@ -1,0 +1,1 @@
+export { MeatDishesInfo } from './MeatDisheshInfo';
