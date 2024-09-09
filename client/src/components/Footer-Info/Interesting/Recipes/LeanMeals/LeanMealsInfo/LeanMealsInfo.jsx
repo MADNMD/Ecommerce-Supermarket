@@ -10,12 +10,12 @@ export const LeanMealsInfo = () => {
 
     const id = useParams();
 
-    const salad = leanMealsRecipies.filter(salad => salad.id === Number(id.leanMealsId));
+    const leanMeals = leanMealsRecipies.filter(salad => salad.id === Number(id.leanMealsId));
 
     return (
 
         <div className={styles['recipies-info-container']}>
-            {salad.map(saladInfo => (
+            {leanMeals.map(saladInfo => (
                 <React.Fragment key={saladInfo.id}>
 
                     <h2>{saladInfo.title}</h2>
