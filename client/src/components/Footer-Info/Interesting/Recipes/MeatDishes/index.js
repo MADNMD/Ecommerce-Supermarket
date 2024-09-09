@@ -1,0 +1,1 @@
+export { MeatDishesRecipies } from './MeatDishesRecipies';
