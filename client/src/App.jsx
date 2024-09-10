@@ -111,6 +111,8 @@ import { MeatDishesRecipies } from "./components/Footer-Info/Interesting/Recipes
 import { MeatDishesInfo } from "./components/Footer-Info/Interesting/Recipes/MeatDishes/MeatDishesInfo";
 import { DessertsInfo } from "./components/Footer-Info/Interesting/Recipes/Desserts/DessertsInfo";
 import { DessertsRecipies } from "./components/Footer-Info/Interesting/Recipes/Desserts";
+import { SmoothiesInfo } from "./components/Footer-Info/Interesting/Recipes/Smoothies/SmoothiesInfo";
+import { SmoothRecipies } from "./components/Footer-Info/Interesting/Recipes/Smoothies";
 
 function App() {
 
@@ -273,8 +275,11 @@ function App() {
                                 <Route path="/interesting/meat-dishes-recipies" element={<MeatDishesRecipies showNavigationAndFooter={showNavigationAndFooter} />} />
                                 <Route path="/interesting/meat-dishes-recipies/:meatDishesId" element={<MeatDishesInfo showNavigationAndFooter={showNavigationAndFooter} />} />
 
-                                <Route path="//interesting/desserts-recipies" element={<DessertsRecipies showNavigationAndFooter={showNavigationAndFooter} />} />
+                                <Route path="/interesting/desserts-recipies" element={<DessertsRecipies showNavigationAndFooter={showNavigationAndFooter} />} />
                                 <Route path="/interesting/desserts-recipies/:dessertId" element={<DessertsInfo showNavigationAndFooter={showNavigationAndFooter} />} />
+
+                                <Route path="/interesting/smoothies-recipies" element={<SmoothRecipies showNavigationAndFooter={showNavigationAndFooter} />} />
+                                <Route path="/interesting/smoothies-recipies/:smoothId" element={<SmoothiesInfo showNavigationAndFooter={showNavigationAndFooter} />} />
 
                                 <Route path="*" element={<NotFound />} />
 
