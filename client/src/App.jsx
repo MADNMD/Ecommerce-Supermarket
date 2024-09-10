@@ -21,10 +21,6 @@ import { CleaningPreparaions, ForHomeAndGarden, LaundryDetergents, PapersAndNapk
 import { Accessories, CatFood, DogAndCat, DogFood, Treats } from './components/Category-9';
 import {ProductInfo, ProductInfoDiscount, ProductInfoExhausted, ProductInfoSecond} from './components/Product-View';
 import { Contacts, Cookies, Delivery, PricePolitic, Holiday, Interesting } from './components/Footer-Info';
-// import { ProductInfo } from "./components/Product-View/ProductInfo";
-// import { ProductInfoDiscount } from "./components/Product-View/ProductInfoDiscount";
-// import { ProductInfoExhausted } from "./components/Product-View/ProductInfoExhaused";
-// import { ProductInfoSecond } from "./components/Product-View/ProductInfoSecond";
 import { AuthProvier } from "./contexts/authContext";
 import { ProfileProvider } from "./contexts/profileContext";
 import { CartProvider } from "./contexts/cartContext";
@@ -33,16 +29,22 @@ import { AdminGuards } from "./components/Guards/AdminGuards";
 import { AuthGuards } from "./components/Guards/AuthGuards";
 import { OrderGuards } from "./components/Guards/OrderGuards";
 import { ScrollTop } from "./components/ScrollTop";
+
 import { SoupsInfo } from "./components/Footer-Info/Interesting/Recipes/Soups/SoupsInfo";
 import { SoupRecipies } from "./components/Footer-Info/Interesting/Recipes/Soups/SoupRecipies";
+
 import { SaladsInfo } from "./components/Footer-Info/Interesting/Recipes/Salads/SaladsInfo";
 import { SaladRecipies } from "./components/Footer-Info/Interesting/Recipes/Salads/SaladRecipies";
+
 import { LeanMealRecipies } from "./components/Footer-Info/Interesting/Recipes/LeanMeals";
 import { LeanMealsInfo } from "./components/Footer-Info/Interesting/Recipes/LeanMeals/LeanMealsInfo";
+
 import { MeatDishesRecipies } from "./components/Footer-Info/Interesting/Recipes/MeatDishes/MeatDishesRecipies";
 import { MeatDishesInfo } from "./components/Footer-Info/Interesting/Recipes/MeatDishes/MeatDishesInfo";
+
 import { DessertsInfo } from "./components/Footer-Info/Interesting/Recipes/Desserts/DessertsInfo";
 import { DessertsRecipies } from "./components/Footer-Info/Interesting/Recipes/Desserts";
+
 import { SmoothiesInfo } from "./components/Footer-Info/Interesting/Recipes/Smoothies/SmoothiesInfo";
 import { SmoothRecipies } from "./components/Footer-Info/Interesting/Recipes/Smoothies";
 
