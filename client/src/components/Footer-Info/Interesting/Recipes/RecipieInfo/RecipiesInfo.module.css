@@ -1,0 +1,79 @@
+.recipies-info-container {
+    margin: 10em auto 0 auto;
+    padding: 2em 0;
+    width: 1350px;
+}
+
+.recipies-info-container h4 {
+    text-align: center;
+    margin-bottom: 0.5em;
+    color: rgba(0, 31, 61, 1);
+}
+
+.recipies-info-container h2 {
+    text-align: center;
+    margin-bottom: 1em;
+    color: rgba(0, 31, 61, 1);
+}
+
+.recipies-info-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+.recipies-info-img img {
+    max-height: 25em;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.5em;
+}
+
+.products {
+    width: 50%;
+}
+
+.products-col {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+    flex: 1 1 calc(50% - 1.5em);
+}
+
+.product-name {
+    margin-left: 0.5em;
+}
+
+.recipies-content p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+    color: rgba(0, 31, 61, 1);
+}
+
+.recipies-content hr {
+    border: none;
+    border-top: 1px solid #dddddd; 
+    margin: 1em 0;
+}
+
+.recipies-steps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 0.5em;
+    height: 0.5em;
+    padding: 1em;
+    background-color: var(--orange);
+    border: 2px solid var(--orange);
+    border-radius: 50%;
+    margin-right: 0.9em;
+    color: rgba(0, 31, 61, 1);
+    font-weight: bold;
+}
