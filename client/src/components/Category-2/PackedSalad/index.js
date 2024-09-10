@@ -1,1 +1,1 @@
-export { getAllPackedSalad } from './PackedSalad';
+export { PackedSalad } from './PackedSalad';
