@@ -1,0 +1,1 @@
+export { SmoothRecipies } from './SmoothRecipies';
