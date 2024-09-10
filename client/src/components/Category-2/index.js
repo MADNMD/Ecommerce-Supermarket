@@ -1,0 +1,9 @@
+export { Butter } from './Butter';
+export { Cheese } from './Cheese';
+export { Egg } from './Egg';
+export { Milk } from './Milk';
+export { MilkAndEgg } from './MilkAndEgg';
+export { MilkDrink } from './MilkDrink';
+export { PackedSalad } from './PackedSalad';
+export { Yogurt } from './Yogurt';
+export { YellowCheese } from './YellowCheese';
