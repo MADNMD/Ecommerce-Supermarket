@@ -4,49 +4,69 @@ import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 import { Home } from "./components/Home";
+import { ScrollTop } from "./components/ScrollTop";
 import { Navigation } from "./components/Navigation";
-import { Search } from './components/Search';
-import { AdminAddProduct, AdminInvetory, AdminOrders, AdminPanel, AdminUsers } from './components/Admin';
-import { Footer } from "./components/Footer";
-import { Login, Register, Logout, Favorite, Profile, Order } from './components/User';
-import { MyCart, MyOrderNumber, MyCartOrder, MyCartReadyOrder } from './components/Cart';
-import { Fruit, FruitAndVeg, Salad, Spices, Vegitables, Olives, Dried, Nuts } from "./components/Category-1";
-import { MilkAndEgg, Milk, Yogurt, MilkDrink, Cheese, YellowCheese, Butter, PackedSalad, Egg } from "./components/Category-2";
-import { Fish, Meat, MeatProducts, MeatAndFish, SushiAndFishProducts } from "./components/Category-3";
-import { BreadAndPasta, Bread, PastaProducts, DoughProducts, FreshPasta, BaguettesAndTortillas } from './components/Category-4';
-import { BreakfastCerealsCornflakesAndMuesli, ChipsAndSnacks, SaltyProducts, SweetAndSalty, SugarProducts } from './components/Category-5';
-import { AlcoholDrink, CiderAndKombucha, EnergyDrinks, FreshJuicesAndSmoothies, SoftDrinks, Beer, Wine, Water, CoffeeAndTea, DrinksAndWater } from './components/Category-6';
-import { BabyAndChildren, CosmeticProducts, DiapersAndWetWipes, FoodProducts, DrinkProducts, DetergentsAndFabricSofteners } from './components/Category-7';
-import { CleaningPreparaions, ForHomeAndGarden, LaundryDetergents, PapersAndNapkins, CleaningProducts, Flavorings, ForHome } from './components/Category-8';
-import { Accessories, CatFood, DogAndCat, DogFood, Treats } from './components/Category-9';
-import {ProductInfo, ProductInfoDiscount, ProductInfoExhausted, ProductInfoSecond} from './components/Product-View';
-import { Contacts, Cookies, Delivery, PricePolitic, Holiday, Interesting } from './components/Footer-Info';
 import { AuthProvier } from "./contexts/authContext";
 import { ProfileProvider } from "./contexts/profileContext";
 import { CartProvider } from "./contexts/cartContext";
-import { NotFound } from "./components/NotFound";
-import { AdminGuards } from "./components/Guards/AdminGuards";
-import { AuthGuards } from "./components/Guards/AuthGuards";
-import { OrderGuards } from "./components/Guards/OrderGuards";
-import { ScrollTop } from "./components/ScrollTop";
+import { Search } from './components/Search';
+import {
+    AdminGuards, AuthGuards, OrderGuards
+} from './components/Guards';
+import {
+    AdminAddProduct, AdminInvetory, AdminOrders, AdminPanel, AdminUsers
+} from './components/Admin';
+import {
+    Login, Register, Logout, Favorite, Profile, Order
+} from './components/User';
+import {
+    MyCart, MyOrderNumber, MyCartOrder, MyCartReadyOrder
+} from './components/Cart';
+import {
+    Fruit, FruitAndVeg, Salad, Spices, Vegitables, Olives, Dried, Nuts
+} from "./components/Category-1";
+import {
+    MilkAndEgg, Milk, Yogurt, MilkDrink, Cheese, YellowCheese, Butter, PackedSalad, Egg
+} from "./components/Category-2";
+import {
+    Fish, Meat, MeatProducts, MeatAndFish, SushiAndFishProducts
+} from "./components/Category-3";
+import {
+    BreadAndPasta, Bread, PastaProducts, DoughProducts, FreshPasta, BaguettesAndTortillas
+} from './components/Category-4';
+import {
+    BreakfastCerealsCornflakesAndMuesli, ChipsAndSnacks, SaltyProducts, SweetAndSalty, SugarProducts
+} from './components/Category-5';
+import {
+    AlcoholDrink, CiderAndKombucha, EnergyDrinks, FreshJuicesAndSmoothies, SoftDrinks, Beer, Wine, Water, CoffeeAndTea, DrinksAndWater
+} from './components/Category-6';
+import {
+    BabyAndChildren, CosmeticProducts, DiapersAndWetWipes, FoodProducts, DrinkProducts, DetergentsAndFabricSofteners
+} from './components/Category-7';
+import {
+    CleaningPreparaions, ForHomeAndGarden, LaundryDetergents, PapersAndNapkins, CleaningProducts, Flavorings, ForHome
+} from './components/Category-8';
+import {
+    Accessories, CatFood, DogAndCat, DogFood, Treats
+} from './components/Category-9';
+import {
+    ProductInfo, ProductInfoDiscount, ProductInfoExhausted, ProductInfoSecond
+} from './components/Product-View';
+import {
+    Contacts, Cookies, Delivery, PricePolitic, Holiday, Interesting
+} from './components/Footer-Info';
+import {
+    DessertsRecipies, LeanMealRecipies, MeatDishesRecipies, SaladRecipies, SmoothRecipies, SoupRecipies
+} from './components/Footer-Info/Interesting/Recipes';
 
 import { SoupsInfo } from "./components/Footer-Info/Interesting/Recipes/Soups/SoupsInfo";
-import { SoupRecipies } from "./components/Footer-Info/Interesting/Recipes/Soups/SoupRecipies";
-
 import { SaladsInfo } from "./components/Footer-Info/Interesting/Recipes/Salads/SaladsInfo";
-import { SaladRecipies } from "./components/Footer-Info/Interesting/Recipes/Salads/SaladRecipies";
-
-import { LeanMealRecipies } from "./components/Footer-Info/Interesting/Recipes/LeanMeals";
 import { LeanMealsInfo } from "./components/Footer-Info/Interesting/Recipes/LeanMeals/LeanMealsInfo";
-
-import { MeatDishesRecipies } from "./components/Footer-Info/Interesting/Recipes/MeatDishes/MeatDishesRecipies";
 import { MeatDishesInfo } from "./components/Footer-Info/Interesting/Recipes/MeatDishes/MeatDishesInfo";
-
 import { DessertsInfo } from "./components/Footer-Info/Interesting/Recipes/Desserts/DessertsInfo";
-import { DessertsRecipies } from "./components/Footer-Info/Interesting/Recipes/Desserts";
-
 import { SmoothiesInfo } from "./components/Footer-Info/Interesting/Recipes/Smoothies/SmoothiesInfo";
-import { SmoothRecipies } from "./components/Footer-Info/Interesting/Recipes/Smoothies";
+    import { Footer } from "./components/Footer";
+import { NotFound } from "./components/NotFound";
 
 function App() {
 
