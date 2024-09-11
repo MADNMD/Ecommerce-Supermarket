@@ -6,6 +6,7 @@ import { toast } from 'react-toastify';
 import * as profileService from '../../../../services/profileService';
 import { useAuthContext } from "../../../../contexts/authContext";
 import { ProfileContext } from "../../../../contexts/profileContext";
+import { CartContext } from "../../../../contexts/cartContext";
 
 export const FavoriteItem = ({
     product,
@@ -14,9 +15,11 @@ export const FavoriteItem = ({
 
     const { handleEditProfile } = useContext(ProfileContext);
     const { userId } = useAuthContext();
+    const { addCart } = useContext(CartContext);
     const [count, setCount] = useState(1);
     const [weight, setWeight] = useState(product.unitQuantity);
     const [toastShow, setToastShow] = useState(false);
+    const [favoriteAnimation, setFavoriteAnimation] = useState(false);
 
     useEffect(() => {
         if (product.unitQuantity === 3190) {
@@ -42,6 +45,31 @@ export const FavoriteItem = ({
         }
     }
 
+    const handleAddToCart = async () => {
+
+        try {
+            const user = await profileService.getUser(userId);
+            
+            addCart(product, count);
+
+            if (user.cart.find(p => p._id === product._id)) {
+                toast.error('Този продукт вече е добавен в кошницата за пазаруване!');
+                return;
+            }
+
+            handleEditProfile({ ...user, cart: [...user.cart, product._id] });
+            setFavoriteAnimation(true);
+
+            setTimeout(() => {
+                setFavoriteAnimation(false);
+            }, 500);
+
+        } catch (error) {
+            toast.error('Не успя да добавил този продукт в кошницата за пазаруване!');
+            console.log(error);
+        }
+    }
+
     const calculatePrice = () => {
         return product.productPrice * count;
     }
@@ -61,7 +89,7 @@ export const FavoriteItem = ({
     }
 
     return (
-        <div className={styles['four-card']}>
+        <div className={`${styles['four-card']} ${favoriteAnimation ? styles['favorite-animation'] : ''}`}>
             <button onClick={removeFromFavoriteList}><i className={`${styles.iconX} fa-solid fa-xmark`}></i></button>
             {/* <Link to="anal"><i className={`${styles.iconX} fa-solid fa-xmark`}></i></Link> */}
             <div className={styles['card-img']}>
@@ -146,7 +174,7 @@ export const FavoriteItem = ({
                         }}>+</p>
                     </div>
                     <div className={styles['order-product']}>
-                        <Link to=""><i className="fa-solid fa-cart-shopping"></i>ДОБАВИ</Link>
+                    <button onClick={handleAddToCart}><i className="fa-solid fa-cart-shopping"></i>ДОБАВИ</button>
                     </div>
                 </div>
             </div>
