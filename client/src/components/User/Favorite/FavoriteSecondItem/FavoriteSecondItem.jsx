@@ -1,10 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
 import styles from './FavoriteSecondItem.module.css';
 import { Link } from "react-router-dom";
+import { toast } from 'react-toastify';
 
 import * as profileService from '../../../../services/profileService';
 import { useAuthContext } from "../../../../contexts/authContext";
 import { ProfileContext } from "../../../../contexts/profileContext";
+import { CartContext } from "../../../../contexts/cartContext";
 
 export const FavoriteSecondItem = ({
     product,
@@ -13,10 +15,12 @@ export const FavoriteSecondItem = ({
 
     const { handleEditProfile } = useContext(ProfileContext);
     const { userId } = useAuthContext();
+    const { addCart } = useContext(CartContext);
     const [weight, setWeight] = useState(product.unitQuantity);
     const [grams, setGrams] = useState(weight);
     const [kilograms, setKilograms] = useState(weight)
-    const [price, setPrice] = useState(product.productNewPrice);
+    const [price, setPrice] = useState(product.productPrice);
+    const [favoriteAnimation, setFavoriteAnimation] = useState(false);
 
     let productInfoLink = '';
 
@@ -104,6 +108,39 @@ export const FavoriteSecondItem = ({
         }
     }
 
+    const handleAddToCart = async () => {
+
+        try {
+            const user = await profileService.getUser(userId);
+
+            let selectedWeight;
+
+            if (product.productName.includes('ДИНЯ')) {
+                selectedWeight = weight === product.unitQuantity ? 3000 : weight;
+            } else {
+                selectedWeight = weight
+            }
+
+            addCart(product, selectedWeight);
+
+            if (user.cart.find(p => p._id === product._id)) {
+                toast.error('Този продукт вече е добавен в кошницата за пазаруване!');
+                return;
+            }
+
+            handleEditProfile({ ...user, cart: [...user.cart, product._id] });
+            setFavoriteAnimation(true);
+
+            setTimeout(() => {
+                setFavoriteAnimation(false);
+            }, 500);
+
+        } catch (error) {
+            toast.error('Не успя да добавиш този продукт в кошницата за пазаруване!');
+            console.log(error);
+        }
+    }
+
     if (product.productQuantity === 0) {
         productInfoLink = '/product-info-exhausted';
     } else if (product.productNewPrice !== null) {
@@ -115,9 +152,8 @@ export const FavoriteSecondItem = ({
     }
 
     return (
-        <div className={styles['four-card']}>
+        <div className={`${styles['four-card']} ${favoriteAnimation ? styles['favorite-animation'] : ''}`}>
             <button onClick={removeFromFavoriteList}><i className={`${styles.iconX} fa-solid fa-xmark`}></i></button>
-            {/* <Link to="anal"><i className={`${styles.iconX} fa-solid fa-xmark`}></i></Link> */}
             <div className={styles['card-img']}>
                 {product.productNewPrice !== null ? (
                     <p className={styles['discount-percent']}>{Math.floor((product.productPrice - product.productNewPrice) / product.productNewPrice * 100)}%</p>
@@ -135,7 +171,7 @@ export const FavoriteSecondItem = ({
                 <h6>{product.productName}</h6>
                 {product.productNewPrice !== null ? (
                     <div className={styles['card-info-price']}>
-                        <p className={styles['card-price-new']}>{price?.toFixed(2)}лв</p>
+                        <p className={styles['card-price-new']}>{product.productNewPrice.toFixed(2)}лв</p>
                         <p className={styles['card-price-old']}>{product.productPrice.toFixed(2)}лв</p>
                     </div>
                 ) : (
@@ -185,7 +221,7 @@ export const FavoriteSecondItem = ({
                         </select>
                     </div>
                     <div className={styles['order-product']}>
-                        <Link to=""><i className="fa-solid fa-cart-shopping"></i>ДОБАВИ</Link>
+                    <button onClick={handleAddToCart}><i className="fa-solid fa-cart-shopping"></i>ДОБАВИ</button>
                     </div>
                 </div>
             </div>
