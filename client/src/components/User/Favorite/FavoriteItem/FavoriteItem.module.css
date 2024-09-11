@@ -8,6 +8,24 @@
     }
 }
 
+@keyframes fly-to-heart {
+    0% {
+        transform: translateY(0) translateX(0) scale(1);
+        ;
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(-1000px) translateX(2050px) scale(1.2);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-800px) translateX(-2000px) scale(0.8);
+        opacity: 0;
+    }
+}
+
 .first-card,
 .second-card,
 .third-card,
@@ -31,6 +49,10 @@
 .four-card:hover {
     box-shadow: 2px 2px 15px -1px rgba(0, 0, 0, 0.75);
     transform: scale(1.05);
+}
+
+.favorite-animation {
+    animation: fly-to-heart 5s ease forwards;
 }
 
 .four-card .iconX {
@@ -67,7 +89,7 @@
 .four-card .discount-percent {
     position: absolute;
     top: 18%;
-    left: 102.5%;
+    left: 101.7%;
     transform: translate(-50%, -50%);
     background-color: #f5f5f5;
     color: red;
@@ -105,6 +127,8 @@
     /* height: 100vh; */
     background-color: #f5f5f5;
     width: 14.1em;
+    border-bottom-left-radius: 0.3em;
+    border-bottom-right-radius: 0.3em;
 }
 
 .card-content h6 {
@@ -172,8 +196,9 @@
     margin-bottom: 0.4em;
 }
 
-.card-option-fav .order-product a,
+.card-option-fav .order-product button,
 .card-option-fav .favorite-product a {
+    cursor: pointer;
     font-size: 0.7em;
     font-weight: bold;
     text-decoration: none;
@@ -185,7 +210,7 @@
     border-radius: 0.3em;
 }
 
-.card-option-fav .order-product a:hover,
+.card-option-fav .order-product button:hover,
 .card-option-fav .favorite-product a:hover {
     color: #fff;
     background-color: red;
