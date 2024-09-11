@@ -1,1 +1,2 @@
-export { SoupRecipies } from './Recipies';
+export { SoupRecipies } from './SoupRecipies';
+// export { SoupRecipies } from './Recipies';
