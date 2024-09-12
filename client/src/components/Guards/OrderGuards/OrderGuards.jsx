@@ -10,9 +10,10 @@ export const OrderGuards = () => {
     const userCart = getUserCart();
     const { admin } = useAuthContext();
 
-    if (admin || userCart.length === 0) {
+    if (userCart.length === 0) {
+        return <Navigate to={'/'} />
+    } else if (admin) {
         return <Outlet />
     }
-
-    return <Navigate to={'/'} />
+    return <Outlet />
 }
