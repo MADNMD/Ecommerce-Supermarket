@@ -65,21 +65,23 @@ export const MyCartOrder = ({ hideNavigationAndFooter }) => {
                 if (product.unitQuantity >= 100 &&
                     (product.selectedSubCategory === 'Зеленчуци' ||
                         product.selectedSubCategory === 'Плодове' ||
-                        product.selectedSubCategory === 'Маслини')) {
+                        product.selectedSubCategory === 'Маслини' ||
+                        product.selectedSubCategory === 'Месо' ||
+                        product.selectedSubCategory === 'Риба')) {
                     const unitPrice = product.productNewPrice === null
                         ? product.productPrice * (1000 / product.unitQuantity)
                         : product.productNewPrice * (1000 / product.unitQuantity);
-                     price = unitPrice * product.count / 1000; // Умножаваме цената по броя на продуктите и делим на 1000, защото `count` е в грамове
+                    price = unitPrice * product.count / 1000; // Умножаваме цената по броя на продуктите и делим на 1000, защото `count` е в грамове
                     total += price;
                 } else if (product.productName.includes('ДИНЯ')) {
                     const unitPrice = product.productNewPrice === null
                         ? product.productPrice * (1000 / product.unitQuantity)
                         : product.productNewPrice * (1000 / product.unitQuantity);
-                     price = unitPrice * (product.count / 1000) / 1000;
+                    price = unitPrice * (product.count / 1000) / 1000;
                     total += price;
                     // newCountDetails[product._id] = { count: product.count, price: price.toFixed(2) };
                 } else {
-                     price = product.productNewPrice === null
+                    price = product.productNewPrice === null
                         ? product.productPrice * product.count
                         : product.productNewPrice * product.count
                     total += price;
@@ -467,7 +469,9 @@ export const MyCartOrder = ({ hideNavigationAndFooter }) => {
                                                 {product.unitQuantity >= 100 &&
                                                     (product.selectedSubCategory === 'Зеленчуци' ||
                                                         product.selectedSubCategory === 'Плодове' ||
-                                                        product.selectedSubCategory === 'Маслини')
+                                                        product.selectedSubCategory === 'Маслини' ||
+                                                        product.selectedSubCategory === 'Месо' ||
+                                                        product.selectedSubCategory === 'Риба')
                                                     ? <span>{(price * (1000 / product.unitQuantity) / 1000).toFixed(2)}лв</span>
                                                     : product.productName.includes('ДИНЯ')
                                                         ? <span>{(price / 1000).toFixed(2)}лв</span>
