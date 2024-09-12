@@ -96,6 +96,18 @@ export const FavoriteSecondItem = ({
         }
     }
 
+    const calculatePrice = () => {
+        return (product.productPrice / product.unitQuantity) * weight;
+    }
+
+    const calculateNewPrice = () => {
+        if (product.productNewPrice !== null) {
+            return (product.productNewPrice / product.unitQuantity) * weight;
+        } else {
+            return calculatePrice();
+        }
+    }
+
     const removeFromFavoriteList = async () => {
 
         try {
@@ -171,11 +183,11 @@ export const FavoriteSecondItem = ({
                 <h6>{product.productName}</h6>
                 {product.productNewPrice !== null ? (
                     <div className={styles['card-info-price']}>
-                        <p className={styles['card-price-new']}>{product.productNewPrice.toFixed(2)}лв</p>
+                        <p className={styles['card-price-new']}>{calculateNewPrice().toFixed(2)}лв</p>
                         <p className={styles['card-price-old']}>{product.productPrice.toFixed(2)}лв</p>
                     </div>
                 ) : (
-                    <p className={styles['card-price']}>{price?.toFixed(2)}лв</p>
+                    <p className={styles['card-price']}>{calculatePrice().toFixed(2)}лв</p>
                 )}
                 <span className={styles['weight']}>{weight < 1000 ? grams : kilograms}{grams ? product.unitWeight : 'к' + product.unitWeight}</span>
 
