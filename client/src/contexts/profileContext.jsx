@@ -43,14 +43,19 @@ export const ProfileProvider = ({
             const newCartLength = updatedProfile.cart.length;
 
             if (newFavoritesLength > oldFavoritesLength) {
+                toast.dismiss();
                 toast.success('Продукта успешно е добавен в любими');
             } else if (newFavoritesLength < oldFavoritesLength) {
+                toast.dismiss();
                 toast.success('Продукта успешно е премахнат от любими');
             } else if (newCartLength > oldCartLenght) {
+                toast.dismiss();
                 toast.success('Продукта успешно е добавен в кошницата за пазаруване');
             } else if(newCartLength < oldCartLenght) {
+                toast.dismiss();
                 toast.success('Продукта успешно е премахнат от кошницата за пазаруване');
             } else {
+                toast.dismiss();
                 toast.success('Профилът е обновен успешно')
             }
 

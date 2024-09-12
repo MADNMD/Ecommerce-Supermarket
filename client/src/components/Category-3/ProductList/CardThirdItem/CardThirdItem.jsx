@@ -98,6 +98,7 @@ export const CardThirdItem = ({
             const user = await profileService.getUser(userId);
 
             if (user.favorites.find(p => p._id === product._id)) {
+                toast.dismiss();
                 toast.error(`Този продукт вече е добавен в любими!`)
                 // alert(`Този продукт вече е добавен в любими!`);
                 return;
@@ -128,6 +129,7 @@ export const CardThirdItem = ({
             addCart(product, selectedWeight);
 
             if (user.cart.find(p => p._id === product._id)) {
+                toast.dismiss();
                 toast.error('Този продукт вече е добавен в кошницата за пазаруване!');
                 return;
             }
@@ -140,6 +142,7 @@ export const CardThirdItem = ({
             }, 500);
 
         } catch (error) {
+            toast.dismiss();
             toast.error('Не успя да добавиш този продукт в кошницата за пазаруване!');
             console.log(error);
         }

@@ -49,10 +49,11 @@ export const FavoriteItem = ({
 
         try {
             const user = await profileService.getUser(userId);
-            
+
             addCart(product, count);
 
             if (user.cart.find(p => p._id === product._id)) {
+                toast.dismiss();
                 toast.error('Този продукт вече е добавен в кошницата за пазаруване!');
                 return;
             }
@@ -65,6 +66,7 @@ export const FavoriteItem = ({
             }, 500);
 
         } catch (error) {
+            toast.dismiss();
             toast.error('Не успя да добавил този продукт в кошницата за пазаруване!');
             console.log(error);
         }
@@ -138,6 +140,7 @@ export const FavoriteItem = ({
                         <p className={styles.plus} onClick={() => {
                             if (count === 5) {
                                 if (!toastShow) {
+                                    toast.dismiss();
                                     toast.error(`Максималният брой единици, които могат да бъдат добавени в количката, е достигнат`);
                                     toastShow(true);
                                     setTimeout(() => {
@@ -148,6 +151,7 @@ export const FavoriteItem = ({
                             }
                             if (count === 3 && product.unitQuantity * 3 === 750) {
                                 if (!toastShow) {
+                                    toast.dismiss();
                                     toast.error(`Максималният брой единици, които могат да бъдат добавени в количката, е достигнат`);
                                     toastShow(true);
                                     setTimeout(() => {
@@ -159,6 +163,7 @@ export const FavoriteItem = ({
                             }
                             if (count === 4 && product.unitQuantity * 4 === 800) {
                                 if (!toastShow) {
+                                    toast.dismiss();
                                     toast.error(`Максималният брой единици, които могат да бъдат добавени в количката, е достигнат`);
                                     toastShow(true);
                                     setTimeout(() => {
@@ -174,7 +179,7 @@ export const FavoriteItem = ({
                         }}>+</p>
                     </div>
                     <div className={styles['order-product']}>
-                    <button onClick={handleAddToCart}><i className="fa-solid fa-cart-shopping"></i>ДОБАВИ</button>
+                        <button onClick={handleAddToCart}><i className="fa-solid fa-cart-shopping"></i>ДОБАВИ</button>
                     </div>
                 </div>
             </div>

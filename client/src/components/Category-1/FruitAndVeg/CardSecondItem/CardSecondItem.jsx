@@ -30,6 +30,7 @@ export const CardSecondItem = ({
             const user = await profileService.getUser(userId);
 
             if (user.favorites.find(p => p._id === product._id)) {
+                toast.dismiss();
                 toast.error('Този продукт вече е добавен в любими!');
                 // alert('Този продукт вече е добавен в любими!');
                 return;
@@ -56,6 +57,7 @@ export const CardSecondItem = ({
             addCart(product, count);
 
             if (user.cart.find(p => p._id === product._id)) {
+                toast.dismiss();
                 toast.error('Този продукт вече е добавен в кошницата за пазаруване!');
                 return;
             }
@@ -68,6 +70,7 @@ export const CardSecondItem = ({
             }, 500);
 
         } catch (error) {
+            toast.dismiss();
             toast.error('Не успя да добавиш този продукт в кошницата за пазаруване!');
             console.log(error);
         }
@@ -102,6 +105,7 @@ export const CardSecondItem = ({
                         <p className={styles.plus} onClick={() => {
                             if (count === 5) {
                                 if (!toastShow) {
+                                    toast.dismiss();
                                     toast.error(`Максималният брой единици, които могат да бъдат добавени в количката, е достигнат`);
                                     setToastShow(true);
                                     setTimeout(() => {
@@ -113,6 +117,7 @@ export const CardSecondItem = ({
                             }
                             if (count === 3 && product.unitQuantity * 3 === 750) {
                                 if (!toastShow) {
+                                    toast.dismiss();
                                     toast.error(`Максималният брой единици, които могат да бъдат добавени в количката, е достигнат`);
                                     setToastShow(true);
                                     setTimeout(() => {
@@ -125,6 +130,7 @@ export const CardSecondItem = ({
                             }
                             if (count === 4 && product.unitQuantity * 4 === 800) {
                                 if (!toastShow) {
+                                    toast.dismiss();
                                     toast.error(`Максималният брой единици, които могат да бъдат добавени в количката, е достигнат`);
                                     setToastShow(true);
                                     setTimeout(() => {
