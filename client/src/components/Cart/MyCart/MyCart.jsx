@@ -35,7 +35,7 @@ export const MyCart = ({
         const counts = {};
 
         const correctedCart = userCart.map(product => {
-            if (product.unitQuantity >= 100 && product.count === 201 && product.category === 'Зеленчуци и плодове') {
+            if (product.unitQuantity >= 100 && product.count === 201 && (product.category === 'Зеленчуци и плодове' || product.selectedSubCategory === 'Месо' || product.selectedSubCategory === 'Риба')) {
                 return { ...product, count: 200 };
             } else if (product.productName === "ДИНЯ кг /Гърция/" && product.count === 1) {
                 return { ...product, count: 3000 };
@@ -50,12 +50,14 @@ export const MyCart = ({
             const unitPrice = product.unitQuantity >= 100 &&
                 (product.selectedSubCategory === 'Зеленчуци' ||
                     product.selectedSubCategory === 'Плодове' ||
-                    product.selectedSubCategory === 'Маслини') &&
+                    product.selectedSubCategory === 'Маслини' ||
+                    product.selectedSubCategory === 'Месо' ||
+                    product.selectedSubCategory === 'Риба') &&
                 product.productName !== 'БИО ЧЕРИ ДОМАТИ "Моравско село" 200г'
                 ? price * (1000 / product.unitQuantity)
                 : price;
 
-            if (product.count >= 100 && product.category === 'Зеленчуци и плодове') {
+            if (product.count >= 100 && (product.category === 'Зеленчуци и плодове' || product.selectedSubCategory === 'Месо' || product.selectedSubCategory === 'Риба')) {
                 total += (unitPrice * (product.count / 1000));
             } else {
                 total += unitPrice * product.count;
@@ -142,7 +144,9 @@ export const MyCart = ({
                                     const isWeightedProduct = product.unitQuantity >= 100 &&
                                         (product.selectedSubCategory === 'Зеленчуци' ||
                                             product.selectedSubCategory === 'Плодове' ||
-                                            product.selectedSubCategory === 'Маслини') &&
+                                            product.selectedSubCategory === 'Маслини' ||
+                                            product.selectedSubCategory === 'Месо' ||
+                                            product.selectedSubCategory === 'Риба') &&
                                         product.productName !== 'БИО ЧЕРИ ДОМАТИ "Моравско село" 200г';
 
                                     const unitPrice = isWeightedProduct ? price * (1000 / product.unitQuantity) : price;
