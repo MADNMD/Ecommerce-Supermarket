@@ -32,7 +32,9 @@ export const Navigation = () => {
             const isWeightedProduct = product.unitQuantity >= 100 &&
                 (product.selectedSubCategory === 'Зеленчуци' ||
                     product.selectedSubCategory === 'Плодове' ||
-                    product.selectedSubCategory === 'Маслини') &&
+                    product.selectedSubCategory === 'Маслини' ||
+                    product.selectedSubCategory === 'Месо' ||
+                    product.selectedSubCategory === 'Риба') &&
                 product.productName !== 'БИО ЧЕРИ ДОМАТИ "Моравско село" 200г';
 
             const unitPrice = isWeightedProduct ? productPrice * (1000 / product.unitQuantity) : productPrice;
