@@ -22,13 +22,17 @@ export const CardThirdItem = ({
     const [price, setPrice] = useState(product.productPrice);
     const [favoriteAnimation, setFavoriteAnimation] = useState(false);
 
+    if (grams === 201) {
+        setGrams(200);
+    }
+
     let linkProductInfo = '';
 
     if (product.productNewPrice !== null) {
         linkProductInfo = '/product-info-discount';
     } else if (product.unitsKilogram === 'Бр') {
         linkProductInfo = '/product-info';
-    } else if(product.unitsKilogram === 'Кг') {
+    } else if (product.unitsKilogram === 'Кг') {
         linkProductInfo = '/product-info-second';
     }
 
@@ -77,6 +81,18 @@ export const CardThirdItem = ({
             setPrice(newPrice);
             setGrams(selectedWeight);
             setKilograms(0);
+        }else if (selectedWeight === 3000) {
+            newPrice = product.productPrice * 3;
+            setPrice(newPrice);
+            setKilograms(selectedWeight / 1000);
+        } else if (selectedWeight === 6000) {
+            newPrice = product.productPrice * 6;
+            setPrice(newPrice);
+            setKilograms(selectedWeight / 1000);
+        } else if (selectedWeight === 9000) {
+            newPrice = product.productPrice * 9;
+            setPrice(newPrice);
+            setKilograms(selectedWeight / 1000);
         }
     }
 
@@ -152,7 +168,7 @@ export const CardThirdItem = ({
         <div className={`${styles['first-card']} ${favoriteAnimation ? styles['favorite-animation'] : ''}`}>
 
             <div className={styles['card-img']}>
-            {product.productNewPrice !== null ? (
+                {product.productNewPrice !== null ? (
                     <p className={styles['discount-percent']}>{Math.floor((product.productPrice - product.productNewPrice) / product.productNewPrice * 100)}%</p>
                 ) : (
                     null
@@ -167,35 +183,71 @@ export const CardThirdItem = ({
 
             <div className={styles['card-content']}>
                 <h6>{product.productName}</h6>
+
+                {/* Проверка за нова цена или стандартна цена */}
                 {product.productNewPrice !== null ? (
                     <div className={styles['card-info-price']}>
                         <p className={styles['card-price-new']}>{calculateNewPrice().toFixed(2)}лв</p>
                         <p className={styles['card-price-old']}>{product.productPrice.toFixed(2)}лв</p>
                     </div>
                 ) : (
-                    <p className={styles['card-price']}>{calculatePrice().toFixed(2)}лв</p>
+                    <p className={styles['card-price']}>{price.toFixed(2)}лв</p>
+                    // <p className={styles['card-price']}>{calculatePrice().toFixed(2)}лв</p>
                 )}
-                <span className={styles['weight']}>{weight < 1000 ? grams : kilograms}{grams ? product.unitWeight : 'к' + product.unitWeight}</span>
 
+                {/* Показване на тегло в зависимост от условията */}
+                <span className={styles['weight']}>
+                    {weight < 1000 ? grams : kilograms}{grams ? product.unitWeight : 'к' + product.unitWeight}
+                </span>
+
+                {/* Опции за тегло в зависимост от количеството на продукта */}
                 <div className={styles['card-option']}>
                     <select name="weight-option" value={weight} onChange={handleWeightChange}>
-                        {product.unitQuantity >= 500 && product.unitQuantity <= 1000 ? (
+                        {product.unitQuantity < 500 && product.unitQuantity > 10 ? (
                             <>
-                                <option value="500">500г</option>
-                                <option value="1000">1кг</option>
+                                {product.unitQuantity === 201 ? (
+                                    <>
+                                        <option value="201">200г</option>
+                                        <option value="400">400г</option>
+                                        <option value="600">600г</option>
+                                    </>
+                                ) : (
+                                    <>
+                                        <option value="100">100г</option>
+                                        <option value="200">200г</option>
+                                    </>
+                                )}
                             </>
                         ) : (
-                            null
+                            <>
+                                {product.unitQuantity >= 500 && product.unitQuantity <= 1000 ? (
+                                    <>
+                                        <option value="500">500г</option>
+                                        <option value="1000">1кг</option>
+                                    </>
+                                ) : (
+                                    <>
+                                        <option value="3000">3кг</option>
+                                        <option value="6000">6кг</option>
+                                        <option value="9000">9кг</option>
+                                    </>
+                                )}
+                            </>
                         )}
                     </select>
+
+                    {/* Бутони за добавяне в количка и любими */}
                     <div className={styles['order-product']}>
-                        <button onClick={handleAddToCart}><i className="fa-solid fa-cart-shopping"></i>ДОБАВИ</button>
+                        <button onClick={handleAddToCart}>
+                            <i className="fa-solid fa-cart-shopping"></i>ДОБАВИ
+                        </button>
                     </div>
                     <div className={styles['favorite-product']}>
-                        <button onClick={handleAddToFavorites}><i className="fa-regular fa-heart"></i>ЛЮБИМИ</button>
+                        <button onClick={handleAddToFavorites}>
+                            <i className="fa-regular fa-heart"></i>ЛЮБИМИ
+                        </button>
                     </div>
                 </div>
-
             </div>
 
         </div>
