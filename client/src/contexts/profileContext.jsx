@@ -55,7 +55,7 @@ export const ProfileProvider = ({
                 toast.dismiss();
                 toast.success('Продукта успешно е премахнат от кошницата за пазаруване');
             } else {
-                toast.dismiss();
+                // toast.dismiss();
                 toast.success('Профилът е обновен успешно')
             }
 
