@@ -8,6 +8,7 @@ import { GoChevronRight } from "react-icons/go";
 import * as productService from '../../services/productService';
 import { CardFirstItem } from "./CardFirstItem";
 import { CardSecondItem } from "./CardSecondItem";
+import { CardThirdItem } from './CardThirdItem';
 
 export const Search = ({ showNavigationAndFooter }) => {
 
@@ -103,12 +104,16 @@ export const Search = ({ showNavigationAndFooter }) => {
                             {products.length > 0 ? (
                                 currentItems.map(product => {
                                     let cardComponent;
-                                    if (product.productQuantity === 0) {
-                                        cardComponent = <CardSecondItem product={product} />;
-                                    } else {
-                                        cardComponent = <CardFirstItem product={product} />;
+                                    {
+                                        product.productQuantity === 0 ? (
+                                            cardComponent = <CardSecondItem product={product} />
+                                        ) : product.unitsKilogram === 'Бр' ? (
+                                            cardComponent = <CardFirstItem product={product} />
+                                        ) : (
+                                            cardComponent = <CardThirdItem product={product} />
+                                        )
                                     }
-                                    return <React.Fragment key={product._id}>{cardComponent}</React.Fragment>;
+                                    return <React.Fragment key={product._id}>{cardComponent}</React.Fragment>
                                 })
                             ) : (
                                 <div>Няма намерени продукти</div>
