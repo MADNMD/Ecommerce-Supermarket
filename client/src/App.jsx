@@ -114,19 +114,15 @@ function App() {
                                     <Route path="/admin-invetory" element={<AdminInvetory showNavigationAndFooter={showNavigationAndFooter} />} />
                                     <Route path="/admin-orders" element={<AdminOrders showNavigationAndFooter={showNavigationAndFooter} />} />
                                     <Route path="/admin-users" element={<AdminUsers showNavigationAndFooter={showNavigationAndFooter} />} />
-                                    <Route element={<OrderGuards />}>
-                                        <Route path="/my-order-number/:orderNumber" element={<MyOrderNumber hideNavigationAndFooter={hideNavigationAndFooter} />} />
-                                    </Route>
                                 </Route>
 
                                 <Route element={<AuthGuards />}>
                                     <Route path="/user/logout" element={<Logout />} />
-
                                     <Route path="/user/order" element={<Order showNavigationAndFooter={showNavigationAndFooter} />} />
                                     <Route path="/user/favorites" element={<Favorite showNavigationAndFooter={showNavigationAndFooter} />} />
                                     <Route path="/user/profile/" element={<Profile showNavigationAndFooter={showNavigationAndFooter} />} />
-
                                     <Route path="/my-cart" element={<MyCart hideNavigationAndFooter={hideNavigationAndFooter} />} />
+
                                     <Route element={<OrderGuards />}>
                                         <Route path="/my-cart-order" element={<MyCartOrder hideNavigationAndFooter={hideNavigationAndFooter} />} />
                                         <Route path="/my-cart-ready-order" element={<MyCartReadyOrder hideNavigationAndFooter={hideNavigationAndFooter} />} />
