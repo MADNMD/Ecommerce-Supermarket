@@ -157,4 +157,42 @@ router.get('/search', async (req, res) => {
         console.log('search-error-server', error.message);
     }
 });
+
+router.put('/update-quantity/:productId', async (req, res) => {
+    try {
+        const productId = req.params.productId;
+        console.log('ID на продукта:', productId);
+
+        // Стъпка 1: Вземете информация за продукта от базата данни
+        const product = await productService.productDetails(productId);
+        console.log('Продукт:', product);
+
+        // Стъпка 2: Извлечете количеството от тялото на заявката
+        const { productQuantity } = req.body;
+        console.log('Получено количество:', productQuantity);
+
+        if (!product) {
+            return res.status(404).json({ message: 'Продуктът не е намерен' });
+        }
+
+        // Коригирайте изчислението на новото количество
+        const newQuantity = product.productQuantity - productQuantity;
+        console.log('Новото количество:', newQuantity);
+
+        if (newQuantity < 0) {
+            return res.status(400).json({ message: 'Недостатъчна наличност' });
+        }
+
+        // Стъпка 3: Актуализирайте количеството на продукта в базата данни
+        const updatedProduct = await productService.editProduct(productId, { productQuantity: newQuantity });
+        console.log('Актуализиран продукт:', updatedProduct);
+        
+        // Стъпка 4: Върнете актуализирания продукт
+        res.status(200).json(updatedProduct);
+    } catch (error) {
+        res.status(400).json({ message: error.message });
+        console.log('update-product-quantity-error-server', error);
+    }
+});
+
 module.exports = router;
