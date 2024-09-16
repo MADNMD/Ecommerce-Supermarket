@@ -9,6 +9,7 @@ import { ProfileContext } from "../../../contexts/profileContext";
 import { useAuthContext } from "../../../contexts/authContext";
 import * as emailService from '../../../services/emailService';
 import * as profileService from '../../../services/profileService';
+import * as productService from '../../../services/productService';
 
 export const MyCartOrder = ({ hideNavigationAndFooter }) => {
 
@@ -178,6 +179,24 @@ export const MyCartOrder = ({ hideNavigationAndFooter }) => {
         additionalComment: ''
     };
 
+    const updateProductQuantities = async () => {
+        try {
+            await Promise.all(cartProduct.map(async (product) => {
+                const newQuantity = product.productQuantity - product.count;
+    
+                if (newQuantity < 0) {
+                    throw new Error(`Недостатъчна наличност за ${product.productName}`);
+                }
+    
+                await productService.updateProductQuantity(product._id, product.count);
+            }));
+    
+        } catch (error) {
+            toast.error(`Грешка при актуализиране на наличностите: ${error.message}`);
+            console.error(error);
+        }
+    };
+
     const onSubmit = async (values) => {
 
         const orderNumber = generateOrderNumber();
@@ -205,13 +224,15 @@ export const MyCartOrder = ({ hideNavigationAndFooter }) => {
             products: cartProduct,
             orderDetails: userData
         };
-        profile.orders.push(orderData)
-        console.log(orderData)
+
+        profile.orders.push(orderData);
+
         try {
             setLoading(true);
             await emailService.emailSenderForm(userData);
             // await profileService.editUser(userId, profile);
-            handleEditProfile(profile)
+            handleEditProfile(profile);
+            await updateProductQuantities();
             setLoading(false);
             toast.success('Поръчката е направена успешно');
             navigate('/my-cart-ready-order');
