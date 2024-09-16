@@ -76,3 +76,16 @@ export const searchProduct = async(query) => {
         throw error;
     }
 }
+
+export const updateProductQuantity = async (productId, newQuantity) => {
+  
+    try {
+        const updatedProduct = await requester.put(`/products/update-quantity/${productId}`, {
+            productQuantity: newQuantity
+        });
+        return updatedProduct;
+    } catch (error) {
+        console.log('Error updating product quantity', error);
+        throw error;
+    }
+};
