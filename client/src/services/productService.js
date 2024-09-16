@@ -66,7 +66,7 @@ export const editProduct = async (productId, productData) => {
     }
 }
 
-export const searchProduct = async(query) => {
+export const searchProduct = async (query) => {
 
     try {
         const seatchProduct = await requester.get(`/products/search?q=${encodeURIComponent(query)}`);
@@ -78,11 +78,9 @@ export const searchProduct = async(query) => {
 }
 
 export const updateProductQuantity = async (productId, newQuantity) => {
-  
+
     try {
-        const updatedProduct = await requester.put(`/products/update-quantity/${productId}`, {
-            productQuantity: newQuantity
-        });
+        const updatedProduct = await requester.put(`/products/update-quantity/${productId}`, { productQuantity: newQuantity });
         return updatedProduct;
     } catch (error) {
         console.log('Error updating product quantity', error);
