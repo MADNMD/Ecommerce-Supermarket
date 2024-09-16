@@ -182,6 +182,11 @@ export const MyCartOrder = ({ hideNavigationAndFooter }) => {
     const updateProductQuantities = async () => {
         try {
             await Promise.all(cartProduct.map(async (product) => {
+
+                if(product.count >= 100){
+                    product.count = product.count / 1000;
+                }
+
                 const newQuantity = product.productQuantity - product.count;
     
                 if (newQuantity < 0) {
