@@ -1,4 +1,5 @@
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
+
     .fruitAndVeg-content {
         margin-top: 1em;
     }
@@ -10,7 +11,7 @@
     .fruitAndVeg-content .cards {
         justify-content: center;
     }
-}
+} */
 
 .fruitAndVeg .container {
     max-width: 1300px;
@@ -100,7 +101,7 @@
 }
 
 .activePage,
-.currentPage{
+.currentPage {
     display: flex;
     justify-content: center;
     cursor: pointer;
@@ -114,10 +115,10 @@
 }
 
 .pagination button:disabled {
-    background-color: #cccccc; 
-    color: #666666; 
-    cursor: not-allowed; 
-    opacity: 0.5; 
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+    opacity: 0.5;
 }
 
 /* Карта за грамаж firstCard*/
@@ -246,7 +247,7 @@
 @media only screen and (max-width: 768px) {
     .mini-nav-product {
         margin-top: 3em;
-        margin-left: 3em;
+        /* margin-left: 3em; */
     }
 }
 
@@ -807,3 +808,22 @@
     color: #fff;
     background-color: rgb(249, 61, 61);
 }
+
+@media screen and (max-width: 767px) {
+
+    .fruitAndVeg-main-content {
+        flex-direction: column;
+    }
+
+    .cards {
+        margin-right: 1em;
+    }
+
+    .cards .first-card {
+        flex: 0 1 calc(50% - 1em);
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {}
+
+@media screen and (min-width: 1024px) {}
