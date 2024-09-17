@@ -78,6 +78,65 @@ export const FruitAndVeg = ({showNavigationAndFooter}) => {
     const goToPage = (pageNumber) => {
         setCurrentPage(pageNumber);
     }
+    // const renderPageNumbers = () => {
+    //     const totalPages = Math.ceil(allFruitAndVegProducts.length / itemsPerPage);
+    //     const pageNumbers = [];
+    
+    //     const maxPagesToShow = 5; // Максималният брой страници, които искаме да показваме наведнъж
+    //     const startPage = Math.max(1, currentPage - 2); // Започваме от 2 страници преди текущата
+    //     const endPage = Math.min(totalPages, currentPage + 3); // Свършваме 2 страници след текущата
+    
+    //     // Винаги показваме първа страница
+    //     if (startPage > 1) {
+    //         pageNumbers.push(
+    //             <button
+    //                 key={1}
+    //                 onClick={() => goToPage(1)}
+    //                 className={1 === currentPage ? styles.activePage : styles.currentPage}
+    //             >
+    //                 1
+    //             </button>
+    //         );
+    //     }
+    
+    //     // Показваме "..." ако има разстояние между първата и текущата група
+    //     if (startPage > 2) {
+    //         pageNumbers.push(<span key="start-ellipsis" className={styles.ellipsis}>...</span>);
+    //     }
+    
+    //     // Показваме номерата на страниците около текущата страница
+    //     for (let i = startPage; i <= endPage; i++) {
+    //         pageNumbers.push(
+    //             <button
+    //                 key={i}
+    //                 onClick={() => goToPage(i)}
+    //                 className={i === currentPage ? styles.activePage : styles.currentPage}
+    //             >
+    //                 {i}
+    //             </button>
+    //         );
+    //     }
+    
+    //     // Показваме "..." ако има разстояние между текущата група и последната страница
+    //     if (endPage < totalPages - 1) {
+    //         pageNumbers.push(<span key="end-ellipsis" className={styles.ellipsis}>...</span>);
+    //     }
+    
+    //     // Винаги показваме последната страница
+    //     if (endPage < totalPages) {
+    //         pageNumbers.push(
+    //             <button
+    //                 key={totalPages}
+    //                 onClick={() => goToPage(totalPages)}
+    //                 className={totalPages === currentPage ? styles.activePage : styles.currentPage}
+    //             >
+    //                 {totalPages}
+    //             </button>
+    //         );
+    //     }
+    
+    //     return pageNumbers;
+    // }
 
     const renderPageNumbers = () => {
         const totalPages = Math.ceil(allFruitAndVegProducts.length / itemsPerPage);
