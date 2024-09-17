@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from './Order.module.css';
 import { Link } from "react-router-dom";
-import { GoChevronLeft, GoChevronRight } from "react-icons/go"; // Icons for pagination
+import { GoChevronLeft, GoChevronRight } from "react-icons/go";
 import { useAuthContext } from "../../../contexts/authContext";
 import * as profileService from '../../../services/profileService';
 
