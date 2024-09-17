@@ -1,22 +1,20 @@
 import React, { useEffect, useState } from "react";
 import styles from './AdminOrders.module.css';
 import { Link } from "react-router-dom";
+import { GoChevronLeft, GoChevronRight } from "react-icons/go";
 import moment from 'moment';
 
 import * as profileService from '../../../services/profileService';
-import { useAuthContext } from "../../../contexts/authContext";
 
 export const AdminOrders = ({ showNavigationAndFooter }) => {
-
-    // const { userId } = useAuthContext();
-    // const [user, setUser] = useState({});
-    // const [allUsers, setAllUsers] = useState([]);
     const [selectedUser, setSelectedUser] = useState(null);
     const [showModal, setShowModal] = useState(false);
 
     const [sortOption, setSortOption] = useState('date');
     const [allOrders, setAllOrders] = useState([]);
     const [sortedOrders, setSortedOrders] = useState([]);
+    const [currentPage, setCurrentPage] = useState(1);
+    const itemsPerPage = 20;
 
     useEffect(() => {
         showNavigationAndFooter();
@@ -28,7 +26,6 @@ export const AdminOrders = ({ showNavigationAndFooter }) => {
                 const orders = users.flatMap(user =>
                     user.orders.map(order => ({ ...order, user }))
                 );
-                // console.log('All Orders:', orders);
                 setAllOrders(orders);
                 sortOrders(orders, sortOption);
             })
@@ -65,11 +62,49 @@ export const AdminOrders = ({ showNavigationAndFooter }) => {
         setShowModal(false);
     }
 
-    return (
+    // Изчисляваме текущите поръчки за съответната страница
+    const indexOfLastItem = currentPage * itemsPerPage;
+    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+    const currentOrders = sortedOrders.slice(indexOfFirstItem, indexOfLastItem);
 
+    const nextPage = () => {
+        if (currentPage < Math.ceil(sortedOrders.length / itemsPerPage)) {
+            setCurrentPage(currentPage + 1);
+        }
+    };
+
+    const prevPage = () => {
+        if (currentPage > 1) {
+            setCurrentPage(currentPage - 1);
+        }
+    };
+
+    const goToPage = (pageNumber) => {
+        setCurrentPage(pageNumber);
+    };
+
+    const renderPageNumbers = () => {
+        const totalPages = Math.ceil(sortedOrders.length / itemsPerPage);
+        const pageNumbers = [];
+
+        for (let i = 1; i <= totalPages; i++) {
+            pageNumbers.push(
+                <button
+                    key={i}
+                    onClick={() => goToPage(i)}
+                    className={i === currentPage ? styles.activePage : styles.currentPage}
+                >
+                    {i}
+                </button>
+            );
+        }
+
+        return pageNumbers;
+    };
+
+    return (
         <div className={styles['admin-panel-products']}>
             <div className={styles.container}>
-
                 <header className={styles['admin-header']}>
                     <h1>Admin Panel</h1>
                 </header>
@@ -88,7 +123,6 @@ export const AdminOrders = ({ showNavigationAndFooter }) => {
 
                     <div className={styles['orders-content']}>
                         <form className={styles['orders-form']}>
-
                             <label htmlFor="subcategory-option-orders">Sort by:</label>
                             <select
                                 className={styles['subcategory-option-orders']}
@@ -101,6 +135,7 @@ export const AdminOrders = ({ showNavigationAndFooter }) => {
                             </select>
                         </form>
                     </div>
+
                     <table className={styles['admin-orders']}>
                         <thead>
                             <tr>
@@ -112,17 +147,27 @@ export const AdminOrders = ({ showNavigationAndFooter }) => {
                             </tr>
                         </thead>
                         <tbody id="productTableBody-orders" className={styles['product-table-body-orders']}>
-                            {sortedOrders.map(order => (
-                                    <tr key={order._id}>
-                                        <td>{order.orderDetails.currentDate}</td>
-                                        <td>{order.orderDetails.deliveryDetails.day}</td>
-                                        <td><Link to={`/my-order-number/${order.orderNumber}`}>{order.orderNumber}</Link></td>
-                                        <td><Link to="" onClick={() => handleUseClick(order.user)}>{order.user._id}</Link></td>
-                                        <td>{order.orderDetails.totalPrice}лв</td>
-                                    </tr>
+                            {currentOrders.map(order => (
+                                <tr key={order._id}>
+                                    <td>{order.orderDetails.currentDate}</td>
+                                    <td>{order.orderDetails.deliveryDetails.day}</td>
+                                    <td><Link to={`/my-order-number/${order.orderNumber}`}>{order.orderNumber}</Link></td>
+                                    <td><Link to="" onClick={() => handleUseClick(order.user)}>{order.user._id}</Link></td>
+                                    <td>{order.orderDetails.totalPrice}лв</td>
+                                </tr>
                             ))}
                         </tbody>
                     </table>
+
+                    <div className={styles.pagination}>
+                        <button className={styles.prev} onClick={prevPage} disabled={currentPage === 1}>
+                            <GoChevronLeft />
+                        </button>
+                        {renderPageNumbers()}
+                        <button className={styles.next} onClick={nextPage} disabled={currentPage === Math.ceil(sortedOrders.length / itemsPerPage)}>
+                            <GoChevronRight />
+                        </button>
+                    </div>
 
                     {showModal && selectedUser && (
                         <div id="client-productModal" className={styles['client-modal']}>
@@ -138,9 +183,8 @@ export const AdminOrders = ({ showNavigationAndFooter }) => {
                             </div>
                         </div>
                     )}
-
                 </section>
             </div>
         </div>
-    )
+    );
 }
