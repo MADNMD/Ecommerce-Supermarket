@@ -811,6 +811,23 @@
 
 @media screen and (max-width: 767px) {
 
+    @media screen and (max-width: 320px) {
+
+        .cards {
+            display: flex;
+            justify-content: center;
+        }
+
+        .option-btn {
+            text-align: center;
+        }
+
+    }
+
+    .fruitAndVeg-content {
+        margin-left: 1.7em;
+    }
+
     .fruitAndVeg-main-content {
         flex-direction: column;
     }
