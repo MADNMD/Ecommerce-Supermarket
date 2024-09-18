@@ -815,6 +815,14 @@
         flex-direction: column;
     }
 
+    .mini-nav-product {
+        flex-direction: row;
+        justify-content: space-around;
+        max-width: none;
+        height: 1.6em;
+        margin-bottom: 2em;
+    }
+
     .option-btn {
         margin-right: 1.9em;
     }
