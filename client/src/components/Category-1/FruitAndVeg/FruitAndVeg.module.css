@@ -815,6 +815,10 @@
         flex-direction: column;
     }
 
+    .option-btn {
+        margin-right: 1.9em;
+    }
+
     .cards {
         margin-right: 1em;
     }
