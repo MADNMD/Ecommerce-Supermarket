@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import styles from './Vegitables.module.css';
+import styles from '../ProductStyles/ProductStyles.module.css';
+// import styles from './Vegitables.module.css';
 import { Link } from "react-router-dom";
 import PacmanLoader from "react-spinners/PacmanLoader";
 import { GoChevronLeft } from "react-icons/go";
