@@ -854,6 +854,8 @@
         max-width: none;
         height: 1.6em;
         margin-bottom: 2em;
+
+        min-width: 100%
     }
 
     .mini-nav-product a {
