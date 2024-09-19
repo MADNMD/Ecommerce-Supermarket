@@ -60,6 +60,7 @@ i {
 
 .site-nav ul {
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     gap: 1.5em;
