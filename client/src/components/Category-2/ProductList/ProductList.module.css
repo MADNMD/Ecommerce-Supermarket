@@ -1,4 +1,4 @@
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
     .milkAndEgg-main-content {
         margin-top: 1em;
     }
@@ -10,7 +10,7 @@
    .milkAndEgg-main-content .cards {
     justify-content: center;
    }
-}
+} */
 
 .milkAndEgg .container {
     max-width: 1300px;
@@ -248,7 +248,7 @@
 @media only screen and (max-width: 768px) {
     .mini-nav-product{
         margin-top: 3em;
-        margin-left: 3em;
+        /* margin-left: 3em; */
     }
 }
 
@@ -819,3 +819,63 @@
     color: #fff;
     background-color: rgb(249, 61, 61);
 }
+
+@media screen and (max-width: 767px) {
+
+    @media screen and (max-width: 320px) {
+
+        .mini-nav-product {
+            width: 31em;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+        }
+
+        .option-btn {
+            text-align: center;
+        }
+
+    }
+
+    .milkAndEgg-content {
+        margin-left: 1.7em;
+    }
+
+    .milkAndEgg-main-content {
+        flex-direction: column;
+    }
+
+    .mini-nav-product {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        max-width: none;
+        height: 1.6em;
+        margin-bottom: 2em;
+
+        min-width: 100%
+    }
+
+    .mini-nav-product a {
+        flex: 0 1 calc(18% - 1em);
+        text-wrap: nowrap;
+    }
+
+    .option-btn {
+        margin-right: 1.9em;
+    }
+
+    .cards {
+        margin-right: 1em;
+    }
+
+    .cards .first-card {
+        flex: 0 1 calc(50% - 1em);
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {}
+
+@media screen and (min-width: 1024px) {}
