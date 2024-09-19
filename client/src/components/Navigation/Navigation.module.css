@@ -236,7 +236,7 @@ i {
     top: 10%;
     left: 95%;
     transform: translate(-50%, -50%);
-    /* padding-left: 1em; */
+    padding-left: 1em;
 }
 
 .ham-icon,
