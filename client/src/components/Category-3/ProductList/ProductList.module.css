@@ -248,7 +248,7 @@
 @media only screen and (max-width: 768px) {
     .mini-nav-product{
         margin-top: 3em;
-        margin-left: 3em;
+        /* margin-left: 3em; */
     }
 }
 
@@ -854,8 +854,6 @@
         max-width: none;
         height: 1.6em;
         margin-bottom: 2em;
-        margin-right: 2em;
-        padding-right: 2em;
     }
 
     .mini-nav-product a {
