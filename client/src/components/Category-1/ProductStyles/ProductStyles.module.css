@@ -824,6 +824,10 @@
 
     @media screen and (max-width: 320px) {
 
+        .mini-nav-product {
+            width: 31em;
+        }
+
         .cards {
             display: flex;
             justify-content: center;
@@ -844,11 +848,17 @@
     }
 
     .mini-nav-product {
+        flex-wrap: wrap;
         flex-direction: row;
         justify-content: space-around;
         max-width: none;
         height: 1.6em;
         margin-bottom: 2em;
+    }
+
+    .mini-nav-product a {
+        flex: 0 1 calc(18% - 1em);
+        text-wrap: nowrap;
     }
 
     .option-btn {
