@@ -236,7 +236,7 @@ i {
     top: 10%;
     left: 95%;
     transform: translate(-50%, -50%);
-    padding-left: 1em;
+    /* padding-left: 1em; */
 }
 
 .ham-icon,
@@ -265,7 +265,6 @@ i {
         width: 100%;
         background-color: var(--orange);
         padding: 10px;
-        border-radius: 0 0 10px 10px;
     }
 
     .site-nav ul.show {
