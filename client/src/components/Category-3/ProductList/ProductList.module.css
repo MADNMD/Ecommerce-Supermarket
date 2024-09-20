@@ -852,7 +852,8 @@
         flex-direction: row;
         justify-content: space-around;
         max-width: none;
-        height: 1.6em;
+        /* height: 1.6em; */
+        height: auto;
         margin-bottom: 2em;
     }
 
