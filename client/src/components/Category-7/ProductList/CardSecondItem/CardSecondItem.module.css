@@ -125,3 +125,56 @@
     font-weight: bold;
     font-size: 0.9em;
 }
+
+@media screen and (max-width: 767px) {
+
+    .first-card,
+    .second-card,
+    .third-card2,
+    .four-card,
+    .five-card {
+        flex: 0 1 calc(45% - 1em);
+    }
+
+    .first-card .card-img .bio-img,
+    .second-card .card-img .bio-img,
+    .third-card2 .card-img .bio-img,
+    .four-card .card-img .bio-img,
+    .five-card .card-img .bio-img {
+        left: -34.1%;
+    }
+
+    .card-content,
+    .card-content2 {
+        width: 18.8em;
+    }
+
+    @media screen and (max-width: 425px) {
+
+        .card-content {
+            width: 16.1em;
+        }
+
+        .first-card .card-img .bio-img,
+        .second-card .card-img .bio-img,
+        .third-card2 .card-img .bio-img,
+        .four-card .card-img .bio-img,
+        .five-card .card-img .bio-img {
+            left: -22.1%;
+        }
+    }
+
+    .card-option .minus,
+    .card-option .plus {
+        width: 1.6em;
+        height: 1.6em;
+    }
+
+    .card-option .count {
+        font-size: 1.1em;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {}
+
+@media screen and (min-width: 1024px) {}
