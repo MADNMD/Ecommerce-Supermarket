@@ -136,3 +136,43 @@
     cursor: not-allowed; 
     opacity: 0.5; 
 }
+
+@media screen and (max-width: 767px) {
+
+    .mini-nav {
+        margin: 2em 0 1em 0;
+        justify-content: center; 
+        align-items: center;
+    }
+
+    .order-content {
+        margin-left: 0;
+    }
+
+    .order-content h3 {
+        text-align: center;
+    }
+
+}
+
+@media only screen and (max-width: 492px) {
+  
+    .order-main-content {
+        margin-left: 0;
+    }
+
+    .mini-nav {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mini-nav a {
+        text-wrap: nowrap;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {}
+
+@media screen and (min-width: 1024px) {}
