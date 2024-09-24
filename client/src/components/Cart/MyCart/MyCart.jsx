@@ -115,11 +115,16 @@ export const MyCart = ({
             toast.error('Количката за пазаруване все още е празна');
         } else {
             userCart.some(product => {
+
+                if (product.count >= 100) {
+                    product.count = product.count / 1000;
+                }
+
                 if (product.count > product.productQuantity) {
                     event.preventDefault();
                     toast.dismiss();
                     toast.error(`Не достатъчно количество на "${product.productName}" в склада`);
-                    return 
+                    return
                 }
             });
         }
