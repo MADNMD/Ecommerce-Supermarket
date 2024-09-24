@@ -280,3 +280,56 @@
 .delivery-all-price p:last-child {
     font-size: 0.7em;
 }
+
+@media screen and (max-width: 768px) {
+
+    .myCart-table tbody tr td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        flex-basis: 40%; 
+    }
+
+    .myCart-table-img-content img {
+        max-width: 5em;
+        max-height: 5em;
+    }
+
+    .myCart-product {
+        flex: 0 1 100%; 
+        border-right: none;
+        margin-left: 0;
+    }
+
+    .count-quantity {
+        justify-content: space-between;
+    }
+
+    .myCart-total-sum {
+        position: static; 
+        left: 0;
+        margin-top: 2em;
+    }
+
+    .delivery-all-price {
+        position: static;
+        width: 100%;
+        top: auto;
+        right: auto;
+    }
+}
+
+@media screen and (max-width: 492px) {
+    
+    .myCart-table tbody tr td {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .myCart-table tbody tr td::before {
+        margin-bottom: 0.5em;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {}
+
+@media screen and (min-width: 1024px) {}
