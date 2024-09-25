@@ -286,7 +286,7 @@
     .myCart-table tbody tr td::before {
         content: attr(data-label);
         font-weight: bold;
-        flex-basis: 40%; 
+        flex-basis: 40%;
     }
 
     .myCart-table-img-content img {
@@ -295,7 +295,7 @@
     }
 
     .myCart-product {
-        flex: 0 1 100%; 
+        flex: 0 1 100%;
         border-right: none;
         margin-left: 0;
     }
@@ -305,9 +305,9 @@
     }
 
     .myCart-total-sum {
-        position: absolute; 
-        left: 60%; 
-        top: 98%;  
+        position: absolute;
+        left: 60%;
+        top: 99%;
     }
 
     .myCart-total-sum p {
@@ -316,9 +316,10 @@
 
     .delivery-all-price {
         display: flex;
-        flex-wrap: wrap; 
+        position: static;
+        flex-wrap: wrap;
+        flex: 0 1 95%;
         justify-content: space-between;
-        margin-top: 22em;
         width: 90%;
     }
 
@@ -326,11 +327,10 @@
         text-wrap: nowrap;
     }
 
-    
 }
 
 @media screen and (max-width: 492px) {
-    
+
     .myCart-table tbody tr td {
         flex-direction: column;
         align-items: flex-start;
@@ -338,6 +338,11 @@
 
     .myCart-table tbody tr td::before {
         margin-bottom: 0.5em;
+    }
+
+    .myCart-table tbody td:nth-child(3),
+    .myCart-table tbody td:nth-child(4) {
+        width: 15.1%;
     }
 }
 
