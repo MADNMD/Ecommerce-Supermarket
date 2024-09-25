@@ -34,3 +34,17 @@
     font-size: 1.1em;
     font-weight: bold;
 }
+
+@media screen and (max-width: 767px) {
+
+    .cookies .container {
+        margin-top: 12em;
+    }
+
+}
+
+@media screen and (max-width: 320px) {}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {}
+
+@media screen and (min-width: 1024px) {}
