@@ -44,3 +44,44 @@
 .holiday-img-text p:nth-child(9) {
     margin-bottom: 8em;
 }
+
+@media screen and (max-width: 767px) {
+
+    .holiday .container {
+        margin-top: 12em;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    .holiday-img-text {
+        top: 50.9%;
+        left: 46%;
+        font-size: 1em; 
+        min-width: 60ch;
+    }
+    
+
+}
+
+@media screen and (max-width: 376px) {
+
+    .holiday-img-text {
+        font-size: 0.8em; 
+        top: 48%; 
+        left: 42%; 
+
+    }
+}
+@media screen and (max-width: 320px) {
+
+    .holiday-img-text {
+        top: 50.9%;
+        left: 44%;
+        font-size: 0.7em; 
+    }
+   
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {}
+
+@media screen and (min-width: 1024px) {}
