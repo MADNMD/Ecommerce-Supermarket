@@ -186,3 +186,29 @@ i {
     height: 7em;
     border-radius: 50%;
 }
+
+@media screen and (max-width: 767px) {
+
+    .contacts .container {
+        margin-top: 12em;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    .contacts-img {
+        width: 400px;
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+
+    .contacts-img {
+        width: 300px;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {}
+
+@media screen and (min-width: 1024px) {}
