@@ -281,7 +281,7 @@
     font-size: 0.7em;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 
     .myCart-table tbody tr td::before {
         content: attr(data-label);
@@ -305,17 +305,28 @@
     }
 
     .myCart-total-sum {
-        position: static; 
-        left: 0;
-        margin-top: 2em;
+        position: absolute; 
+        left: 60%; 
+        top: 98%;  
+    }
+
+    .myCart-total-sum p {
+        text-wrap: nowrap;
     }
 
     .delivery-all-price {
-        position: static;
-        width: 100%;
-        top: auto;
-        right: auto;
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: space-between;
+        margin-top: 22em;
+        width: 90%;
     }
+
+    .delivery-summary p {
+        text-wrap: nowrap;
+    }
+
+    
 }
 
 @media screen and (max-width: 492px) {
