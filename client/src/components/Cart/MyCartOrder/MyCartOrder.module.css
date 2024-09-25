@@ -298,3 +298,138 @@
     font-size: 0.6em;
     color: red;
 }
+
+@media screen and (max-width: 767px) {
+
+    .myCartOrder-nav {
+        display: none;
+    }
+    
+    .site-myCartOrder .container {
+        padding: 1em;
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
+    .data-order {
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
+    .myCartOrder-personalData {
+        border-right: none;
+        padding-right: 0;
+    }
+
+    .myCartOrder-personalData-form,
+    .myCartOrder-personalOrder {
+        width: 100%;
+    }
+
+    .myCartOrder-personalOrder {
+        padding: 0;
+    }
+
+    .myCartOrder-personalData-form {
+        width: 100%;
+        padding: 1em;
+        box-sizing: border-box; 
+    }
+
+    .myCartOrder-personalData-form form {
+        display: flex;
+        flex-direction: column; 
+        gap: 1em; 
+    }
+
+    .myCartOrder-personalData-form select,
+    .myCartOrder-personalData-form textarea,
+    .myCartOrder-personalData-form input {
+        width: 100%; 
+        padding: 0.8em;
+        font-size: 1em; 
+        box-sizing: border-box;
+    }
+
+    .myCartOrder-personalData-form .form-day-hour,
+    .myCartOrder-personalData-form .country-city,
+    .myCartOrder-personalData-form .hood {
+        flex-direction: column; 
+        gap: 0.5em; 
+    }
+
+    .myCartOrder-personalData-form label {
+        font-size: 1em;
+        margin-bottom: 0.5em;
+    }
+
+    .pay-method {
+        display: flex;
+        flex-direction: column; 
+        gap: 1em; 
+    }
+
+    .comments-order textarea {
+        width: 100%; 
+    }
+
+    .comments-order p {
+        font-size: 0.9em; 
+    }
+
+    .errors-form, .error-addres {
+        font-size: 0.75em; 
+        position: static; 
+        color: red;
+    }
+
+    .myCartOrder-personalOrder .orderBtn {
+        width: 83%;
+    }
+
+    .myCartOrder-personalOrder .total-personalOrder-price span {
+        margin-left: 0;
+    }
+
+}
+
+@media screen and (max-width: 492px) {
+
+    .myCartOrder-logo img {
+        width: 7em;
+        height: 7em;
+    }
+
+    .data-order {
+        gap: 1em;
+    }
+
+    .myCartOrder-personalData-form,
+    .myCartOrder-personalOrder {
+        padding: 0;
+    }
+
+    .myCartOrder-personalData-form {
+        padding: 0.5em;
+        max-width: 32.4em;
+    }
+
+    .myCartOrder-personalData-form label,
+    .myCartOrder-personalData-form select,
+    .myCartOrder-personalData-form textarea,
+    .myCartOrder-personalData-form input {
+        font-size: 0.9em; 
+    }
+
+    .comments-order p {
+        font-size: 0.85em;
+    }
+
+    .myCartOrder-personalOrder .orderBtn {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {}
+
+@media screen and (min-width: 1024px) {}
