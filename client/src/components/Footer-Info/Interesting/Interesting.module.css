@@ -108,6 +108,10 @@ a {
 
 @media screen and (max-width: 767px) {
 
+    .interesting .container {
+        margin-top: 10.2em;
+    }
+
     .line-1,
     .line-2 {
         flex-direction: column;
