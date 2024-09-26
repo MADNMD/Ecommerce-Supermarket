@@ -304,7 +304,7 @@
     .myCartOrder-nav {
         display: none;
     }
-    
+
     .site-myCartOrder .container {
         padding: 1em;
         flex-direction: column;
@@ -333,29 +333,29 @@
     .myCartOrder-personalData-form {
         width: 100%;
         padding: 1em;
-        box-sizing: border-box; 
+        box-sizing: border-box;
     }
 
     .myCartOrder-personalData-form form {
         display: flex;
-        flex-direction: column; 
-        gap: 1em; 
+        flex-direction: column;
+        gap: 1em;
     }
 
     .myCartOrder-personalData-form select,
     .myCartOrder-personalData-form textarea,
     .myCartOrder-personalData-form input {
-        width: 100%; 
+        width: 100%;
         padding: 0.8em;
-        font-size: 1em; 
+        font-size: 1em;
         box-sizing: border-box;
     }
 
     .myCartOrder-personalData-form .form-day-hour,
     .myCartOrder-personalData-form .country-city,
     .myCartOrder-personalData-form .hood {
-        flex-direction: column; 
-        gap: 0.5em; 
+        flex-direction: column;
+        gap: 0.5em;
     }
 
     .myCartOrder-personalData-form label {
@@ -365,21 +365,32 @@
 
     .pay-method {
         display: flex;
-        flex-direction: column; 
-        gap: 1em; 
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .pay-method p:nth-child(2),
+    .pay-method p:nth-child(3) {
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-right: 28em;
+        text-wrap: nowrap;
     }
 
     .comments-order textarea {
-        width: 100%; 
+        width: 100%;
     }
 
     .comments-order p {
-        font-size: 0.9em; 
+        font-size: 0.9em;
     }
 
-    .errors-form, .error-addres {
-        font-size: 0.75em; 
-        position: static; 
+    .errors-form,
+    .error-addres {
+        font-size: 0.75em;
+        position: static;
         color: red;
     }
 
@@ -389,6 +400,12 @@
 
     .myCartOrder-personalOrder .total-personalOrder-price span {
         margin-left: 0;
+    }
+
+    .errors-form {
+        position: absolute;
+        top: 56%;
+        left: 22%;
     }
 
 }
@@ -418,7 +435,7 @@
     .myCartOrder-personalData-form select,
     .myCartOrder-personalData-form textarea,
     .myCartOrder-personalData-form input {
-        font-size: 0.9em; 
+        font-size: 0.9em;
     }
 
     .comments-order p {
