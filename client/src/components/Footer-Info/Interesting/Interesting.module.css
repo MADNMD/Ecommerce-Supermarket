@@ -24,7 +24,8 @@ a {
 .line-1 {
     display: flex;
     gap: 1em;
-    align-items: center;
+    align-items: stretch;
+    /* align-items: center; */
     justify-content: space-between;
     margin: 1.5em 1em 0 1em;
 }
@@ -44,13 +45,11 @@ a {
     border-radius: 0.5em;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
     transition: box-shadow 0.3s ease;
+    height: auto;
 }
 
 .line-1 .card-1-img img,
-.line-1 .card-3-img img
-/* .line-2 .card-1-img img,
-.line-2 .card-4-img img  */
-{
+.line-1 .card-3-img img {
     width: 100%;
     max-height: 20em;
     border-top-left-radius: 0.5em;
@@ -58,8 +57,10 @@ a {
 }
 
 .line-1 .card-2-img img {
+    height: auto;
     max-height: 19.6em;
     border-radius: 0.5em;
+    object-fit: cover;
 }
 
 .line-2 {
@@ -94,13 +95,40 @@ a {
 .line-2 .card-4-img img {
     width: 100%;
     height: auto;
-    max-height: 16em; 
+    max-height: 16em;
     object-fit: cover;
     border-top-left-radius: 0.5em;
     border-top-right-radius: 0.5em;
 }
 
 .line-2 .card-2-img img,
-.line-2 .card-3-img img  {
+.line-2 .card-3-img img {
     height: 16em;
 }
+
+@media screen and (max-width: 767px) {
+
+    .line-1,
+    .line-2 {
+        flex-direction: column;
+    }
+
+    .line-1 .card-1,
+    .line-1 .card-3,
+    .line-1 .card-2,
+    .line-2 .card-1,
+    .line-2 .card-3,
+    .line-2 .card-2,
+    .line-2 .card-4 {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 376px) {}
+
+@media screen and (max-width: 320px) {}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {}
+
+@media screen and (min-width: 1024px) {}
