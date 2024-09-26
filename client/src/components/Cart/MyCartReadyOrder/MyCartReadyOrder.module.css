@@ -215,6 +215,15 @@
         display: none;
     }
 
+    .flag-icon {
+        margin-right: 1.5em;
+    }
+
+    .suggestions-1,
+    .suggestions-2 {
+        gap: 1em;
+    }
+
 }
 
 @media screen and (max-width: 320px) {
