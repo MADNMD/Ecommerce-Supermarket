@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styles from './Contacts.module.css';
 import { GoogleMap, LoadScript } from '@react-google-maps/api';
 
-const containerStyle = {
-    width: '850px',
-    height: '400px'
-};
+// const containerStyle = {
+//     width: '850px',
+//     height: '400px'
+// };
 
 const center = {
     lat: 43.858140,
@@ -17,6 +17,29 @@ export const Contacts = ({ showNavigationAndFooter }) => {
     useEffect(() => {
         showNavigationAndFooter();
     }, [showNavigationAndFooter]);
+
+    const [containerStyle, setContainerStyle] = useState({ width: '850px', height: '400px' });
+
+    useEffect(() => {
+
+        const updateMapSize = () => {
+            if (window.innerWidth <= 321) {
+                setContainerStyle({ width: '100%', minWidth: '300px', height: '400px' });
+            } else if (window.innerWidth <= 420) {
+                setContainerStyle({ width: '100%', minWidth: '350px', height: '400px' });
+            }else if(window.innerWidth <= 767) {
+                setContainerStyle({ width: '100%', minWidth: '400px', height: '400px' });
+            }else {
+                setContainerStyle({ width: '850px', height: '400px' });
+            }
+        }
+
+        window.addEventListener('resize', updateMapSize);
+
+        updateMapSize();
+
+        return () => window.removeEventListener('resize', updateMapSize);
+    }, []);
 
     return (
 
