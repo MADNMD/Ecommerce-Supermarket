@@ -222,6 +222,10 @@
         width: 100%;
     }
 
+    .four-card .card-img .bio-img {
+        left: -39.1%;
+    }
+
     .card-option-fav .order-product button {
         font-size: 1.2em;
     }
