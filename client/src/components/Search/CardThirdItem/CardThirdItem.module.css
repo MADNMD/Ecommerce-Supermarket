@@ -210,3 +210,22 @@
     border-radius: 0.3em;
     cursor: pointer;
 }
+
+@media screen and (max-width: 767px) {
+
+    .card-content,
+    .card-content2 {
+        width: 16.3em;
+    }
+
+    .first-card .card-img .bio-img {
+        left: -21.1%;
+    }
+
+}
+
+@media only screen and (max-width: 492px) {}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {}
+
+@media screen and (min-width: 1024px) {}
