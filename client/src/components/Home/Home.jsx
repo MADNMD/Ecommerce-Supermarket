@@ -20,10 +20,12 @@ export const Home = ({ showNavigationAndFooter }) => {
     const [randomClients2, setRandomClients2] = useState({});
 
     useEffect(() => {
+        if (clients.length > 0) {
             const randomIndex = Math.floor(Math.random() * clients.length);
             const randomIndex2 = Math.floor(Math.random() * clients.length);
             setRandomClients(clients[randomIndex]);
-            setRandomClients2(clients[randomIndex2])
+            setRandomClients2(clients[randomIndex2]);
+        }
     }, []);
 
     useEffect(() => {
