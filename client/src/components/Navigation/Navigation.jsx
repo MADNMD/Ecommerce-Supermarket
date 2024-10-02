@@ -20,7 +20,7 @@ export const Navigation = () => {
     const calculateProductCartPrice = () => {
 
         const getCartProducts = localStorage.getItem('carts');
-        const cartParsed = JSON.parse(getCartProducts);
+        const cartParsed = getCartProducts ? JSON.parse(getCartProducts) : {};
 
         const cart = cartParsed[userId] || [];
 
