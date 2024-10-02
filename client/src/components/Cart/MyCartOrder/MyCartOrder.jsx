@@ -41,7 +41,7 @@ export const MyCartOrder = ({ hideNavigationAndFooter }) => {
 
     useEffect(() => {
         const getCartProducts = localStorage.getItem('carts');
-        const cartParsed = JSON.parse(getCartProducts);
+        const cartParsed = getCartProducts ? JSON.parse(getCartProducts) : {};
         setCartProducts(cartParsed[userId] || []);
         // const getCartProducts = localStorage.getItem('carts');
 
