@@ -115,7 +115,7 @@ export const Home = ({ showNavigationAndFooter }) => {
 
                                 <div className={styles.card}>
                                     <div className={styles['client-img']}>
-                                        <img src="/public/images/profil-pic.png" alt="" />
+                                        <img src="images/profil-pic.png" alt="" />
                                         <div className={styles['client-rating']}>
                                             <span>{randomClients.rating}</span>
                                             <span>/</span>
