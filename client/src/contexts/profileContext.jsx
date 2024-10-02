@@ -15,15 +15,19 @@ export const ProfileProvider = ({
     const { userId } = useAuthContext();
 
     useEffect(() => {
-        if (userId) {
 
+        if (userId) {
             profileService.getUser(userId)
                 .then(profileData => {
-                    setProfile(profileData);
+                    if (profileData) {
+                        setProfile(profileData);
+                    } else {
+                        console.log("Профилът не е намерен");
+                    }
                 })
                 .catch(error => {
                     console.log(error);
-                })
+                });
         }
     }, [userId]);
 
@@ -51,7 +55,7 @@ export const ProfileProvider = ({
             } else if (newCartLength > oldCartLenght) {
                 toast.dismiss();
                 toast.success('Продукта успешно е добавен в кошницата за пазаруване');
-            } else if(newCartLength < oldCartLenght) {
+            } else if (newCartLength < oldCartLenght) {
                 toast.dismiss();
                 toast.success('Продукта успешно е премахнат от кошницата за пазаруване');
             } else {
@@ -68,20 +72,20 @@ export const ProfileProvider = ({
 
     const profileContext = {
         handleEditProfile,
-        userId: profile._id,
-        firstName: profile.firstName,
-        lastName: profile.lastName,
-        email: profile.email,
-        telefon: profile.telefon,
-        country: profile.country,
-        city: profile.city,
-        postCode: profile.postCode,
-        address: profile.address,
+        userId: profile?._id,
+        firstName: profile?.firstName,
+        lastName: profile?.lastName,
+        email: profile?.email,
+        telefon: profile?.telefon,
+        country: profile?.country,
+        city: profile?.city,
+        postCode: profile?.postCode,
+        address: profile?.address,
 
-        favorites: profile.favorites,
-        cart: profile.cart,
-        
-        orders: profile.orders
+        favorites: profile?.favorites,
+        cart: profile?.cart,
+
+        orders: profile?.orders
     }
 
     return (
