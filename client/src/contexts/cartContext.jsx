@@ -56,7 +56,7 @@ export const CartProvider = ({
         });
     };
 
-     // Премахване на продукт от количката
+    // Премахване на продукт от количката
     const removeCart = (productId) => {
         setCarts(prevCarts => {
             const userCart = prevCarts[userId] || [];
@@ -77,7 +77,9 @@ export const CartProvider = ({
 
     // Вземане на количката на текущия потребител
     const getUserCart = () => {
-        return carts[userId] || [];
+        if (userId) {
+            return carts[userId] || [];
+        }
     }
 
     return (
