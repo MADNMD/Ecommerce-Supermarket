@@ -11,7 +11,7 @@ export const RecipiesList = ({ recipies, likedStorageKey, title, showNavigationA
 
     useEffect(() => {
         showNavigationAndFooter();
-        const savedLikes = JSON.parse(localStorage.getItem(likedStorageKey));
+        const savedLikes = JSON.parse(localStorage.getItem(likedStorageKey) || []);
         if (savedLikes) {
             setLiked(savedLikes);
         }
