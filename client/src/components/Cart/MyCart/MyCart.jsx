@@ -15,6 +15,12 @@ export const MyCart = ({
     const { userId } = useAuthContext();
     const { handleEditProfile } = useContext(ProfileContext);
     const { getUserCart, removeCart, updateCart } = useContext(CartContext);
+
+    if (!userId) {
+        toast.error('Моля, влезте в профила си');
+        return null;
+    }
+
     const userCart = getUserCart();
     const [count, setCount] = useState(0);
     const [totalPrice, setTotalPrice] = useState(0);
