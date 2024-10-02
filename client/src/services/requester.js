@@ -1,4 +1,5 @@
-const baseURL = 'http://localhost:3000';
+const baseURL = 'https://vanimi-supermarket.onrender.com';
+// const baseURL = 'http://localhost:3000';
 
 async function request(url, option) {
 
