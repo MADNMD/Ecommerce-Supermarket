@@ -20,6 +20,8 @@ export const CartProvider = ({
 
             if (savedCarts) {
                 setCarts(JSON.parse(savedCarts));
+            } else {
+                setCarts({});
             }
         }
     }, [userId]);
