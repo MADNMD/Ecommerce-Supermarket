@@ -9,10 +9,10 @@ router.post('/send', async (req, res) => {
     try {
 
         const result = await emailSenderService.sendMail(text);
-        res.status(200).send(result);
+        res.status(200).json({ message: 'Имейлът е изпратен успешно', result }); 
 
     } catch (error) {
-        res.status(500).send('Грешка при изпращане на имейл');
+        res.status(500).json({ error: 'Грешка при изпращане на имейл', details: error.message });
     }
 });
 
@@ -23,10 +23,10 @@ router.post('/send-form', async (req, res) => {
     try {
 
         const result = await emailSenderService.sendMailForm( form );
-        res.status(200).send(result);
+        res.status(200).json({ message: 'Формата е изпратена успешно', result });
 
     } catch (error) {
-        res.status(500).send('Грешка при изпращане на поръчката');
+        res.status(500).json({ error: 'Грешка при изпращане на поръчката', details: error.message });
     }
 });
 
