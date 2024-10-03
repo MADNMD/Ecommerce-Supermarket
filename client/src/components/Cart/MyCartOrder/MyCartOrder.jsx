@@ -230,10 +230,6 @@ export const MyCartOrder = ({ hideNavigationAndFooter }) => {
             orderDetails: userData
         };
 
-        if (!profile.orders) {
-            profile.orders = [];
-        }
-
         profile.orders.push(orderData);
 
         try {
