@@ -34,7 +34,7 @@ function createOption(method = 'get', data) {
         headers: {}
     };
     if (data !== undefined) {
-        option.headers['Content-Type'] = 'Application/json';
+        option.headers['Content-Type'] = 'application/json';
         option.body = JSON.stringify(data);
     }
     return option;
