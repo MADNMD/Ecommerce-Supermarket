@@ -27,6 +27,7 @@ router.post('/send-form', async (req, res) => {
 
     } catch (error) {
         res.status(500).json({ error: 'Грешка при изпращане на поръчката', details: error.message });
+        // res.status(500).send('Грешка при изпращане на поръчката');
     }
 });
 
