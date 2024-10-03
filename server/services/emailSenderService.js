@@ -6,8 +6,8 @@ exports.sendMail = async (text) => {
 
         const transporter = nodemailer.createTransport({
             host: 'smtp.abv.bg',
-            port: 465,
-            secure: true,
+            port: 587,
+            secure: false,
             auth: {
                 user: 'vanimi-supermarket@abv.bg',
                 pass: 'misho123'
