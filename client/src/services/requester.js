@@ -4,26 +4,51 @@ const baseURL = 'https://vanimi-supermarket.onrender.com';
 async function request(url, option) {
 
     try {
-
-        const response = await fetch(baseURL + url, option);
+        const response = await fetch(RS + e, t);
         
-        if (response.ok !== true) {
-            const err = await response.json();
-            // throw new Error(err.message);
-        }
-
-        if (response.status === 204) {
-            return response;
-        } else if (response.headers.has('content-type') && response.headers.get('content-type').includes('application/json')) {
-            return response.json();
+        // Ако отговорът е успешен, върни го
+        if (response.ok) {
+            const contentType = response.headers.get("content-type");
+    
+            // Проверяваме дали типът на съдържанието е JSON и го обработваме
+            if (contentType && contentType.includes("application/json")) {
+                const data = await response.json();
+                return data;
+            } else {
+                const textData = await response.text();
+                return textData; // Може да върне текст, ако не е JSON
+            }
         } else {
-            return response.text();
+            // Ако не е успешен, върни грешката като текст или JSON, ако има такъв
+            const errorMessage = await response.text();
+            throw new Error(errorMessage || "Грешка при изпращане на заявката");
         }
-
     } catch (error) {
-        alert(error.message);
+        console.error("Error fetching:", error.message);
         throw error;
     }
+
+    // try {
+
+    //     const response = await fetch(baseURL + url, option);
+        
+    //     if (response.ok !== true) {
+    //         const err = await response.json();
+    //         // throw new Error(err.message);
+    //     }
+
+    //     if (response.status === 204) {
+    //         return response;
+    //     } else if (response.headers.has('content-type') && response.headers.get('content-type').includes('application/json')) {
+    //         return response.json();
+    //     } else {
+    //         return response.text();
+    //     }
+
+    // } catch (error) {
+    //     alert(error.message);
+    //     throw error;
+    // }
 
 }
 
