@@ -4,50 +4,26 @@ const baseURL = 'https://vanimi-supermarket.onrender.com';
 async function request(url, option) {
 
     try {
+
         const response = await fetch(baseURL + url, option);
         
-        const contentType = response.headers.get('content-type');
-        
-        let responseData;
-        if (contentType && contentType.includes('application/json')) {
-            responseData = await response.json();
+        if (response.ok !== true) {
+            const err = await response.json();
+            // throw new Error(err.message);
+        }
+
+        if (response.status === 204) {
+            return response;
+        } else if (response.headers.has('content-type') && response.headers.get('content-type').includes('application/json')) {
+            return response.json();
         } else {
-            responseData = await response.text();
+            return response.text();
         }
 
-        // Ако отговорът не е успешен, хвърли грешка с детайлите
-        if (!response.ok) {
-            throw new Error(responseData.message || 'Грешка при заявката');
-        }
-
-        return responseData;
-        
     } catch (error) {
         alert(error.message);
         throw error;
     }
-
-    // try {
-
-    //     const response = await fetch(baseURL + url, option);
-        
-    //     if (response.ok !== true) {
-    //         const err = await response.json();
-    //         // throw new Error(err.message);
-    //     }
-
-    //     if (response.status === 204) {
-    //         return response;
-    //     } else if (response.headers.has('content-type') && response.headers.get('content-type').includes('application/json')) {
-    //         return response.json();
-    //     } else {
-    //         return response.text();
-    //     }
-
-    // } catch (error) {
-    //     alert(error.message);
-    //     throw error;
-    // }
 
 }
 
