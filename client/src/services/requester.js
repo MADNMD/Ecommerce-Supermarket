@@ -9,9 +9,7 @@ async function request(url, option) {
         const response = await fetch(baseURL + url, option);
         
         if (response.ok !== true) {
-            const err = await response.clone().json();
-            throw new Error(err.message);
-            // const err = await response.json();
+            const err = await response.json();
             // throw new Error(err.message);
         }
 
