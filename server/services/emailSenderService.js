@@ -17,7 +17,8 @@ exports.sendMail = async (text) => {
         });
 
         const mailOptions = {
-            from: 'vanimi-supermarket@abv.bg',
+            from: 'vanimi-supermarket@mail.bg',
+            // from: 'vanimi-supermarket@abv.bg',
             to: ['mihaildonchev88@gmail.com', `${text.text}`, 'vanimi-supermarket@abv.bg'],
             subject: `Честито Вие се абонирахте за бюлетина на супермаркет VANIMI`,
             text: `Ще получавате нашите най-нови промоции на посочения от Вас имейл ${text.text}`
@@ -58,7 +59,8 @@ exports.sendMailForm = async (form) => {
         };
 
         const formOption = {
-            from: 'vanimi-supermarket@abv.bg',
+            from: 'vanimi-supermarket@mail.bg',
+            // from: 'vanimi-supermarket@abv.bg',
             to: ['mihaildonchev88@gmail.com', `${form.email}`, 'vanimi-supermarket@abv.bg'],
             subject: `Поръчката е приета #${form.orderNumber}`,
             html: `
