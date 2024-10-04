@@ -5,12 +5,14 @@ exports.sendMail = async (text) => {
     try {
 
         const transporter = nodemailer.createTransport({
-            host: 'smtp.abv.bg',
+            // host: 'smtp.abv.bg',
+            host: 'smtp.mail.bg',
             port: 465,
             secure: true,
             auth: {
-                user: 'vanimi-supermarket@abv.bg',
-                pass: 'misho123'
+                user: 'vanimi-supermarket@mail.bg',
+                pass: 'misho1234'
+                // pass: 'misho123'
             }
         });
 
@@ -36,12 +38,14 @@ exports.sendMailForm = async (form) => {
 
     try {
         const transporter = nodemailer.createTransport({
-            host: 'smtp.abv.bg',
+            // host: 'smtp.abv.bg',
+            host: 'smtp.mail.bg',
             port: 465,
             secure: true,
             auth: {
-                user: 'vanimi-supermarket@abv.bg',
-                pass: 'misho123'
+                user: 'vanimi-supermarket@mail.bg',
+                pass: 'misho1234'
+                // pass: 'misho123'
             }
         });
 
