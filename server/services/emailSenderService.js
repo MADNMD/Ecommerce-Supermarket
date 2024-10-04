@@ -9,6 +9,7 @@ exports.sendMail = async (text) => {
             port: 465,
             secure: true,
             auth: {
+                type: 'LOGIN',
                 user: 'vanimi-supermarket@abv.bg',
                 pass: 'misho123'
             }
@@ -40,6 +41,7 @@ exports.sendMailForm = async (form) => {
             port: 465,
             secure: true,
             auth: {
+                type: 'LOGIN',
                 user: 'vanimi-supermarket@abv.bg',
                 pass: 'misho123'
             }
