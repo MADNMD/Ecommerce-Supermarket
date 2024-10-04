@@ -1,5 +1,5 @@
-const baseURL = 'vanimi-supermarket.vercel.app';
-// const baseURL = 'https://vanimi-supermarket.onrender.com';
+// const baseURL = 'vanimi-supermarket.vercel.app';
+const baseURL = 'https://vanimi-supermarket.onrender.com';
 // const baseURL = 'http://localhost:3000';
 
 async function request(url, option) {
