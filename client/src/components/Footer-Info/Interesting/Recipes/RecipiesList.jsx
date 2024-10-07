@@ -11,10 +11,22 @@ export const RecipiesList = ({ recipies, likedStorageKey, title, showNavigationA
 
     useEffect(() => {
         showNavigationAndFooter();
-        const savedLikes = JSON.parse(localStorage.getItem(likedStorageKey) || []);
+        const savedLikes = localStorage.getItem(likedStorageKey);
+
         if (savedLikes) {
-            setLiked(savedLikes);
+            try {
+                setLiked(JSON.parse(savedLikes));
+            } catch (error) {
+                console.error("Error parsing JSON:", error);
+                setLiked([]); 
+            }
+        } else {
+            setLiked([]); 
         }
+        // const savedLikes = JSON.parse(localStorage.getItem(likedStorageKey) || []);
+        // if (savedLikes) {
+        //     setLiked(savedLikes);
+        // }
     }, [showNavigationAndFooter, likedStorageKey]);
 
     const toggleLike = (id) => {
