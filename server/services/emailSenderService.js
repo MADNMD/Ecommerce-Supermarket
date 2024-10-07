@@ -5,19 +5,19 @@ exports.sendMail = async (text) => {
     try {
 
         const transporter = nodemailer.createTransport({
-            // host: 'smtp.abv.bg',
-            host: 'smtp.mail.bg',
+            host: 'smtp.abv.bg',
+            // host: 'smtp.mail.bg',
             port: 465,
             secure: true,
             auth: {
-                user: 'vanimi-supermarket@mail.bg',
-                pass: 'misho1234'
-                // pass: 'misho123'
+                user: 'vanimi-supermarket@abv.bg',
+                // pass: 'misho1234'
+                pass: 'misho123'
             }
         });
 
         const mailOptions = {
-            from: 'vanimi-supermarket@mail.bg',
+            from: 'vanimi-supermarket@abv.bg',
             // from: 'vanimi-supermarket@abv.bg',
             to: ['mihaildonchev88@gmail.com', `${text.text}`, 'vanimi-supermarket@abv.bg'],
             subject: `Честито Вие се абонирахте за бюлетина на супермаркет VANIMI`,
@@ -39,14 +39,14 @@ exports.sendMailForm = async (form) => {
 
     try {
         const transporter = nodemailer.createTransport({
-            // host: 'smtp.abv.bg',
-            host: 'smtp.mail.bg',
+            host: 'smtp.abv.bg',
+            // host: 'smtp.mail.bg',
             port: 465,
             secure: true,
             auth: {
-                user: 'vanimi-supermarket@mail.bg',
-                pass: 'misho1234'
-                // pass: 'misho123'
+                user: 'vanimi-supermarket@abv.bg',
+                // pass: 'misho1234'
+                pass: 'misho123'
             }
         });
 
@@ -59,8 +59,8 @@ exports.sendMailForm = async (form) => {
         };
 
         const formOption = {
-            from: 'vanimi-supermarket@mail.bg',
-            // from: 'vanimi-supermarket@abv.bg',
+            from: 'vanimi-supermarket@abv.bg',
+            // from: 'vanimi-supermarket@mail.bg',
             to: ['mihaildonchev88@gmail.com', `${form.email}`, 'vanimi-supermarket@abv.bg'],
             subject: `Поръчката е приета #${form.orderNumber}`,
             html: `
