@@ -16,7 +16,7 @@ export const emailSenderForm = async (form) => {
     
     try {
         const sendEmailForm = await requester.post('/email/send-form',  form );
-
+        console.log(sendEmailForm)
         return sendEmailForm;
     } catch (error) {
         console.log('email-error-client');
