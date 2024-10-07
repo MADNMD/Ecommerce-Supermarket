@@ -23,6 +23,7 @@ router.post('/send-form', async (req, res) => {
     try {
 
         const result = await emailSenderService.sendMailForm( form );
+        console.log(result)
         res.status(200).json({ message: 'Формата е изпратена успешно', result });
 
     } catch (error) {
