@@ -19,6 +19,7 @@ router.post('/send', async (req, res) => {
 router.post('/send-form', async (req, res) => {
 
     const form = req.body;
+    console.log(form)
     
     try {
 
