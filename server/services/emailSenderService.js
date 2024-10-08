@@ -6,13 +6,11 @@ exports.sendMail = async (text) => {
 
         const transporter = nodemailer.createTransport({
             host: 'smtp.abv.bg',
-            // host: 'smtp.mail.bg',
             port: 465,
             secure: true,
             auth: {
                 user: 'vanimi-supermarket@abv.bg',
-                // pass: 'misho1234'
-                pass: 'misho123'
+                pass: 'misho1234'
             }
         });
 
@@ -46,7 +44,7 @@ exports.sendMailForm = async (form) => {
             auth: {
                 user: 'vanimi-supermarket@abv.bg',
                 // pass: 'misho1234'
-                pass: 'misho123'
+                pass: 'misho1234'
             }
         });
 
