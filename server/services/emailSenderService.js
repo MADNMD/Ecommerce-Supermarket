@@ -10,7 +10,7 @@ exports.sendMail = async (text) => {
             secure: true,
             auth: {
                 user: 'vanimi-supermarket@abv.bg',
-                pass: 'misho1234'
+                pass: 'misho123'
             }
         });
 
@@ -44,7 +44,7 @@ exports.sendMailForm = async (form) => {
             auth: {
                 user: 'vanimi-supermarket@abv.bg',
                 // pass: 'misho1234'
-                pass: 'misho1234'
+                pass: 'misho123'
             }
         });
 
