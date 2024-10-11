@@ -41,7 +41,7 @@ export const Home = ({ showNavigationAndFooter }) => {
 
         try {
             setLoading(true);
-            await emailjs.send('service_wndsls8', 'template_tguokqm', formik.values.email, 'OiRlR9J1UKxRQbHoS');
+            await emailjs.send('service_wndsls8', 'template_tguokqm', { email: formik.values.email }, 'OiRlR9J1UKxRQbHoS');
             // await emailService.emailSender(formik.values.email);
             setLoading(false);
             toast.success('Имейлът е изпратен успешно')
