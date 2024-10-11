@@ -235,7 +235,7 @@ export const MyCartOrder = ({ hideNavigationAndFooter }) => {
 
         try {
             setLoading(true);
-            await emailjs.send('service_wndsls8', 'template_tguokqm', userData, 'OiRlR9J1UKxRQbHoS');
+            await emailjs.send('service_wndsls8', 'template_afczbyf', userData, 'OiRlR9J1UKxRQbHoS');
             // await emailService.emailSenderForm(userData);
             // await profileService.editUser(userId, profile);
             handleEditProfile(profile);
