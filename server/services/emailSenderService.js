@@ -16,7 +16,6 @@ exports.sendMail = async (text) => {
 
         const mailOptions = {
             from: 'vanimi-supermarket@abv.bg',
-            // from: 'vanimi-supermarket@abv.bg',
             to: [`${text.text}`, 'vanimi-supermarket@abv.bg'],
             subject: `Честито Вие се абонирахте за бюлетина на супермаркет VANIMI`,
             text: `Ще получавате нашите най-нови промоции на посочения от Вас имейл ${text.text}`
@@ -38,12 +37,10 @@ exports.sendMailForm = async (form) => {
     try {
         const transporter = nodemailer.createTransport({
             host: 'smtp.abv.bg',
-            // host: 'smtp.mail.bg',
             port: 465,
             secure: true,
             auth: {
                 user: 'vanimi-supermarket@abv.bg',
-                // pass: 'misho1234'
                 pass: 'misho123'
             }
         });
@@ -58,7 +55,6 @@ exports.sendMailForm = async (form) => {
 
         const formOption = {
             from: 'vanimi-supermarket@abv.bg',
-            // from: 'vanimi-supermarket@mail.bg',
             to: [`${form.email}`, 'vanimi-supermarket@abv.bg'],
             subject: `Поръчката е приета #${form.orderNumber}`,
             html: `
