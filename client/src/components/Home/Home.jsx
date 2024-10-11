@@ -3,6 +3,8 @@ import styles from './Home.module.css';
 import { useFormik } from 'formik';
 import { toast } from 'react-toastify';
 import PacmanLoader from "react-spinners/PacmanLoader";
+import emailjs from '@emailjs';
+// import emailjs from '@emailjs/browser';
 
 import * as emailService from '../../services/emailService';
 import { clients } from '../../clients';
@@ -40,7 +42,8 @@ export const Home = ({ showNavigationAndFooter }) => {
 
         try {
             setLoading(true);
-            await emailService.emailSender(formik.values.email);
+            await emailjs.send('service_wndsls8', 'template_tguokqm', formik.values.email, 'OiRlR9J1UKxRQbHoS');
+            // await emailService.emailSender(formik.values.email);
             setLoading(false);
             toast.success('Имейлът е изпратен успешно')
             // alert('Имейлът е изпратен успешно');
