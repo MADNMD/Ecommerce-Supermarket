@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useFormik } from 'formik';
 import { toast } from 'react-toastify';
 import PacmanLoader from "react-spinners/PacmanLoader";
+import emailjs from '@emailjs/browser';
 
 import { ProfileContext } from "../../../contexts/profileContext";
 import { useAuthContext } from "../../../contexts/authContext";
@@ -234,7 +235,8 @@ export const MyCartOrder = ({ hideNavigationAndFooter }) => {
 
         try {
             setLoading(true);
-            await emailService.emailSenderForm(userData);
+            await emailjs.send('service_wndsls8', 'template_tguokqm', userData, 'OiRlR9J1UKxRQbHoS');
+            // await emailService.emailSenderForm(userData);
             // await profileService.editUser(userId, profile);
             handleEditProfile(profile);
             await updateProductQuantities();
