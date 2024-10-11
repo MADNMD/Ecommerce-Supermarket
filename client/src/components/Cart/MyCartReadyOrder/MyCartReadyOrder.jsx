@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { useFormik } from 'formik';
 import PacmanLoader from "react-spinners/PacmanLoader";
+import emailjs from '@emailjs/browser';
 
 import * as profileService from '../../../services/profileService';
 import * as emailService from '../../../services/emailService';
@@ -40,11 +41,12 @@ export const MyCartReadyOrder = ({ hideNavigationAndFooter }) => {
         email: ''
     }
 
-    const onSubmit = (value) => {
+    const onSubmit = async (value) => {
 
         try {
             setLoading(true);
-            emailService.emailSender(value.email);
+            await emailjs.send('service_wndsls8', 'template_tguokqm', { email: value.email }, 'OiRlR9J1UKxRQbHoS');
+            // emailService.emailSender(value.email);
             setLoading(false);
             toast.success('Имейлът е изпратен успешно');
             setText(formik.values.email);
