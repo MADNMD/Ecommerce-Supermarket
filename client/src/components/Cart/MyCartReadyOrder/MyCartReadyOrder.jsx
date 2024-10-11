@@ -45,7 +45,7 @@ export const MyCartReadyOrder = ({ hideNavigationAndFooter }) => {
 
         try {
             setLoading(true);
-            await emailjs.send('service_wndsls8', 'template_tguokqm', { email: formik.values.email }, 'OiRlR9J1UKxRQbHoS');
+            await emailjs.send('service_wndsls8', 'template_tguokqm', { email: value.email }, 'OiRlR9J1UKxRQbHoS');
             // emailService.emailSender(value.email);
             setLoading(false);
             toast.success('Имейлът е изпратен успешно');
