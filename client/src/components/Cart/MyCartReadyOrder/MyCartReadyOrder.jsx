@@ -74,7 +74,12 @@ export const MyCartReadyOrder = ({ hideNavigationAndFooter }) => {
         initialValues,
         onSubmit,
         validate
-    })
+    });
+
+    const cssLoader = {
+        display: "block",
+        margin: "270px auto 0 auto",
+    };
 
     return (
 
