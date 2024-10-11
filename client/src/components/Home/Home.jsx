@@ -3,8 +3,7 @@ import styles from './Home.module.css';
 import { useFormik } from 'formik';
 import { toast } from 'react-toastify';
 import PacmanLoader from "react-spinners/PacmanLoader";
-import emailjs from '@emailjs';
-// import emailjs from '@emailjs/browser';
+import emailjs from '@emailjs/browser';
 
 import * as emailService from '../../services/emailService';
 import { clients } from '../../clients';
